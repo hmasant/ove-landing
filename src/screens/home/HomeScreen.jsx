@@ -1,5 +1,5 @@
 import style from "./style.module.css";
-import { Header } from "../../components/header";
+import { Header } from "../../components/Header";
 import { Box, Container, Grid2, Typography } from "@mui/material";
 
 export default function HomeScreen() {
