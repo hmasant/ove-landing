@@ -1,0 +1,23 @@
+.hero_sec {
+  color: white;
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-image: url("/hero_bg.png");
+}
+
+.hero_video {
+  width: 80vw;
+  margin: auto;
+  display: flex;
+  align-items: end;
+  aspect-ratio: 16/9;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url("/hero_image_2.png");
+}
+
+.hero_sec h1 {
+  letter-spacing: -0.25rem;
+  font-size: 4rem;
+}
