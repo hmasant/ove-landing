@@ -5,7 +5,7 @@ export const Header = () => {
     <header>
       <Container maxWidth="xl">
         <Box
-          p={2}
+          py={2}
           display="flex"
           alignItems="center"
           justifyContent="space-between"

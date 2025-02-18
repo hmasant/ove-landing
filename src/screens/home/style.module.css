@@ -1,23 +1,30 @@
 .hero_sec {
-  color: white;
+  padding-bottom: 10rem;
   background-size: cover;
-  background-position: top;
-  background-repeat: no-repeat;
+  background-position: center;
   background-image: url("/hero_bg.png");
 }
 
-.hero_video {
-  width: 80vw;
-  margin: auto;
-  display: flex;
-  align-items: end;
-  aspect-ratio: 16/9;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-image: url("/hero_image_2.png");
+.hero_sec h1 {
+  color: white;
+  font-size: 5rem;
+  font-weight: 900;
+  line-height: 120%;
+  letter-spacing: -5px;
 }
 
-.hero_sec h1 {
-  letter-spacing: -0.25rem;
-  font-size: 4rem;
+.testimonial_video {
+  aspect-ratio: 9/16;
+  border-radius: 1rem;
+  background-color: lightgrey;
+}
+
+.recent_projects {
+  display: flex;
+  aspect-ratio: 1;
+  align-items: center;
+  border-radius: 10px;
+  justify-content: center;
+  border: 3px dashed #cf2d31;
+  background-color: rgba(207, 45, 49, 0.1);
 }

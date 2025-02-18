@@ -1,104 +1,260 @@
 import style from "./style.module.css";
+import { EffectCards } from "swiper/modules";
 import { Header } from "../../components/Header";
-import { Box, Container, Grid2, Typography } from "@mui/material";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Grid2, Box, Container, Typography } from "@mui/material";
+
+const Spacer = () => <Box py={5}></Box>;
 
 export default function HomeScreen() {
   return (
     <>
       <section className={style.hero_sec}>
         <Header />
-        <br />
-        <br />
-        <br />
-        <br />
-        <Container>
+        <Spacer />
+        <Container maxWidth="xl">
           <Grid2 container spacing={5}>
-            <Grid2 size={{ sm: 6 }}>
-              <Typography color="red" fontWeight="medium" letterSpacing={5}>
-                WITH OVE IT'S FAST & EASY
-              </Typography>
-              <h1>Hire top product & engineering talents</h1>
-            </Grid2>
-            <Grid2 size={{ sm: 6 }}>
-              <Box display="flex" justifyContent="center">
-                <Typography fontWeight="bold">4.5+ Rating</Typography>
-                &nbsp; &nbsp;
-                <Typography color="gold">
-                  <i className="fa-solid fa-star"></i>
-                  &nbsp;
-                  <i className="fa-solid fa-star"></i>
-                  &nbsp;
-                  <i className="fa-solid fa-star"></i>
-                  &nbsp;
-                  <i className="fa-solid fa-star"></i>
+            <Grid2
+              size={{ md: 6 }}
+              display="flex"
+              alignItems="center"
+              justifyContent="center"
+            >
+              <Box>
+                <Typography fontSize={30} color="#CF2D31">
+                  YOUR DIGITAL TRANSFORMATION PARTNER
                 </Typography>
+                <br />
+                <h1>Hire top product and engineering talent</h1>
+                <br />
+                <br />
+                <br />
+                <a href="#">
+                  <img
+                    style={{ width: "16rem", margin: 0 }}
+                    src="/black_btn.png"
+                    alt="Image"
+                  />
+                </a>
               </Box>
-              <br />
+            </Grid2>
+            <Grid2 size={{ md: 6 }}>
               <img
-                style={{ width: "20rem" }}
-                src="/rating_logos.png"
+                style={{ aspectRatio: 1 }}
+                src="/hero_video_bg.png"
                 alt="Image"
-              />
-              <br />
-              <br />
-              <img
-                style={{ width: "30rem" }}
-                src="/partnerships.png"
-                alt="OVE Partnerships"
               />
             </Grid2>
           </Grid2>
+          <Spacer />
+          <Spacer />
+          <Typography
+            variant="h3"
+            color="white"
+            fontWeight="bold"
+            textAlign="center"
+          >
+            OUR PARTNERSHIPS
+          </Typography>
+          <br />
+          <br />
+          <img style={{ width: "70vw" }} src="/partnerships.png" alt="Image" />
         </Container>
-        <br />
-        <br />
-        <div className={style.hero_video}>
-          <Grid2 container spacing={5}>
-            <Grid2 size={{ sm: 1 }}></Grid2>
-            <Grid2 size={{ sm: 5 }}>
-              <Typography variant="h6" fontWeight="bold">
-                Heading Goes Here
-              </Typography>
-              <Typography>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore.
-              </Typography>
-              <br />
-              <Typography variant="h6" fontWeight="bold">
-                Heading Goes Here
-              </Typography>
-              <Typography>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore.
-              </Typography>
-              <br />
-              <Typography variant="h6" fontWeight="bold">
-                Heading Goes Here
-              </Typography>
-              <Typography>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore.
-              </Typography>
-              <br />
-              <Typography variant="h6" fontWeight="bold">
-                Heading Goes Here
-              </Typography>
-              <Typography>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore.
-              </Typography>
-            </Grid2>
-            <Grid2 size={{ sm: 5 }}>
-              <img
-                style={{ aspectRatio: 1, width: "30vw" }}
-                src="/hero_video.png"
-                alt="Image"
-              />
-            </Grid2>
-            <Grid2 size={{ sm: 1 }}></Grid2>
-            <br />
-          </Grid2>
-        </div>
       </section>
+      <Spacer />
+      <Typography variant="h4" fontWeight={600} textAlign="center">
+        Partnered with Startups and
+        <span style={{ color: "#CF2D31" }}> Fortune 500 </span>Companies!
+      </Typography>
+      <br />
+      <br />
+      <img src="/clients.png" alt="Image" />
+      <Spacer />
+      <img src="/sec_two_bg.png" alt="Image" />
+      <Spacer />
+      <Container>
+        <Typography
+          variant="h5"
+          color="#CF2D31"
+          fontWeight="bold"
+          textAlign="center"
+        >
+          Client Testimonials
+        </Typography>
+        <br />
+        <Typography textAlign="center" variant="h3" fontWeight="bold">
+          Our success stories that speak <br /> for themselves
+        </Typography>
+        <Spacer />
+        <Grid2 container spacing={2}>
+          <Grid2 size={{ md: 3 }}>
+            <div className={style.testimonial_video}></div>
+          </Grid2>
+          <Grid2 size={{ md: 3 }}>
+            <Spacer />
+            <div className={style.testimonial_video}></div>
+          </Grid2>
+          <Grid2 size={{ md: 3 }}>
+            <div className={style.testimonial_video}></div>
+          </Grid2>
+          <Grid2 size={{ md: 3 }}>
+            <Spacer />
+            <div className={style.testimonial_video}></div>
+          </Grid2>
+        </Grid2>
+      </Container>
+      <Spacer />
+      <Spacer />
+      <img src="/heading.png" alt="Image" style={{ width: "60vw" }} />
+      <Spacer />
+      <img src="/tab_bg.png" alt="Image" />
+      <Spacer />
+      <Container>
+        <Grid2 container spacing={20}>
+          <Grid2 size={{ md: 4 }}>
+            <Swiper
+              effect={"cards"}
+              grabCursor={true}
+              className="mySwiper"
+              modules={[EffectCards]}
+            >
+              <SwiperSlide>
+                <video controls>
+                  <source
+                    src="https://scoobies-backend.s3.ap-south-1.amazonaws.com/meghna_qa_final.mp4"
+                    type="video/mp4"
+                  />
+                  Your browser does not support the video tag.
+                </video>
+              </SwiperSlide>
+              <SwiperSlide>
+                <video controls>
+                  <source
+                    src="https://scoobies-backend.s3.ap-south-1.amazonaws.com/manas_java_final.mp4"
+                    type="video/mp4"
+                  />
+                  Your browser does not support the video tag.
+                </video>
+              </SwiperSlide>
+              <SwiperSlide>
+                <video controls>
+                  <source
+                    src="https://scoobies-backend.s3.ap-south-1.amazonaws.com/meghna_qa_final.mp4"
+                    type="video/mp4"
+                  />
+                  Your browser does not support the video tag.
+                </video>
+              </SwiperSlide>
+              <SwiperSlide>
+                <video controls>
+                  <source
+                    src="https://scoobies-backend.s3.ap-south-1.amazonaws.com/manas_java_final.mp4"
+                    type="video/mp4"
+                  />
+                  Your browser does not support the video tag.
+                </video>
+              </SwiperSlide>
+            </Swiper>
+          </Grid2>
+          <Grid2 size={{ md: 8 }}>
+            <Typography variant="h5" color="#CF2D31" fontWeight="bold">
+              Meet our Developers
+            </Typography>
+            <br />
+            <Typography variant="h3" fontWeight="bold">
+              Hire your next Developer
+            </Typography>
+            <br />
+            <Typography color="grey">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi,
+              similique. Amet itaque ipsam dolorum facilis ducimus aut, officia
+              officiis expedita, ullam incidunt neque repudiandae molestiae
+              assumenda maxime quae alias nobis?
+            </Typography>
+            <br />
+            <br />
+            <br />
+            <img
+              style={{ width: "60%", margin: 0 }}
+              src="/dev_sec_cards.png"
+              alt="Image"
+            />
+            <br />
+            <br />
+            <br />
+            <a href="#">
+              <img
+                style={{ width: "16rem", margin: 0 }}
+                src="/red_btn.png"
+                alt="Button"
+              />
+            </a>
+          </Grid2>
+        </Grid2>
+      </Container>
+      <Spacer />
+      <img src="/cta_bg.png" alt="Image" style={{ width: "90vw" }} />
+      <Spacer />
+      <Container>
+        <Typography
+          variant="h5"
+          color="#CF2D31"
+          fontWeight="bold"
+          textAlign="center"
+        >
+          Our Hiring Process
+        </Typography>
+        <br />
+        <Typography textAlign="center" variant="h3" fontWeight="bold">
+          Hire your next Developer in
+        </Typography>
+        <Typography
+          variant="h3"
+          color="#CF2D31"
+          fontWeight="bold"
+          textAlign="center"
+        >
+          3 simple steps
+        </Typography>
+        <br />
+        <br />
+        <Typography textAlign="center" color="grey">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores
+          laudantium voluptates aspernatur rerum, quasi ullam dolorem
+          necessitatibus dolor vero repudiandae alias odit facere commodi rem
+          cumque reiciendis corporis totam repellendus.
+        </Typography>
+        <Spacer />
+        <img src="/hiring_process.png" alt="Image" />
+      </Container>
+      <Spacer />
+      <img src="/achievement_bg.png" alt="Image" />
+      <Spacer />
+      <Container>
+        <Typography
+          variant="h5"
+          color="#CF2D31"
+          fontWeight="bold"
+          textAlign="center"
+        >
+          Our Recent Projects
+        </Typography>
+        <br />
+        <Typography textAlign="center" variant="h3" fontWeight="bold">
+          Our recently designed build and <br /> launched products
+        </Typography>
+        <Grid2 container spacing={5}>
+          <Grid2 size={{ md: 3 }}>
+            <div className={style.recent_projects}>
+              <Typography>Key Features</Typography>
+            </div>
+          </Grid2>
+          <Grid2 size={{ md: 3 }}></Grid2>
+          <Grid2 size={{ md: 3 }}></Grid2>
+          <Grid2 size={{ md: 3 }}></Grid2>
+        </Grid2>
+      </Container>
+      <Spacer />
     </>
   );
 }
