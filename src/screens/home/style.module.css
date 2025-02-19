@@ -14,20 +14,18 @@
 }
 
 .hero_video {
-  width: 700px;
-  display: flex;
-  padding: 1rem;
+  padding: 6rem;
   aspect-ratio: 1;
-  align-items: center;
-  justify-content: center;
+  color: #cf2d31;
+  font-size: 1.5rem;
+  text-align: right;
   background-size: contain;
   background-repeat: no-repeat;
   background-image: url("/hero_video_bg.png");
 }
 
 .hero_video video {
-  width: 500px;
-  border-radius: 10px;
+  border-radius: 15px;
 }
 
 .testimonial_video {

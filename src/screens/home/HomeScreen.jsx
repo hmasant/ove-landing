@@ -1,12 +1,16 @@
+import { useState } from "react";
 import style from "./style.module.css";
 import { Header } from "../../components/Header";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Grid2, Box, Container, Typography } from "@mui/material";
+import { Box, Grid2, Container, Typography } from "@mui/material";
 import { EffectCards, Pagination, Navigation } from "swiper/modules";
 
 const Spacer = () => <Box py={5}></Box>;
 
 export default function HomeScreen() {
+  const [tabValue, setTabValue] = useState(3);
+  const [isMuted, setIsMuted] = useState(true);
+
   return (
     <>
       <section className={style.hero_sec}>
@@ -40,17 +44,23 @@ export default function HomeScreen() {
             </Grid2>
             <Grid2 size={{ md: 6 }}>
               <div className={style.hero_video}>
-                <video loop autoPlay playsInline muted={true}>
+                <video loop autoPlay playsInline muted={isMuted}>
                   <source
                     src="https://scoobies-backend.s3.ap-south-1.amazonaws.com/podcast"
                     type="video/mp4"
                   />
                   Your browser does not support the video tag.
                 </video>
+                <button onClick={() => setIsMuted(!isMuted)}>
+                  {isMuted ? (
+                    <i class="fa-solid fa-volume-xmark"></i>
+                  ) : (
+                    <i class="fa-solid fa-volume-high"></i>
+                  )}
+                </button>
               </div>
             </Grid2>
           </Grid2>
-          <Spacer />
           <Spacer />
           <Typography
             variant="h3"

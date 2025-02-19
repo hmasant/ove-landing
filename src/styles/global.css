@@ -24,6 +24,13 @@ a {
   text-decoration: none;
 }
 
+button {
+  border: 0;
+  color: inherit;
+  font-size: inherit;
+  background-color: inherit;
+}
+
 header {
   color: white;
   border-radius: 0 0 1rem 1rem;
