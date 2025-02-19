@@ -1,5 +1,5 @@
 {
-  "name": "ove_landing_3",
+  "name": "ove_landing_page",
   "version": "1.0.0",
   "type": "module",
   "scripts": {
@@ -7,10 +7,10 @@
     "build": "vite build"
   },
   "dependencies": {
-    "@mui/material": "^6.4.4",
+    "@mui/material": "^6.4.5",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "react-router-dom": "^7.1.5",
+    "react-router-dom": "^7.2.0",
     "swiper": "^11.2.4"
   },
   "devDependencies": {

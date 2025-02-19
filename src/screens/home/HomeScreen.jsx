@@ -1,8 +1,8 @@
 import style from "./style.module.css";
-import { EffectCards } from "swiper/modules";
 import { Header } from "../../components/Header";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Grid2, Box, Container, Typography } from "@mui/material";
+import { EffectCards, Pagination, Navigation } from "swiper/modules";
 
 const Spacer = () => <Box py={5}></Box>;
 
@@ -39,11 +39,15 @@ export default function HomeScreen() {
               </Box>
             </Grid2>
             <Grid2 size={{ md: 6 }}>
-              <img
-                style={{ aspectRatio: 1 }}
-                src="/hero_video_bg.png"
-                alt="Image"
-              />
+              <div className={style.hero_video}>
+                <video loop autoPlay playsInline muted={true}>
+                  <source
+                    src="https://scoobies-backend.s3.ap-south-1.amazonaws.com/podcast"
+                    type="video/mp4"
+                  />
+                  Your browser does not support the video tag.
+                </video>
+              </div>
             </Grid2>
           </Grid2>
           <Spacer />
@@ -70,7 +74,7 @@ export default function HomeScreen() {
       <br />
       <img src="/clients.png" alt="Image" />
       <Spacer />
-      <img src="/sec_two_bg.png" alt="Image" />
+      <img src="/numbers.png" alt="Image" />
       <Spacer />
       <Container>
         <Typography
@@ -119,40 +123,48 @@ export default function HomeScreen() {
               modules={[EffectCards]}
             >
               <SwiperSlide>
-                <video controls>
-                  <source
-                    src="https://scoobies-backend.s3.ap-south-1.amazonaws.com/meghna_qa_final.mp4"
-                    type="video/mp4"
-                  />
-                  Your browser does not support the video tag.
-                </video>
+                <div className={style.dev_video}>
+                  <video controls>
+                    <source
+                      src="https://scoobies-backend.s3.ap-south-1.amazonaws.com/meghna_qa_final.mp4"
+                      type="video/mp4"
+                    />
+                    Your browser does not support the video tag.
+                  </video>
+                </div>
               </SwiperSlide>
               <SwiperSlide>
-                <video controls>
-                  <source
-                    src="https://scoobies-backend.s3.ap-south-1.amazonaws.com/manas_java_final.mp4"
-                    type="video/mp4"
-                  />
-                  Your browser does not support the video tag.
-                </video>
+                <div className={style.dev_video}>
+                  <video controls>
+                    <source
+                      src="https://scoobies-backend.s3.ap-south-1.amazonaws.com/manas_java_final.mp4"
+                      type="video/mp4"
+                    />
+                    Your browser does not support the video tag.
+                  </video>
+                </div>
               </SwiperSlide>
               <SwiperSlide>
-                <video controls>
-                  <source
-                    src="https://scoobies-backend.s3.ap-south-1.amazonaws.com/meghna_qa_final.mp4"
-                    type="video/mp4"
-                  />
-                  Your browser does not support the video tag.
-                </video>
+                <div className={style.dev_video}>
+                  <video controls>
+                    <source
+                      src="https://scoobies-backend.s3.ap-south-1.amazonaws.com/meghna_qa_final.mp4"
+                      type="video/mp4"
+                    />
+                    Your browser does not support the video tag.
+                  </video>
+                </div>
               </SwiperSlide>
               <SwiperSlide>
-                <video controls>
-                  <source
-                    src="https://scoobies-backend.s3.ap-south-1.amazonaws.com/manas_java_final.mp4"
-                    type="video/mp4"
-                  />
-                  Your browser does not support the video tag.
-                </video>
+                <div className={style.dev_video}>
+                  <video controls>
+                    <source
+                      src="https://scoobies-backend.s3.ap-south-1.amazonaws.com/manas_java_final.mp4"
+                      type="video/mp4"
+                    />
+                    Your browser does not support the video tag.
+                  </video>
+                </div>
               </SwiperSlide>
             </Swiper>
           </Grid2>
@@ -193,7 +205,7 @@ export default function HomeScreen() {
         </Grid2>
       </Container>
       <Spacer />
-      <img src="/cta_bg.png" alt="Image" style={{ width: "90vw" }} />
+      <img src="/cta_final.png" alt="Image" style={{ width: "90vw" }} />
       <Spacer />
       <Container>
         <Typography
@@ -228,7 +240,7 @@ export default function HomeScreen() {
         <img src="/hiring_process.png" alt="Image" />
       </Container>
       <Spacer />
-      <img src="/achievement_bg.png" alt="Image" />
+      <img src="/achievements.png" alt="Image" />
       <Spacer />
       <Container>
         <Typography
@@ -243,18 +255,104 @@ export default function HomeScreen() {
         <Typography textAlign="center" variant="h3" fontWeight="bold">
           Our recently designed build and <br /> launched products
         </Typography>
+        <Spacer />
         <Grid2 container spacing={5}>
           <Grid2 size={{ md: 3 }}>
             <div className={style.recent_projects}>
-              <Typography>Key Features</Typography>
+              <Typography
+                variant="h4"
+                color="#cf2d31"
+                fontWeight="bold"
+                textAlign="center"
+              >
+                Key <br /> Features
+              </Typography>
             </div>
           </Grid2>
-          <Grid2 size={{ md: 3 }}></Grid2>
-          <Grid2 size={{ md: 3 }}></Grid2>
-          <Grid2 size={{ md: 3 }}></Grid2>
+          <Grid2 size={{ md: 3 }}>
+            <div className={style.recent_projects}>
+              <div>
+                <Typography
+                  variant="h4"
+                  color="#cf2d31"
+                  fontWeight="bold"
+                  textAlign="center"
+                >
+                  01
+                </Typography>
+                <br />
+                <Typography color="grey" textAlign="center">
+                  Lorem ipsum dolor sit amet consectetur and adipisicing elit.
+                  Beatae, under here?
+                </Typography>
+              </div>
+            </div>
+          </Grid2>
+          <Grid2 size={{ md: 3 }}>
+            <div className={style.recent_projects}>
+              <div>
+                <Typography
+                  variant="h4"
+                  color="#cf2d31"
+                  fontWeight="bold"
+                  textAlign="center"
+                >
+                  02
+                </Typography>
+                <br />
+                <Typography color="grey" textAlign="center">
+                  Lorem ipsum dolor sit amet consectetur and adipisicing elit.
+                  Beatae, under here?
+                </Typography>
+              </div>
+            </div>
+          </Grid2>
+          <Grid2 size={{ md: 3 }}>
+            <div className={style.recent_projects}>
+              <div>
+                <Typography
+                  variant="h4"
+                  color="#cf2d31"
+                  fontWeight="bold"
+                  textAlign="center"
+                >
+                  03
+                </Typography>
+                <br />
+                <Typography color="grey" textAlign="center">
+                  Lorem ipsum dolor sit amet consectetur and adipisicing elit.
+                  Beatae, under here?
+                </Typography>
+              </div>
+            </div>
+          </Grid2>
         </Grid2>
+        <Spacer />
+        <Swiper
+          loop={true}
+          slidesPerView={1}
+          spaceBetween={50}
+          navigation={true}
+          className="mySwiper"
+          pagination={{ clickable: true }}
+          modules={[Pagination, Navigation]}
+        >
+          <SwiperSlide>Slide 1</SwiperSlide>
+          <SwiperSlide>Slide 2</SwiperSlide>
+          <SwiperSlide>Slide 3</SwiperSlide>
+          <SwiperSlide>Slide 4</SwiperSlide>
+          <SwiperSlide>Slide 5</SwiperSlide>
+          <SwiperSlide>Slide 6</SwiperSlide>
+          <SwiperSlide>Slide 7</SwiperSlide>
+          <SwiperSlide>Slide 8</SwiperSlide>
+          <SwiperSlide>Slide 9</SwiperSlide>
+          <SwiperSlide>Slide 10</SwiperSlide>
+        </Swiper>
       </Container>
       <Spacer />
+      <img src="/footer_bg.png" alt="Image" />
+      <Box m={1}></Box>
+      <img src="/office_location.png" alt="Image" />
     </>
   );
 }
