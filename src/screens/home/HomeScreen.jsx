@@ -3,13 +3,14 @@ import style from "./style.module.css";
 import { Header } from "../../components/Header";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { TabComponent } from "../../components/TabComponent";
-import { Box, Grid2, Container, Typography } from "@mui/material";
+import { Box, Grid2, Container, Typography, TextField } from "@mui/material";
 import { EffectCards, Pagination, Navigation } from "swiper/modules";
 
 const Spacer = () => <Box py={5}></Box>;
 
 export default function HomeScreen() {
   const [isMuted, setIsMuted] = useState(true);
+  const [name, setName] = useState("");
 
   return (
     <>
@@ -392,7 +393,54 @@ export default function HomeScreen() {
         </Swiper>
       </Container>
       <Spacer />
-      <img src="/footer_bg.png" alt="Image" />
+      <section className={style.footer_sec}>
+        <Grid2 container spacing={10}>
+          <Grid2 size={{ md: 6 }}></Grid2>
+          <Grid2 size={{ md: 6 }}>
+            <TextField
+              value={name}
+              label="Name"
+              color="error"
+              variant="standard"
+              placeholder="Enter Your Name"
+              onChange={(e) => setName(e.target.value)}
+              fullWidth
+              required
+            />
+            <TextField
+              value={name}
+              label="Email"
+              color="error"
+              variant="standard"
+              placeholder="Enter Your Email"
+              onChange={(e) => setName(e.target.value)}
+              fullWidth
+              required
+            />
+            <TextField
+              value={name}
+              label="Phone"
+              color="error"
+              variant="standard"
+              placeholder="Enter Your Phone"
+              onChange={(e) => setName(e.target.value)}
+              fullWidth
+              required
+            />
+            <TextField
+              value={name}
+              color="error"
+              variant="standard"
+              label="Project Brief"
+              placeholder="Enter Your Project Details"
+              onChange={(e) => setName(e.target.value)}
+              fullWidth
+              multiline
+              required
+            />
+          </Grid2>
+        </Grid2>
+      </section>
       <Box m={1}></Box>
       <img src="/office_location.png" alt="Image" />
     </>

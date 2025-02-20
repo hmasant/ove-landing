@@ -56,3 +56,9 @@
   border-radius: 15px;
   background-color: rgba(0, 0, 0, 0.85);
 }
+
+.footer_sec {
+  aspect-ratio: 16/9;
+  background-size: cover;
+  background-image: url("/footer_bg.png");
+}
