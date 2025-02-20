@@ -2,13 +2,13 @@ import { useState } from "react";
 import style from "./style.module.css";
 import { Header } from "../../components/Header";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { TabComponent } from "../../components/TabComponent";
 import { Box, Grid2, Container, Typography } from "@mui/material";
 import { EffectCards, Pagination, Navigation } from "swiper/modules";
 
 const Spacer = () => <Box py={5}></Box>;
 
 export default function HomeScreen() {
-  const [tabValue, setTabValue] = useState(3);
   const [isMuted, setIsMuted] = useState(true);
 
   return (
@@ -53,9 +53,9 @@ export default function HomeScreen() {
                 </video>
                 <button onClick={() => setIsMuted(!isMuted)}>
                   {isMuted ? (
-                    <i class="fa-solid fa-volume-xmark"></i>
+                    <i className="fa-solid fa-volume-xmark"></i>
                   ) : (
-                    <i class="fa-solid fa-volume-high"></i>
+                    <i className="fa-solid fa-volume-high"></i>
                   )}
                 </button>
               </div>
@@ -102,18 +102,50 @@ export default function HomeScreen() {
         <Spacer />
         <Grid2 container spacing={2}>
           <Grid2 size={{ md: 3 }}>
-            <div className={style.testimonial_video}></div>
+            <div className={style.testimonial_video}>
+              <video controls>
+                <source
+                  src="https://scoobies-backend.s3.ap-south-1.amazonaws.com/6.mp4"
+                  type="video/mp4"
+                />
+                Your browser does not support the video tag.
+              </video>
+            </div>
           </Grid2>
           <Grid2 size={{ md: 3 }}>
             <Spacer />
-            <div className={style.testimonial_video}></div>
+            <div className={style.testimonial_video}>
+              <video controls>
+                <source
+                  src="https://scoobies-backend.s3.ap-south-1.amazonaws.com/7.mp4"
+                  type="video/mp4"
+                />
+                Your browser does not support the video tag.
+              </video>
+            </div>
           </Grid2>
           <Grid2 size={{ md: 3 }}>
-            <div className={style.testimonial_video}></div>
+            <div className={style.testimonial_video}>
+              <video controls>
+                <source
+                  src="https://scoobies-backend.s3.ap-south-1.amazonaws.com/8.mp4"
+                  type="video/mp4"
+                />
+                Your browser does not support the video tag.
+              </video>
+            </div>
           </Grid2>
           <Grid2 size={{ md: 3 }}>
             <Spacer />
-            <div className={style.testimonial_video}></div>
+            <div className={style.testimonial_video}>
+              <video controls>
+                <source
+                  src="https://scoobies-backend.s3.ap-south-1.amazonaws.com/9.mp4"
+                  type="video/mp4"
+                />
+                Your browser does not support the video tag.
+              </video>
+            </div>
           </Grid2>
         </Grid2>
       </Container>
@@ -121,7 +153,7 @@ export default function HomeScreen() {
       <Spacer />
       <img src="/heading.png" alt="Image" style={{ width: "60vw" }} />
       <Spacer />
-      <img src="/tab_bg.png" alt="Image" />
+      <TabComponent />
       <Spacer />
       <Container>
         <Grid2 container spacing={20}>

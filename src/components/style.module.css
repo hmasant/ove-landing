@@ -1,0 +1,12 @@
+.tab_sec {
+  background-size: cover;
+  background-image: url("/tab_bg.png");
+}
+
+.tab_grid {
+  gap: 0.5rem;
+  display: grid;
+  margin: 0 1rem;
+  cursor: pointer;
+  grid-template-columns: repeat(9, 1fr);
+}
