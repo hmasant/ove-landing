@@ -91,10 +91,12 @@ export const TabComponent = () => {
               </Typography>
             </Button>
           </Grid2>
-          <Grid2 size={{ xs: 6 }}></Grid2>
+          <Grid2 size={{ xs: 6 }}>
+            <img src="/tab_graphic.png" alt="Image" />
+          </Grid2>
         </Grid2>
       </Container>
-      <Box py={10}></Box>
+      <Box py={5}></Box>
     </section>
   );
 };

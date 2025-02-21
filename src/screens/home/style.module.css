@@ -58,7 +58,26 @@
 }
 
 .footer_sec {
+  padding: 2rem 4rem;
   aspect-ratio: 16/9;
   background-size: cover;
   background-image: url("/footer_bg.png");
+}
+
+@media only screen and (max-width: 500px) {
+  .hero_sec h1 {
+    font-size: 4rem;
+  }
+
+  .hero_video {
+    padding: 4rem;
+  }
+
+  .dev_grid {
+    width: 70vw;
+  }
+
+  .footer_sec {
+    background-image: url("/footer_bg_mobile.png");
+  }
 }

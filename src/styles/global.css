@@ -8,6 +8,7 @@
 
 body {
   overflow-x: hidden;
+  box-sizing: border-box;
 }
 
 img {
@@ -41,4 +42,10 @@ video {
   width: 100%;
   object-fit: contain;
   border-radius: inherit;
+}
+
+@media only screen and (max-width: 500px) {
+  menu a {
+    display: none;
+  }
 }

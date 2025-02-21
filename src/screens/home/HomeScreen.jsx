@@ -3,8 +3,8 @@ import style from "./style.module.css";
 import { Header } from "../../components/Header";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { TabComponent } from "../../components/TabComponent";
-import { Box, Grid2, Container, Typography, TextField } from "@mui/material";
 import { EffectCards, Pagination, Navigation } from "swiper/modules";
+import { Box, Grid2, Container, Typography, TextField } from "@mui/material";
 
 const Spacer = () => <Box py={5}></Box>;
 
@@ -102,7 +102,7 @@ export default function HomeScreen() {
         </Typography>
         <Spacer />
         <Grid2 container spacing={2}>
-          <Grid2 size={{ md: 3 }}>
+          <Grid2 size={{ md: 3, xs: 6 }}>
             <div className={style.testimonial_video}>
               <video controls>
                 <source
@@ -113,7 +113,7 @@ export default function HomeScreen() {
               </video>
             </div>
           </Grid2>
-          <Grid2 size={{ md: 3 }}>
+          <Grid2 size={{ md: 3, xs: 6 }}>
             <Spacer />
             <div className={style.testimonial_video}>
               <video controls>
@@ -125,7 +125,7 @@ export default function HomeScreen() {
               </video>
             </div>
           </Grid2>
-          <Grid2 size={{ md: 3 }}>
+          <Grid2 size={{ md: 3, xs: 6 }}>
             <div className={style.testimonial_video}>
               <video controls>
                 <source
@@ -136,7 +136,7 @@ export default function HomeScreen() {
               </video>
             </div>
           </Grid2>
-          <Grid2 size={{ md: 3 }}>
+          <Grid2 size={{ md: 3, xs: 6 }}>
             <Spacer />
             <div className={style.testimonial_video}>
               <video controls>
@@ -151,7 +151,6 @@ export default function HomeScreen() {
         </Grid2>
       </Container>
       <Spacer />
-      <Spacer />
       <img src="/heading.png" alt="Image" style={{ width: "60vw" }} />
       <Spacer />
       <TabComponent />
@@ -159,57 +158,59 @@ export default function HomeScreen() {
       <Container>
         <Grid2 container spacing={20}>
           <Grid2 size={{ md: 4 }}>
-            <Swiper
-              effect={"cards"}
-              grabCursor={true}
-              className="mySwiper"
-              modules={[EffectCards]}
-            >
-              <SwiperSlide>
-                <div className={style.dev_video}>
-                  <video controls>
-                    <source
-                      src="https://scoobies-backend.s3.ap-south-1.amazonaws.com/meghna_qa_final.mp4"
-                      type="video/mp4"
-                    />
-                    Your browser does not support the video tag.
-                  </video>
-                </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div className={style.dev_video}>
-                  <video controls>
-                    <source
-                      src="https://scoobies-backend.s3.ap-south-1.amazonaws.com/manas_java_final.mp4"
-                      type="video/mp4"
-                    />
-                    Your browser does not support the video tag.
-                  </video>
-                </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div className={style.dev_video}>
-                  <video controls>
-                    <source
-                      src="https://scoobies-backend.s3.ap-south-1.amazonaws.com/meghna_qa_final.mp4"
-                      type="video/mp4"
-                    />
-                    Your browser does not support the video tag.
-                  </video>
-                </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div className={style.dev_video}>
-                  <video controls>
-                    <source
-                      src="https://scoobies-backend.s3.ap-south-1.amazonaws.com/manas_java_final.mp4"
-                      type="video/mp4"
-                    />
-                    Your browser does not support the video tag.
-                  </video>
-                </div>
-              </SwiperSlide>
-            </Swiper>
+            <section className={style.dev_grid}>
+              <Swiper
+                effect={"cards"}
+                grabCursor={true}
+                className="mySwiper"
+                modules={[EffectCards]}
+              >
+                <SwiperSlide>
+                  <div className={style.dev_video}>
+                    <video controls>
+                      <source
+                        src="https://scoobies-backend.s3.ap-south-1.amazonaws.com/meghna_qa_final.mp4"
+                        type="video/mp4"
+                      />
+                      Your browser does not support the video tag.
+                    </video>
+                  </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <div className={style.dev_video}>
+                    <video controls>
+                      <source
+                        src="https://scoobies-backend.s3.ap-south-1.amazonaws.com/manas_java_final.mp4"
+                        type="video/mp4"
+                      />
+                      Your browser does not support the video tag.
+                    </video>
+                  </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <div className={style.dev_video}>
+                    <video controls>
+                      <source
+                        src="https://scoobies-backend.s3.ap-south-1.amazonaws.com/meghna_qa_final.mp4"
+                        type="video/mp4"
+                      />
+                      Your browser does not support the video tag.
+                    </video>
+                  </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <div className={style.dev_video}>
+                    <video controls>
+                      <source
+                        src="https://scoobies-backend.s3.ap-south-1.amazonaws.com/manas_java_final.mp4"
+                        type="video/mp4"
+                      />
+                      Your browser does not support the video tag.
+                    </video>
+                  </div>
+                </SwiperSlide>
+              </Swiper>
+            </section>
           </Grid2>
           <Grid2 size={{ md: 8 }}>
             <Typography variant="h5" color="#CF2D31" fontWeight="bold">
@@ -217,7 +218,7 @@ export default function HomeScreen() {
             </Typography>
             <br />
             <Typography variant="h3" fontWeight="bold">
-              Hire your next Developer
+              Hire your next developer
             </Typography>
             <br />
             <Typography color="grey">
@@ -397,6 +398,16 @@ export default function HomeScreen() {
         <Grid2 container spacing={10}>
           <Grid2 size={{ md: 6 }}></Grid2>
           <Grid2 size={{ md: 6 }}>
+            <Spacer />
+            <Typography
+              variant="h3"
+              color="white"
+              fontWeight="bold"
+              textAlign="center"
+            >
+              Talk to our experts
+            </Typography>
+            <Spacer />
             <TextField
               value={name}
               label="Name"
@@ -404,9 +415,21 @@ export default function HomeScreen() {
               variant="standard"
               placeholder="Enter Your Name"
               onChange={(e) => setName(e.target.value)}
+              sx={{
+                "& .MuiInputBase-input": { color: "white" },
+                "& .MuiInputLabel-root": { color: "white" },
+                "& .MuiInput-underline:before": {
+                  borderBottomColor: "white",
+                },
+                "& .MuiInput-underline:hover:before": {
+                  borderBottomColor: "white",
+                },
+              }}
               fullWidth
               required
             />
+            <br />
+            <br />
             <TextField
               value={name}
               label="Email"
@@ -414,9 +437,21 @@ export default function HomeScreen() {
               variant="standard"
               placeholder="Enter Your Email"
               onChange={(e) => setName(e.target.value)}
+              sx={{
+                "& .MuiInputBase-input": { color: "white" },
+                "& .MuiInputLabel-root": { color: "white" },
+                "& .MuiInput-underline:before": {
+                  borderBottomColor: "white",
+                },
+                "& .MuiInput-underline:hover:before": {
+                  borderBottomColor: "white",
+                },
+              }}
               fullWidth
               required
             />
+            <br />
+            <br />
             <TextField
               value={name}
               label="Phone"
@@ -424,9 +459,21 @@ export default function HomeScreen() {
               variant="standard"
               placeholder="Enter Your Phone"
               onChange={(e) => setName(e.target.value)}
+              sx={{
+                "& .MuiInputBase-input": { color: "white" },
+                "& .MuiInputLabel-root": { color: "white" },
+                "& .MuiInput-underline:before": {
+                  borderBottomColor: "white",
+                },
+                "& .MuiInput-underline:hover:before": {
+                  borderBottomColor: "white",
+                },
+              }}
               fullWidth
               required
             />
+            <br />
+            <br />
             <TextField
               value={name}
               color="error"
@@ -434,10 +481,32 @@ export default function HomeScreen() {
               label="Project Brief"
               placeholder="Enter Your Project Details"
               onChange={(e) => setName(e.target.value)}
+              sx={{
+                "& .MuiInputBase-input": { color: "white" },
+                "& .MuiInputLabel-root": { color: "white" },
+                "& .MuiInput-underline:before": {
+                  borderBottomColor: "white",
+                },
+                "& .MuiInput-underline:hover:before": {
+                  borderBottomColor: "white",
+                },
+              }}
               fullWidth
               multiline
               required
+              rows={4}
             />
+            <br />
+            <br />
+            <br />
+            <br />
+            <a href="#">
+              <img
+                style={{ width: "16rem", margin: 0 }}
+                src="/black_btn.png"
+                alt="Image"
+              />
+            </a>
           </Grid2>
         </Grid2>
       </section>
