@@ -4,13 +4,28 @@ import { Header } from "../../components/Header";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { TabComponent } from "../../components/TabComponent";
 import { EffectCards, Pagination, Navigation } from "swiper/modules";
+import { addDocument } from "../../../firebase/cloudFirestore/setData";
 import { Box, Grid2, Container, Typography, TextField } from "@mui/material";
 
 const Spacer = () => <Box py={5}></Box>;
 
 export default function HomeScreen() {
   const [isMuted, setIsMuted] = useState(true);
+
   const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+  const [brief, setBrief] = useState("");
+
+  const handleSubmit = async (e) => {
+    e.preventDefault;
+    await addDocument("leads", { name, email, phone, brief });
+
+    setName("");
+    setPhone("");
+    setEmail("");
+    setBrief("");
+  };
 
   return (
     <>
@@ -191,7 +206,7 @@ export default function HomeScreen() {
                   <div className={style.dev_video}>
                     <video controls>
                       <source
-                        src="https://scoobies-backend.s3.ap-south-1.amazonaws.com/meghna_qa_final.mp4"
+                        src="https://scoobies-backend.s3.ap-south-1.amazonaws.com/Prachi_TechBA.mp4"
                         type="video/mp4"
                       />
                       Your browser does not support the video tag.
@@ -202,7 +217,18 @@ export default function HomeScreen() {
                   <div className={style.dev_video}>
                     <video controls>
                       <source
-                        src="https://scoobies-backend.s3.ap-south-1.amazonaws.com/manas_java_final.mp4"
+                        src="https://scoobies-backend.s3.ap-south-1.amazonaws.com/Mehak_Dotnet.mp4"
+                        type="video/mp4"
+                      />
+                      Your browser does not support the video tag.
+                    </video>
+                  </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <div className={style.dev_video}>
+                    <video controls>
+                      <source
+                        src="https://scoobies-backend.s3.ap-south-1.amazonaws.com/Rahul_DigitalMarketing.mp4"
                         type="video/mp4"
                       />
                       Your browser does not support the video tag.
@@ -299,79 +325,6 @@ export default function HomeScreen() {
         <Typography textAlign="center" variant="h3" fontWeight="bold">
           Our recently designed build and <br /> launched products
         </Typography>
-        <Spacer />
-        <Grid2 container spacing={5}>
-          <Grid2 size={{ md: 3 }}>
-            <div className={style.recent_projects}>
-              <Typography
-                variant="h4"
-                color="#cf2d31"
-                fontWeight="bold"
-                textAlign="center"
-              >
-                Key <br /> Features
-              </Typography>
-            </div>
-          </Grid2>
-          <Grid2 size={{ md: 3 }}>
-            <div className={style.recent_projects}>
-              <div>
-                <Typography
-                  variant="h4"
-                  color="#cf2d31"
-                  fontWeight="bold"
-                  textAlign="center"
-                >
-                  01
-                </Typography>
-                <br />
-                <Typography color="grey" textAlign="center">
-                  Lorem ipsum dolor sit amet consectetur and adipisicing elit.
-                  Beatae, under here?
-                </Typography>
-              </div>
-            </div>
-          </Grid2>
-          <Grid2 size={{ md: 3 }}>
-            <div className={style.recent_projects}>
-              <div>
-                <Typography
-                  variant="h4"
-                  color="#cf2d31"
-                  fontWeight="bold"
-                  textAlign="center"
-                >
-                  02
-                </Typography>
-                <br />
-                <Typography color="grey" textAlign="center">
-                  Lorem ipsum dolor sit amet consectetur and adipisicing elit.
-                  Beatae, under here?
-                </Typography>
-              </div>
-            </div>
-          </Grid2>
-          <Grid2 size={{ md: 3 }}>
-            <div className={style.recent_projects}>
-              <div>
-                <Typography
-                  variant="h4"
-                  color="#cf2d31"
-                  fontWeight="bold"
-                  textAlign="center"
-                >
-                  03
-                </Typography>
-                <br />
-                <Typography color="grey" textAlign="center">
-                  Lorem ipsum dolor sit amet consectetur and adipisicing elit.
-                  Beatae, under here?
-                </Typography>
-              </div>
-            </div>
-          </Grid2>
-        </Grid2>
-        <Spacer />
         <Swiper
           loop={true}
           slidesPerView={1}
@@ -381,16 +334,18 @@ export default function HomeScreen() {
           pagination={{ clickable: true }}
           modules={[Pagination, Navigation]}
         >
-          <SwiperSlide>Slide 1</SwiperSlide>
-          <SwiperSlide>Slide 2</SwiperSlide>
-          <SwiperSlide>Slide 3</SwiperSlide>
-          <SwiperSlide>Slide 4</SwiperSlide>
-          <SwiperSlide>Slide 5</SwiperSlide>
-          <SwiperSlide>Slide 6</SwiperSlide>
-          <SwiperSlide>Slide 7</SwiperSlide>
-          <SwiperSlide>Slide 8</SwiperSlide>
-          <SwiperSlide>Slide 9</SwiperSlide>
-          <SwiperSlide>Slide 10</SwiperSlide>
+          <SwiperSlide>
+            <img src="/project_1.png" alt="Project" />
+          </SwiperSlide>
+          <SwiperSlide>
+            <img src="/project_1.png" alt="Project" />
+          </SwiperSlide>
+          <SwiperSlide>
+            <img src="/project_1.png" alt="Project" />
+          </SwiperSlide>
+          <SwiperSlide>
+            <img src="/project_1.png" alt="Project" />
+          </SwiperSlide>
         </Swiper>
       </Container>
       <Spacer />
@@ -431,12 +386,12 @@ export default function HomeScreen() {
             <br />
             <br />
             <TextField
-              value={name}
+              value={email}
               label="Email"
               color="error"
               variant="standard"
               placeholder="Enter Your Email"
-              onChange={(e) => setName(e.target.value)}
+              onChange={(e) => setEmail(e.target.value)}
               sx={{
                 "& .MuiInputBase-input": { color: "white" },
                 "& .MuiInputLabel-root": { color: "white" },
@@ -453,12 +408,12 @@ export default function HomeScreen() {
             <br />
             <br />
             <TextField
-              value={name}
+              value={phone}
               label="Phone"
               color="error"
               variant="standard"
               placeholder="Enter Your Phone"
-              onChange={(e) => setName(e.target.value)}
+              onChange={(e) => setPhone(e.target.value)}
               sx={{
                 "& .MuiInputBase-input": { color: "white" },
                 "& .MuiInputLabel-root": { color: "white" },
@@ -475,12 +430,12 @@ export default function HomeScreen() {
             <br />
             <br />
             <TextField
-              value={name}
+              value={brief}
               color="error"
               variant="standard"
               label="Project Brief"
               placeholder="Enter Your Project Details"
-              onChange={(e) => setName(e.target.value)}
+              onChange={(e) => setBrief(e.target.value)}
               sx={{
                 "& .MuiInputBase-input": { color: "white" },
                 "& .MuiInputLabel-root": { color: "white" },
@@ -500,13 +455,13 @@ export default function HomeScreen() {
             <br />
             <br />
             <br />
-            <a href="#">
+            <button onClick={handleSubmit}>
               <img
                 style={{ width: "16rem", margin: 0 }}
                 src="/black_btn.png"
                 alt="Image"
               />
-            </a>
+            </button>
           </Grid2>
         </Grid2>
       </section>

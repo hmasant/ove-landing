@@ -87,7 +87,7 @@ export const TabComponent = () => {
             <br />
             <Button variant="contained" color="error">
               <Typography variant="h6" fontWeight="bold">
-                Know More &nbsp; <i class="fa-solid fa-angles-right"></i>
+                Know More &nbsp; <i className="fa-solid fa-angles-right"></i>
               </Typography>
             </Button>
           </Grid2>
