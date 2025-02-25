@@ -1,5 +1,6 @@
 import style from "./style.module.css";
 import { useState, useRef } from "react";
+import { Popup } from "../../components/Popup";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { TabComponent } from "../../components/TabComponent";
 import { EffectCards, Pagination, Navigation } from "swiper/modules";
@@ -8,6 +9,7 @@ import {
   Box,
   Grid2,
   Button,
+  Divider,
   Container,
   TextField,
   Typography,
@@ -19,6 +21,7 @@ export default function HomeScreen() {
   const hiringRef = useRef(null);
 
   const [isMuted, setIsMuted] = useState(true);
+  const [popupOpen, setPopupOpen] = useState(false);
 
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -62,7 +65,7 @@ export default function HomeScreen() {
                 &nbsp; &nbsp; &nbsp;
                 <button>Services</button>
                 &nbsp; &nbsp; &nbsp;
-                <button>Testimonials</button>
+                <button>Client Success</button>
                 &nbsp; &nbsp; &nbsp;
                 <Button variant="contained" color="error">
                   <Typography fontWeight="bold">Hire a talent</Typography>
@@ -81,20 +84,21 @@ export default function HomeScreen() {
               justifyContent="center"
             >
               <Box>
-                <Typography fontSize={30} color="#CF2D31">
-                  SAVE UPTO 65% COST ON YOUR <br /> TECH TALENT
+                <Typography fontSize={25} color="#CF2D31" fontWeight="bold">
+                  SAVE UPTO 65% ON YOUR TECH TALENT
                 </Typography>
                 <br />
                 <h1>Hire Top 1% Tech Talent</h1>
                 <br />
                 <br />
-                <a href="#">
+                <br />
+                <button onClick={() => setPopupOpen(true)}>
                   <img
                     style={{ width: "16rem", margin: 0 }}
                     src="/black_btn.png"
                     alt="Image"
                   />
-                </a>
+                </button>
               </Box>
             </Grid2>
             <Grid2 size={{ md: 6 }}>
@@ -262,6 +266,24 @@ export default function HomeScreen() {
         </Grid2>
       </Container>
       <Spacer />
+      <Divider />
+      <Spacer />
+      <Box textAlign="center">
+        <Typography variant="h4" textAlign="center" fontWeight="bold">
+          Want to get started?
+        </Typography>
+        <br />
+        <button onClick={() => setPopupOpen(true)}>
+          <img
+            style={{ width: "20rem" }}
+            src="/consultation_btn.png"
+            alt="Image"
+          />
+        </button>
+      </Box>
+      <Spacer />
+      <Divider />
+      <Spacer />
       <img src="/heading.png" alt="Image" style={{ width: "60vw" }} />
       <Spacer />
       <TabComponent />
@@ -289,9 +311,7 @@ export default function HomeScreen() {
                       <Typography variant="h5" color="white">
                         Meghna
                       </Typography>
-                      <Typography color="white" sx={{ opacity: "0.5" }}>
-                        QA Engineer
-                      </Typography>
+                      <Typography color="white">QA Engineer</Typography>
                     </Box>
                   </div>
                 </SwiperSlide>
@@ -593,7 +613,7 @@ export default function HomeScreen() {
             <br />
             <button onClick={handleSubmit}>
               <img
-                style={{ width: "16rem", margin: 0 }}
+                style={{ width: "16rem" }}
                 src="/black_btn.png"
                 alt="Image"
               />
@@ -603,6 +623,126 @@ export default function HomeScreen() {
       </section>
       <Box m={1}></Box>
       <img src="/office_location.png" alt="Image" />
+      {popupOpen ? (
+        <section className={style.popup_section}>
+          <div className={style.popup}>
+            <button onClick={() => setPopupOpen(false)}>
+              <i class="fa-solid fa-xmark"></i>
+            </button>
+            <Grid2 container spacing={5}>
+              <Grid2 size={{ md: 6 }}>
+                <img
+                  style={{ width: "75px", margin: 0 }}
+                  src="/favicon.png"
+                  alt="OVE Logo"
+                />
+                <br />
+                <br />
+                <Typography variant="h5">
+                  <i
+                    className="fa-solid fa-square-check"
+                    style={{ color: "green" }}
+                  ></i>
+                  &nbsp; 70% saving on labour cost.
+                </Typography>
+                <br />
+                <Typography variant="h5">
+                  <i
+                    className="fa-solid fa-square-check"
+                    style={{ color: "green" }}
+                  ></i>
+                  &nbsp;No recruitment cost.
+                </Typography>
+                <br />
+                <Typography variant="h5">
+                  <i
+                    className="fa-solid fa-square-check"
+                    style={{ color: "green" }}
+                  ></i>
+                  &nbsp;No upfront Capital cost.
+                </Typography>
+                <br />
+                <Typography variant="h5">
+                  <i
+                    className="fa-solid fa-square-check"
+                    style={{ color: "green" }}
+                  ></i>
+                  &nbsp;One invoice. No hidden costs.
+                </Typography>
+                <br />
+                <br />
+                <img style={{ height: "5rem" }} src="/indeed.png" alt="Image" />
+              </Grid2>
+              <Grid2 size={{ md: 6 }}>
+                <Typography variant="h4" fontWeight="bold" textAlign="center">
+                  Talk to our experts
+                </Typography>
+                <br />
+                <br />
+                <TextField
+                  value={name}
+                  label="Name"
+                  color="error"
+                  variant="standard"
+                  placeholder="Enter Your Name"
+                  onChange={(e) => setName(e.target.value)}
+                  fullWidth
+                  required
+                />
+                <br />
+                <br />
+                <TextField
+                  value={email}
+                  label="Email"
+                  color="error"
+                  variant="standard"
+                  placeholder="Enter Your Email"
+                  onChange={(e) => setEmail(e.target.value)}
+                  fullWidth
+                  required
+                />
+                <br />
+                <br />
+                <TextField
+                  value={phone}
+                  label="Phone"
+                  color="error"
+                  variant="standard"
+                  placeholder="Enter Your Phone"
+                  onChange={(e) => setPhone(e.target.value)}
+                  fullWidth
+                  required
+                />
+                <br />
+                <br />
+                <TextField
+                  value={brief}
+                  color="error"
+                  variant="standard"
+                  label="Project Brief"
+                  placeholder="Enter Your Project Details"
+                  onChange={(e) => setBrief(e.target.value)}
+                  fullWidth
+                  multiline
+                  required
+                  rows={4}
+                />
+                <br />
+                <br />
+                <button onClick={handleSubmit}>
+                  <img
+                    style={{ width: "16rem", margin: 0 }}
+                    src="/consultation_btn.png"
+                    alt="Image"
+                  />
+                </button>
+              </Grid2>
+            </Grid2>
+          </div>
+        </section>
+      ) : (
+        <></>
+      )}
     </>
   );
 }

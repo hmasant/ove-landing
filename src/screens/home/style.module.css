@@ -72,6 +72,32 @@
   background-image: url("/footer_bg.png");
 }
 
+.popup_section {
+  top: 0;
+  z-index: 5;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  position: fixed;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.popup {
+  width: 90vw;
+  height: 90vh;
+  padding: 4rem;
+  overflow: hidden;
+  border-radius: 15px;
+  background-color: white;
+}
+
+.popup button {
+  width: 100%;
+  text-align: right;
+}
+
 @media only screen and (max-width: 500px) {
   .hero_sec h1 {
     font-size: 4rem;
