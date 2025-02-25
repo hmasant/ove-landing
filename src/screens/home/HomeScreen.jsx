@@ -1,15 +1,23 @@
-import { useState } from "react";
 import style from "./style.module.css";
-import { Header } from "../../components/Header";
+import { useState, useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { TabComponent } from "../../components/TabComponent";
 import { EffectCards, Pagination, Navigation } from "swiper/modules";
 import { addDocument } from "../../../firebase/cloudFirestore/setData";
-import { Box, Grid2, Container, Typography, TextField } from "@mui/material";
+import {
+  Box,
+  Grid2,
+  Button,
+  Container,
+  TextField,
+  Typography,
+} from "@mui/material";
 
 const Spacer = () => <Box py={5}></Box>;
 
 export default function HomeScreen() {
+  const hiringRef = useRef(null);
+
   const [isMuted, setIsMuted] = useState(true);
 
   const [name, setName] = useState("");
@@ -30,9 +38,41 @@ export default function HomeScreen() {
   return (
     <>
       <section className={style.hero_sec}>
-        <Header />
+        <header>
+          <Container maxWidth="xl">
+            <Box
+              py={2}
+              display="flex"
+              alignItems="center"
+              justifyContent="space-between"
+            >
+              <img
+                style={{ width: "10rem", margin: 0 }}
+                src="/logo.png"
+                alt="OVE Logo"
+              />
+              <menu>
+                <button
+                  onClick={() => {
+                    hiringRef.current.scrollIntoView({ behavior: "smooth" });
+                  }}
+                >
+                  Hiring Process
+                </button>
+                &nbsp; &nbsp; &nbsp;
+                <button>Services</button>
+                &nbsp; &nbsp; &nbsp;
+                <button>Testimonials</button>
+                &nbsp; &nbsp; &nbsp;
+                <Button variant="contained" color="error">
+                  <Typography fontWeight="bold">Hire a talent</Typography>
+                </Button>
+              </menu>
+            </Box>
+          </Container>
+        </header>
         <Spacer />
-        <Container maxWidth="xl">
+        <Container>
           <Grid2 container spacing={5}>
             <Grid2
               size={{ md: 6 }}
@@ -42,11 +82,10 @@ export default function HomeScreen() {
             >
               <Box>
                 <Typography fontSize={30} color="#CF2D31">
-                  YOUR DIGITAL TRANSFORMATION PARTNER
+                  SAVE UPTO 65% COST ON YOUR <br /> TECH TALENT
                 </Typography>
                 <br />
-                <h1>Hire top product and engineering talent</h1>
-                <br />
+                <h1>Hire Top 1% Tech Talent</h1>
                 <br />
                 <br />
                 <a href="#">
@@ -98,9 +137,42 @@ export default function HomeScreen() {
       </Typography>
       <br />
       <br />
-      <img src="/clients.png" alt="Image" />
+      <img
+        style={{ width: "90vw", textAlign: "center" }}
+        src="/clients.png"
+        alt="Image"
+      />
       <Spacer />
-      <img src="/numbers.png" alt="Image" />
+      <section className={style.cta_sec}>
+        <Grid2 container spacing={10}>
+          <Grid2 size={{ md: 6 }}>
+            <Typography variant="h3" color="white" fontWeight={200}>
+              Hear what our numbers say about us
+            </Typography>
+            <br />
+            <br />
+            <br />
+            <Typography color="white" variant="h5" fontWeight={200}>
+              Save upto 50-70% cost compared to in-house hiring. Get matched
+              with elite developers within 48 hours.
+            </Typography>
+            <br />
+            <br />
+            <br />
+            <img src="/stats.png" alt="Image" />
+            <br />
+            <br />
+            <br />
+            <a href="#">
+              <img
+                style={{ width: "16rem", margin: 0 }}
+                src="/white_btn.png"
+                alt="Image"
+              />
+            </a>
+          </Grid2>
+        </Grid2>
+      </section>
       <Spacer />
       <Container>
         <Typography
@@ -116,7 +188,7 @@ export default function HomeScreen() {
           Our success stories that speak <br /> for themselves
         </Typography>
         <Spacer />
-        <Grid2 container spacing={2}>
+        <Grid2 container spacing={3}>
           <Grid2 size={{ md: 3, xs: 6 }}>
             <div className={style.testimonial_video}>
               <video controls>
@@ -126,6 +198,12 @@ export default function HomeScreen() {
                 />
                 Your browser does not support the video tag.
               </video>
+              <br />
+              <br />
+              <Box mx={2}>
+                <Typography variant="h5">Matt Lonergan</Typography>
+                <Typography color="grey">CEO, PMO PRO</Typography>
+              </Box>
             </div>
           </Grid2>
           <Grid2 size={{ md: 3, xs: 6 }}>
@@ -138,6 +216,12 @@ export default function HomeScreen() {
                 />
                 Your browser does not support the video tag.
               </video>
+              <br />
+              <br />
+              <Box mx={2}>
+                <Typography variant="h5">Mark Reisinger</Typography>
+                <Typography color="grey">MD, Web Zulu</Typography>
+              </Box>
             </div>
           </Grid2>
           <Grid2 size={{ md: 3, xs: 6 }}>
@@ -149,6 +233,12 @@ export default function HomeScreen() {
                 />
                 Your browser does not support the video tag.
               </video>
+              <br />
+              <br />
+              <Box mx={2}>
+                <Typography variant="h5">Jenny Junkeer</Typography>
+                <Typography color="grey">CEO, Intent</Typography>
+              </Box>
             </div>
           </Grid2>
           <Grid2 size={{ md: 3, xs: 6 }}>
@@ -161,6 +251,12 @@ export default function HomeScreen() {
                 />
                 Your browser does not support the video tag.
               </video>
+              <br />
+              <br />
+              <Box mx={2}>
+                <Typography variant="h5">Matthew Clews</Typography>
+                <Typography color="grey">MD, Sea Side Media</Typography>
+              </Box>
             </div>
           </Grid2>
         </Grid2>
@@ -189,6 +285,14 @@ export default function HomeScreen() {
                       />
                       Your browser does not support the video tag.
                     </video>
+                    <Box m={2}>
+                      <Typography variant="h5" color="white">
+                        Meghna
+                      </Typography>
+                      <Typography color="white" sx={{ opacity: "0.5" }}>
+                        QA Engineer
+                      </Typography>
+                    </Box>
                   </div>
                 </SwiperSlide>
                 <SwiperSlide>
@@ -200,6 +304,14 @@ export default function HomeScreen() {
                       />
                       Your browser does not support the video tag.
                     </video>
+                    <Box m={2}>
+                      <Typography variant="h5" color="white">
+                        Manas
+                      </Typography>
+                      <Typography color="white" sx={{ opacity: "0.5" }}>
+                        Java Developer
+                      </Typography>
+                    </Box>
                   </div>
                 </SwiperSlide>
                 <SwiperSlide>
@@ -211,6 +323,14 @@ export default function HomeScreen() {
                       />
                       Your browser does not support the video tag.
                     </video>
+                    <Box m={2}>
+                      <Typography variant="h5" color="white">
+                        Prachi
+                      </Typography>
+                      <Typography color="white" sx={{ opacity: "0.5" }}>
+                        Business Analyst
+                      </Typography>
+                    </Box>
                   </div>
                 </SwiperSlide>
                 <SwiperSlide>
@@ -222,6 +342,14 @@ export default function HomeScreen() {
                       />
                       Your browser does not support the video tag.
                     </video>
+                    <Box m={2}>
+                      <Typography variant="h5" color="white">
+                        Mehak
+                      </Typography>
+                      <Typography color="white" sx={{ opacity: "0.5" }}>
+                        Dot Net Developer
+                      </Typography>
+                    </Box>
                   </div>
                 </SwiperSlide>
                 <SwiperSlide>
@@ -233,6 +361,14 @@ export default function HomeScreen() {
                       />
                       Your browser does not support the video tag.
                     </video>
+                    <Box m={2}>
+                      <Typography variant="h5" color="white">
+                        Rahul
+                      </Typography>
+                      <Typography color="white" sx={{ opacity: "0.5" }}>
+                        Digital Marketer
+                      </Typography>
+                    </Box>
                   </div>
                 </SwiperSlide>
               </Swiper>
@@ -248,10 +384,9 @@ export default function HomeScreen() {
             </Typography>
             <br />
             <Typography color="grey">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi,
-              similique. Amet itaque ipsam dolorum facilis ducimus aut, officia
-              officiis expedita, ullam incidunt neque repudiandae molestiae
-              assumenda maxime quae alias nobis?
+              Our talent pool is well-versed in industry-leading technologies,
+              enabling seamless collaboration with you to deliver optimal
+              results.
             </Typography>
             <br />
             <br />
@@ -277,7 +412,7 @@ export default function HomeScreen() {
       <Spacer />
       <img src="/cta_final.png" alt="Image" style={{ width: "90vw" }} />
       <Spacer />
-      <Container>
+      <Container ref={hiringRef}>
         <Typography
           variant="h5"
           color="#CF2D31"
@@ -301,10 +436,8 @@ export default function HomeScreen() {
         <br />
         <br />
         <Typography textAlign="center" color="grey">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores
-          laudantium voluptates aspernatur rerum, quasi ullam dolorem
-          necessitatibus dolor vero repudiandae alias odit facere commodi rem
-          cumque reiciendis corporis totam repellendus.
+          Power your team with top tech talent. Strategic tech talent partner :
+          we recruit, vet, and empower your ideal team.
         </Typography>
         <Spacer />
         <img src="/hiring_process.png" alt="Image" />
@@ -323,7 +456,7 @@ export default function HomeScreen() {
         </Typography>
         <br />
         <Typography textAlign="center" variant="h3" fontWeight="bold">
-          Our recently designed build and <br /> launched products
+          Our recently delivered projects
         </Typography>
         <Swiper
           loop={true}
@@ -338,13 +471,16 @@ export default function HomeScreen() {
             <img src="/project_1.png" alt="Project" />
           </SwiperSlide>
           <SwiperSlide>
-            <img src="/project_1.png" alt="Project" />
+            <img src="/project_2.png" alt="Project" />
           </SwiperSlide>
           <SwiperSlide>
-            <img src="/project_1.png" alt="Project" />
+            <img src="/project_3.png" alt="Project" />
           </SwiperSlide>
           <SwiperSlide>
-            <img src="/project_1.png" alt="Project" />
+            <img src="/project_4.png" alt="Project" />
+          </SwiperSlide>
+          <SwiperSlide>
+            <img src="/project_5.png" alt="Project" />
           </SwiperSlide>
         </Swiper>
       </Container>

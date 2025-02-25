@@ -46,7 +46,7 @@ video {
 }
 
 @media only screen and (max-width: 500px) {
-  menu a {
+  menu button {
     display: none;
   }
 }

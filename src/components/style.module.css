@@ -4,9 +4,10 @@
 }
 
 .tab_grid {
+  width: 90vw;
   gap: 0.5rem;
+  margin: auto;
   display: grid;
-  margin: 0 1rem;
   cursor: pointer;
-  grid-template-columns: repeat(9, 1fr);
+  grid-template-columns: repeat(7, 1fr);
 }

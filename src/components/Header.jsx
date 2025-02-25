@@ -16,11 +16,15 @@ export const Header = () => {
             alt="OVE Logo"
           />
           <menu>
-            <a href="#">Hiring Process</a>
+            <button
+              onClick={() => {
+                window.scrollIntoView("#hiring", { behavior: "smooth" });
+              }}
+            >
+              Hiring Process
+            </button>
             &nbsp; &nbsp; &nbsp;
             <a href="#">Services</a>
-            &nbsp; &nbsp; &nbsp;
-            <a href="#">Pricing</a>
             &nbsp; &nbsp; &nbsp;
             <a href="#">Testimonials</a>
             &nbsp; &nbsp; &nbsp;

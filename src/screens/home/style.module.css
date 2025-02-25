@@ -14,7 +14,7 @@
 }
 
 .hero_video {
-  padding: 6rem;
+  padding: 5rem;
   aspect-ratio: 1;
   color: #cf2d31;
   font-size: 1.5rem;
@@ -26,6 +26,14 @@
 
 .hero_video video {
   border-radius: 15px;
+}
+
+.cta_sec {
+  width: 100vw;
+  padding: 5rem;
+  aspect-ratio: 16/9;
+  background-size: contain;
+  background-image: url("/numbers_bg.png");
 }
 
 .testimonial_video {
