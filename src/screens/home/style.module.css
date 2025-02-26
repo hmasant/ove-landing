@@ -98,12 +98,15 @@
 }
 
 .popup_form {
+  gap: 5rem;
   height: 90vh;
   padding: 2rem;
+  display: grid;
   position: relative;
   aspect-ratio: 16/9;
   border-radius: 10px;
   background-size: contain;
+  grid-template-columns: repeat(2, 1fr);
   background-image: url("/popup_bg.png");
 }
 
@@ -112,6 +115,7 @@
   right: 0;
   padding: 1rem;
   position: absolute;
+  background: transparent;
 }
 
 @media only screen and (max-width: 500px) {
@@ -125,6 +129,15 @@
 
   .dev_grid {
     width: 70vw;
+  }
+
+  .popup_form {
+    width: 95vw;
+    height: 95vh;
+    display: block;
+    aspect-ratio: auto;
+    background-image: none;
+    background-color: white;
   }
 
   .footer_sec {

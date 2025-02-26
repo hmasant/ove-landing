@@ -13,7 +13,7 @@ import {
   Typography,
 } from "@mui/material";
 
-const Spacer = () => <Box py={5}></Box>;
+const Spacer = () => <Box py={4}></Box>;
 
 export default function HomeScreen() {
   const hiringRef = useRef(null);
@@ -135,7 +135,7 @@ export default function HomeScreen() {
         </header>
         <Spacer />
         <Container>
-          <Grid2 container spacing={5}>
+          <Grid2 container spacing={10}>
             <Grid2
               size={{ md: 6 }}
               display="flex"
@@ -245,7 +245,7 @@ export default function HomeScreen() {
         <Grid2 container spacing={3}>
           <Grid2 size={{ md: 3, xs: 6 }}>
             <div className={style.testimonial_video}>
-              <video controls>
+              <video controls poster="/matt.png">
                 <source
                   src="https://scoobies-backend.s3.ap-south-1.amazonaws.com/6.mp4"
                   type="video/mp4"
@@ -359,14 +359,13 @@ export default function HomeScreen() {
         <Box py={5}></Box>
         <Container>
           <Grid2 container spacing={10}>
-            <Grid2 size={{ xs: 6 }}>
+            <Grid2 size={{ md: 6 }}>
               <Typography variant="h3" fontWeight="bold" color="white">
                 {data[tab].heading}
               </Typography>
               <br />
               <br />
               <Typography color="white">{data[tab].content}</Typography>
-              <br />
               <br />
               <br />
               <br />
@@ -381,7 +380,7 @@ export default function HomeScreen() {
                 </Typography>
               </Button>
             </Grid2>
-            <Grid2 size={{ xs: 6 }}>
+            <Grid2 size={{ md: 6 }}>
               <img
                 style={{ borderRadius: 25 }}
                 src={`/graphic_${tab}.png`}
@@ -405,7 +404,7 @@ export default function HomeScreen() {
               >
                 <SwiperSlide>
                   <div className={style.dev_video}>
-                    <video controls>
+                    <video controls poster="/meghna.png">
                       <source
                         src="https://scoobies-backend.s3.ap-south-1.amazonaws.com/meghna_qa_final.mp4"
                         type="video/mp4"
@@ -626,11 +625,7 @@ export default function HomeScreen() {
           3 simple steps
         </Typography>
         <Spacer />
-        <img
-          style={{ height: "100vh" }}
-          src="/hiring_process.png"
-          alt="Image"
-        />
+        <img src="/hiring_process.png" alt="Image" />
       </Container>
       <Spacer />
       <img src="/achievements.png" alt="Image" />
@@ -800,72 +795,75 @@ export default function HomeScreen() {
               onClick={() => setPopupOpen(false)}
               className={style.popup_close_btn}
             >
-              <i class="fa-solid fa-xmark"></i>
+              <i className="fa-solid fa-xmark"></i>
             </button>
-            <Grid2 container spacing={10}>
-              <Grid2 size={{ md: 6 }}></Grid2>
-              <Grid2 size={{ md: 6 }}>
-                <Spacer />
-                <TextField
-                  value={name}
-                  label="Name"
-                  color="error"
-                  variant="standard"
-                  placeholder="Enter Your Name"
-                  onChange={(e) => setName(e.target.value)}
-                  fullWidth
-                  required
+            <div></div>
+            <div>
+              <img
+                style={{ width: "12rem" }}
+                src="/logo_black.png"
+                alt="OVE Logo"
+              />
+              <br />
+              <TextField
+                value={name}
+                label="Name"
+                color="error"
+                variant="standard"
+                placeholder="Enter Your Name"
+                onChange={(e) => setName(e.target.value)}
+                fullWidth
+                required
+              />
+              <br />
+              <br />
+              <TextField
+                value={email}
+                label="Email"
+                color="error"
+                variant="standard"
+                placeholder="Enter Your Email"
+                onChange={(e) => setEmail(e.target.value)}
+                fullWidth
+                required
+              />
+              <br />
+              <br />
+              <TextField
+                value={phone}
+                label="Phone"
+                color="error"
+                variant="standard"
+                placeholder="Enter Your Phone"
+                onChange={(e) => setPhone(e.target.value)}
+                fullWidth
+                required
+              />
+              <br />
+              <br />
+              <TextField
+                value={brief}
+                color="error"
+                variant="standard"
+                label="Project Brief"
+                placeholder="Enter Your Project Details"
+                onChange={(e) => setBrief(e.target.value)}
+                fullWidth
+                multiline
+                required
+                rows={3}
+              />
+              <br />
+              <br />
+              <br />
+              <button onClick={handleSubmit}>
+                <img
+                  style={{ width: "16rem" }}
+                  src="/consultation_btn.png"
+                  alt="Image"
                 />
-                <br />
-                <br />
-                <TextField
-                  value={email}
-                  label="Email"
-                  color="error"
-                  variant="standard"
-                  placeholder="Enter Your Email"
-                  onChange={(e) => setEmail(e.target.value)}
-                  fullWidth
-                  required
-                />
-                <br />
-                <br />
-                <TextField
-                  value={phone}
-                  label="Phone"
-                  color="error"
-                  variant="standard"
-                  placeholder="Enter Your Phone"
-                  onChange={(e) => setPhone(e.target.value)}
-                  fullWidth
-                  required
-                />
-                <br />
-                <br />
-                <TextField
-                  value={brief}
-                  color="error"
-                  variant="standard"
-                  label="Project Brief"
-                  placeholder="Enter Your Project Details"
-                  onChange={(e) => setBrief(e.target.value)}
-                  fullWidth
-                  multiline
-                  required
-                  rows={4}
-                />
-                <br />
-                <br />
-                <br />
-                <button onClick={handleSubmit}>
-                  <img
-                    style={{ width: "20rem" }}
-                    src="/consultation_btn.png"
-                    alt="Image"
-                  />
-                </button>
-              </Grid2>
-            </Grid2>
+              </button>
+            </div>
           </div>
         </section>
       ) : (
