@@ -217,10 +217,10 @@ export default function HomeScreen() {
             <Spacer />
             <img src="/stats.png" alt="Image" />
             <Spacer />
-            <button>
+            <button onClick={() => setPopupOpen(true)}>
               <img
-                style={{ width: "16rem", margin: 0 }}
-                src="/white_btn.png"
+                style={{ width: "20rem", margin: 0 }}
+                src="/numbers_btn.png"
                 alt="Image"
               />
             </button>
@@ -586,18 +586,23 @@ export default function HomeScreen() {
             <br />
             <br />
             <br />
-            <a href="#">
+            <button onClick={() => setPopupOpen(true)}>
               <img
                 style={{ width: "16rem", margin: 0 }}
                 src="/red_btn.png"
                 alt="Button"
               />
-            </a>
+            </button>
           </Grid2>
         </Grid2>
       </Container>
       <Spacer />
-      <img src="/cta_final.png" alt="Image" style={{ width: "90vw" }} />
+      <img
+        alt="Image"
+        src="/cta_final.png"
+        style={{ width: "90vw" }}
+        onClick={() => setPopupOpen(true)}
+      />
       <Spacer />
       <Container ref={hiringRef}>
         <Typography
