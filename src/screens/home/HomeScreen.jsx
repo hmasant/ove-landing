@@ -263,7 +263,7 @@ export default function HomeScreen() {
           <Grid2 size={{ md: 3, xs: 6 }}>
             <Spacer />
             <div className={style.testimonial_video}>
-              <video controls>
+              <video controls poster="/mark.png">
                 <source
                   src="https://scoobies-backend.s3.ap-south-1.amazonaws.com/7.mp4"
                   type="video/mp4"
@@ -280,7 +280,7 @@ export default function HomeScreen() {
           </Grid2>
           <Grid2 size={{ md: 3, xs: 6 }}>
             <div className={style.testimonial_video}>
-              <video controls>
+              <video controls poster="/jenny.png">
                 <source
                   src="https://scoobies-backend.s3.ap-south-1.amazonaws.com/8.mp4"
                   type="video/mp4"
@@ -298,7 +298,7 @@ export default function HomeScreen() {
           <Grid2 size={{ md: 3, xs: 6 }}>
             <Spacer />
             <div className={style.testimonial_video}>
-              <video controls>
+              <video controls poster="/matthew.png">
                 <source
                   src="https://scoobies-backend.s3.ap-south-1.amazonaws.com/9.mp4"
                   type="video/mp4"
