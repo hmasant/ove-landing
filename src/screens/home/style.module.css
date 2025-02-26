@@ -30,9 +30,8 @@
 
 .cta_sec {
   width: 100vw;
-  padding: 5rem;
-  aspect-ratio: 16/9;
-  background-size: contain;
+  padding: 4rem;
+  background-size: cover;
   background-image: url("/numbers_bg.png");
 }
 
@@ -50,6 +49,20 @@
   justify-content: center;
   border: 3px dashed #cf2d31;
   background-color: rgba(207, 45, 49, 0.1);
+}
+
+.tab_sec {
+  background-size: cover;
+  background-image: url("/tab_bg.png");
+}
+
+.tab_grid {
+  width: 90vw;
+  gap: 0.5rem;
+  margin: auto;
+  display: grid;
+  cursor: pointer;
+  grid-template-columns: repeat(7, 1fr);
 }
 
 .dev_video {
@@ -84,18 +97,21 @@
   background-color: rgba(0, 0, 0, 0.5);
 }
 
-.popup {
-  width: 90vw;
+.popup_form {
   height: 90vh;
-  padding: 4rem;
-  overflow: hidden;
-  border-radius: 15px;
-  background-color: white;
+  padding: 2rem;
+  position: relative;
+  aspect-ratio: 16/9;
+  border-radius: 10px;
+  background-size: contain;
+  background-image: url("/popup_bg.png");
 }
 
-.popup button {
-  width: 100%;
-  text-align: right;
+.popup_close_btn {
+  top: 0;
+  right: 0;
+  padding: 1rem;
+  position: absolute;
 }
 
 @media only screen and (max-width: 500px) {

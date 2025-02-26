@@ -1,8 +1,6 @@
 import style from "./style.module.css";
 import { useState, useRef } from "react";
-import { Popup } from "../../components/Popup";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { TabComponent } from "../../components/TabComponent";
 import { EffectCards, Pagination, Navigation } from "swiper/modules";
 import { addDocument } from "../../../firebase/cloudFirestore/setData";
 import {
@@ -19,6 +17,8 @@ const Spacer = () => <Box py={5}></Box>;
 
 export default function HomeScreen() {
   const hiringRef = useRef(null);
+
+  const [tab, setTab] = useState(0);
 
   const [isMuted, setIsMuted] = useState(true);
   const [popupOpen, setPopupOpen] = useState(false);
@@ -37,6 +37,65 @@ export default function HomeScreen() {
     setEmail("");
     setBrief("");
   };
+
+  const data = [
+    {
+      heading: "SaaS & Software Products",
+      content: `We specialize in building scalable and secure SaaS solutions 
+      tailored to your business needs. From MVP development to full-scale platforms,
+      our team ensures seamless cloud integration, multi-tenancy support, and robust
+      security. We help businesses transform ideas into market-ready SaaS products
+      with rapid deployment and continuous enhancements.`,
+    },
+    {
+      heading: "Custom Web App Development",
+      content: `Our team crafts high-performance web applications designed for speed, 
+      security, and scalability. Whether you need a simple business tool or a complex
+      enterprise-grade solution, we leverage modern technologies to deliver intuitive
+      and responsive web applications. Our development process ensures seamless
+      integration with your existing systems.`,
+    },
+    {
+      heading: "eCommerce Development",
+      content: `We develop dynamic e-commerce platforms that enhance user engagement 
+      and drive sales. From custom online stores to marketplace solutions, we offer
+      secure payment gateways, AI-powered recommendations, and omnichannel shopping
+      experiences. Our expertise in Shopify, Magento, and custom-built solutions
+      ensures a seamless e-commerce journey.`,
+    },
+    {
+      heading: "Digital Transformation Solutions",
+      content: `We empower businesses with cutting-edge digital transformation 
+      strategies, enabling them to stay ahead in a competitive landscape. From
+      automating workflows to integrating AI and cloud solutions, we drive
+      efficiency and innovation. Our end-to-end solutions help organizations
+      adapt to evolving digital trends and customer expectations.`,
+    },
+    {
+      heading: "UI/UX Design & Development",
+      content: `We create user-centric designs that enhance digital experiences 
+      and improve engagement. Our UI/UX experts conduct in-depth research to
+      design intuitive interfaces, seamless navigation, and visually appealing
+      layouts. Whether it's a web app, mobile app, or SaaS platform, we focus
+      on aesthetics and functionality.`,
+    },
+    {
+      heading: "Mobile App Development",
+      content: `We build powerful and feature-rich mobile applications for iOS 
+      and Android using the latest technologies. Our expertise spans native and
+      cross-platform development, ensuring performance optimization, security,
+      and a superior user experience. From startups to enterprises, we craft apps
+      that drive engagement and growth.`,
+    },
+    {
+      heading: "API Development & Integration",
+      content: `We offer robust API development and integration services to connect 
+      applications, enhance functionality, and streamline workflows. Whether it's
+      third-party API integration or custom API development, we ensure secure,
+      scalable, and seamless connectivity between systems, improving efficiency
+      and interoperability.`,
+    },
+  ];
 
   return (
     <>
@@ -84,17 +143,13 @@ export default function HomeScreen() {
               justifyContent="center"
             >
               <Box>
-                <Typography fontSize={25} color="#CF2D31" fontWeight="bold">
-                  SAVE UPTO 65% ON YOUR TECH TALENT
-                </Typography>
-                <br />
-                <h1>Hire Top 1% Tech Talent</h1>
+                <img src="/hero_heading.png" alt="Image" />
                 <br />
                 <br />
                 <br />
                 <button onClick={() => setPopupOpen(true)}>
                   <img
-                    style={{ width: "16rem", margin: 0 }}
+                    style={{ width: "22rem", margin: 0 }}
                     src="/black_btn.png"
                     alt="Image"
                   />
@@ -136,7 +191,7 @@ export default function HomeScreen() {
       </section>
       <Spacer />
       <Typography variant="h4" fontWeight={600} textAlign="center">
-        Partnered with Startups and
+        Trusted by Startups and
         <span style={{ color: "#CF2D31" }}> Fortune 500 </span>Companies!
       </Typography>
       <br />
@@ -155,25 +210,20 @@ export default function HomeScreen() {
             </Typography>
             <br />
             <br />
-            <br />
             <Typography color="white" variant="h5" fontWeight={200}>
               Save upto 50-70% cost compared to in-house hiring. Get matched
               with elite developers within 48 hours.
             </Typography>
-            <br />
-            <br />
-            <br />
+            <Spacer />
             <img src="/stats.png" alt="Image" />
-            <br />
-            <br />
-            <br />
-            <a href="#">
+            <Spacer />
+            <button>
               <img
                 style={{ width: "16rem", margin: 0 }}
                 src="/white_btn.png"
                 alt="Image"
               />
-            </a>
+            </button>
           </Grid2>
         </Grid2>
       </section>
@@ -286,7 +336,62 @@ export default function HomeScreen() {
       <Spacer />
       <img src="/heading.png" alt="Image" style={{ width: "60vw" }} />
       <Spacer />
-      <TabComponent />
+      <section className={style.tab_sec}>
+        <div className={style.tab_grid}>
+          {data.map((e, index) =>
+            tab === index ? (
+              <img
+                key={index}
+                alt={e.heading}
+                onClick={() => setTab(index)}
+                src={`/tab_${index}_white.png`}
+              />
+            ) : (
+              <img
+                key={index}
+                alt={e.heading}
+                onClick={() => setTab(index)}
+                src={`/tab_${index}_red.png`}
+              />
+            )
+          )}
+        </div>
+        <Box py={5}></Box>
+        <Container>
+          <Grid2 container spacing={10}>
+            <Grid2 size={{ xs: 6 }}>
+              <Typography variant="h3" fontWeight="bold" color="white">
+                {data[tab].heading}
+              </Typography>
+              <br />
+              <br />
+              <Typography color="white">{data[tab].content}</Typography>
+              <br />
+              <br />
+              <br />
+              <br />
+              <Button
+                color="error"
+                variant="contained"
+                onClick={() => setPopupOpen(true)}
+              >
+                <Typography variant="h6">
+                  Share Your Requirement &nbsp; &nbsp; &nbsp;
+                  <i className="fa-solid fa-angles-right"></i>
+                </Typography>
+              </Button>
+            </Grid2>
+            <Grid2 size={{ xs: 6 }}>
+              <img
+                style={{ borderRadius: 25 }}
+                src={`/graphic_${tab}.png`}
+                alt="Image"
+              />
+            </Grid2>
+          </Grid2>
+        </Container>
+        <Box py={5}></Box>
+      </section>
       <Spacer />
       <Container>
         <Grid2 container spacing={20}>
@@ -307,11 +412,25 @@ export default function HomeScreen() {
                       />
                       Your browser does not support the video tag.
                     </video>
-                    <Box m={2}>
-                      <Typography variant="h5" color="white">
-                        Meghna
-                      </Typography>
-                      <Typography color="white">QA Engineer</Typography>
+                    <Box
+                      m={2}
+                      display="flex"
+                      alignItems="center"
+                      justifyContent="space-between"
+                    >
+                      <Box>
+                        <Typography variant="h5" color="white">
+                          Meghna
+                        </Typography>
+                        <Typography color="white" sx={{ opacity: "0.5" }}>
+                          QA Engineer
+                        </Typography>
+                      </Box>
+                      <img
+                        style={{ width: "2rem", margin: 0 }}
+                        src="/swipe.png"
+                        alt="Gesture"
+                      />
                     </Box>
                   </div>
                 </SwiperSlide>
@@ -324,13 +443,25 @@ export default function HomeScreen() {
                       />
                       Your browser does not support the video tag.
                     </video>
-                    <Box m={2}>
-                      <Typography variant="h5" color="white">
-                        Manas
-                      </Typography>
-                      <Typography color="white" sx={{ opacity: "0.5" }}>
-                        Java Developer
-                      </Typography>
+                    <Box
+                      m={2}
+                      display="flex"
+                      alignItems="center"
+                      justifyContent="space-between"
+                    >
+                      <Box>
+                        <Typography variant="h5" color="white">
+                          Manas
+                        </Typography>
+                        <Typography color="white" sx={{ opacity: "0.5" }}>
+                          Java Developer
+                        </Typography>
+                      </Box>
+                      <img
+                        style={{ width: "2rem", margin: 0 }}
+                        src="/swipe.png"
+                        alt="Gesture"
+                      />
                     </Box>
                   </div>
                 </SwiperSlide>
@@ -343,13 +474,25 @@ export default function HomeScreen() {
                       />
                       Your browser does not support the video tag.
                     </video>
-                    <Box m={2}>
-                      <Typography variant="h5" color="white">
-                        Prachi
-                      </Typography>
-                      <Typography color="white" sx={{ opacity: "0.5" }}>
-                        Business Analyst
-                      </Typography>
+                    <Box
+                      m={2}
+                      display="flex"
+                      alignItems="center"
+                      justifyContent="space-between"
+                    >
+                      <Box>
+                        <Typography variant="h5" color="white">
+                          Prachi
+                        </Typography>
+                        <Typography color="white" sx={{ opacity: "0.5" }}>
+                          Business Analyst
+                        </Typography>
+                      </Box>
+                      <img
+                        style={{ width: "2rem", margin: 0 }}
+                        src="/swipe.png"
+                        alt="Gesture"
+                      />
                     </Box>
                   </div>
                 </SwiperSlide>
@@ -362,13 +505,25 @@ export default function HomeScreen() {
                       />
                       Your browser does not support the video tag.
                     </video>
-                    <Box m={2}>
-                      <Typography variant="h5" color="white">
-                        Mehak
-                      </Typography>
-                      <Typography color="white" sx={{ opacity: "0.5" }}>
-                        Dot Net Developer
-                      </Typography>
+                    <Box
+                      m={2}
+                      display="flex"
+                      alignItems="center"
+                      justifyContent="space-between"
+                    >
+                      <Box>
+                        <Typography variant="h5" color="white">
+                          Mehak
+                        </Typography>
+                        <Typography color="white" sx={{ opacity: "0.5" }}>
+                          Dot Net Developer
+                        </Typography>
+                      </Box>
+                      <img
+                        style={{ width: "2rem", margin: 0 }}
+                        src="/swipe.png"
+                        alt="Gesture"
+                      />
                     </Box>
                   </div>
                 </SwiperSlide>
@@ -381,13 +536,25 @@ export default function HomeScreen() {
                       />
                       Your browser does not support the video tag.
                     </video>
-                    <Box m={2}>
-                      <Typography variant="h5" color="white">
-                        Rahul
-                      </Typography>
-                      <Typography color="white" sx={{ opacity: "0.5" }}>
-                        Digital Marketer
-                      </Typography>
+                    <Box
+                      m={2}
+                      display="flex"
+                      alignItems="center"
+                      justifyContent="space-between"
+                    >
+                      <Box>
+                        <Typography variant="h5" color="white">
+                          Rahul
+                        </Typography>
+                        <Typography color="white" sx={{ opacity: "0.5" }}>
+                          Digital Marketer
+                        </Typography>
+                      </Box>
+                      <img
+                        style={{ width: "2rem", margin: 0 }}
+                        src="/swipe.png"
+                        alt="Gesture"
+                      />
                     </Box>
                   </div>
                 </SwiperSlide>
@@ -453,14 +620,12 @@ export default function HomeScreen() {
         >
           3 simple steps
         </Typography>
-        <br />
-        <br />
-        <Typography textAlign="center" color="grey">
-          Power your team with top tech talent. Strategic tech talent partner :
-          we recruit, vet, and empower your ideal team.
-        </Typography>
         <Spacer />
-        <img src="/hiring_process.png" alt="Image" />
+        <img
+          style={{ height: "100vh" }}
+          src="/hiring_process.png"
+          alt="Image"
+        />
       </Container>
       <Spacer />
       <img src="/achievements.png" alt="Image" />
@@ -613,7 +778,7 @@ export default function HomeScreen() {
             <br />
             <button onClick={handleSubmit}>
               <img
-                style={{ width: "16rem" }}
+                style={{ width: "20rem" }}
                 src="/black_btn.png"
                 alt="Image"
               />
@@ -625,60 +790,17 @@ export default function HomeScreen() {
       <img src="/office_location.png" alt="Image" />
       {popupOpen ? (
         <section className={style.popup_section}>
-          <div className={style.popup}>
-            <button onClick={() => setPopupOpen(false)}>
+          <div className={style.popup_form}>
+            <button
+              onClick={() => setPopupOpen(false)}
+              className={style.popup_close_btn}
+            >
               <i class="fa-solid fa-xmark"></i>
             </button>
-            <Grid2 container spacing={5}>
+            <Grid2 container spacing={10}>
+              <Grid2 size={{ md: 6 }}></Grid2>
               <Grid2 size={{ md: 6 }}>
-                <img
-                  style={{ width: "75px", margin: 0 }}
-                  src="/favicon.png"
-                  alt="OVE Logo"
-                />
-                <br />
-                <br />
-                <Typography variant="h5">
-                  <i
-                    className="fa-solid fa-square-check"
-                    style={{ color: "green" }}
-                  ></i>
-                  &nbsp; 70% saving on labour cost.
-                </Typography>
-                <br />
-                <Typography variant="h5">
-                  <i
-                    className="fa-solid fa-square-check"
-                    style={{ color: "green" }}
-                  ></i>
-                  &nbsp;No recruitment cost.
-                </Typography>
-                <br />
-                <Typography variant="h5">
-                  <i
-                    className="fa-solid fa-square-check"
-                    style={{ color: "green" }}
-                  ></i>
-                  &nbsp;No upfront Capital cost.
-                </Typography>
-                <br />
-                <Typography variant="h5">
-                  <i
-                    className="fa-solid fa-square-check"
-                    style={{ color: "green" }}
-                  ></i>
-                  &nbsp;One invoice. No hidden costs.
-                </Typography>
-                <br />
-                <br />
-                <img style={{ height: "5rem" }} src="/indeed.png" alt="Image" />
-              </Grid2>
-              <Grid2 size={{ md: 6 }}>
-                <Typography variant="h4" fontWeight="bold" textAlign="center">
-                  Talk to our experts
-                </Typography>
-                <br />
-                <br />
+                <Spacer />
                 <TextField
                   value={name}
                   label="Name"
@@ -729,9 +851,10 @@ export default function HomeScreen() {
                 />
                 <br />
                 <br />
+                <br />
                 <button onClick={handleSubmit}>
                   <img
-                    style={{ width: "16rem", margin: 0 }}
+                    style={{ width: "20rem" }}
                     src="/consultation_btn.png"
                     alt="Image"
                   />
