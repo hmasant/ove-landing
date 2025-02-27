@@ -689,14 +689,19 @@ export default function HomeScreen() {
         <div>
           <div>
             <Typography
-              variant="h3"
+              variant="h4"
               color="white"
               fontWeight="bold"
               textAlign="center"
             >
-              Talk to our experts
+              Share Your Requirements
             </Typography>
-            <Spacer />
+            <br />
+            <Typography variant="h5" textAlign="center" color="grey">
+              We'll get back to you shortly!
+            </Typography>
+            <br />
+            <br />
             <TextField
               value={name}
               label="Name"
