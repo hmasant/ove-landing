@@ -1,6 +1,7 @@
 import style from "./style.module.css";
 import { useState, useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { postRequest } from "../../network/request";
 import { EffectCards, Pagination, Navigation } from "swiper/modules";
 import { addDocument } from "../../../firebase/cloudFirestore/setData";
 import {
@@ -29,14 +30,20 @@ export default function HomeScreen() {
   const [phone, setPhone] = useState("");
   const [brief, setBrief] = useState("");
 
+  const cfUrl = "https://tight-pond-b68f.himanshu-masant-6f5.workers.dev/";
+
   const handleSubmit = async (e) => {
     e.preventDefault;
     await addDocument("leads", { name, email, phone, brief });
+
+    await postRequest(cfUrl, { name, email, phone, brief });
 
     setName("");
     setPhone("");
     setEmail("");
     setBrief("");
+
+    setPopupOpen(false);
   };
 
   const data = [
