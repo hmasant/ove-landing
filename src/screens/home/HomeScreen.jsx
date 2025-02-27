@@ -17,6 +17,7 @@ const Spacer = () => <Box py={4}></Box>;
 
 export default function HomeScreen() {
   const hiringRef = useRef(null);
+  const testimonialRef = useRef(null);
 
   const [tab, setTab] = useState(0);
 
@@ -113,6 +114,7 @@ export default function HomeScreen() {
                 src="/logo.png"
                 alt="OVE Logo"
               />
+              &nbsp; &nbsp; &nbsp; &nbsp;
               <menu>
                 <button
                   onClick={() => {
@@ -122,12 +124,24 @@ export default function HomeScreen() {
                   Hiring Process
                 </button>
                 &nbsp; &nbsp; &nbsp;
-                <button>Services</button>
+                <button
+                  onClick={() => {
+                    testimonialRef.current.scrollIntoView({
+                      behavior: "smooth",
+                    });
+                  }}
+                >
+                  Client Success
+                </button>
                 &nbsp; &nbsp; &nbsp;
-                <button>Client Success</button>
+                <button onClick={() => setPopupOpen(true)}>Book a Call</button>
                 &nbsp; &nbsp; &nbsp;
-                <Button variant="contained" color="error">
-                  <Typography fontWeight="bold">Hire a talent</Typography>
+                <Button
+                  onClick={() => setPopupOpen(true)}
+                  variant="contained"
+                  color="error"
+                >
+                  <Typography fontWeight="bold">Contact Us</Typography>
                 </Button>
               </menu>
             </Box>
@@ -149,7 +163,7 @@ export default function HomeScreen() {
                 <br />
                 <button onClick={() => setPopupOpen(true)}>
                   <img
-                    style={{ width: "22rem", margin: 0 }}
+                    className={style.big_btn}
                     src="/black_btn.png"
                     alt="Image"
                   />
@@ -219,7 +233,7 @@ export default function HomeScreen() {
             <Spacer />
             <button onClick={() => setPopupOpen(true)}>
               <img
-                style={{ width: "20rem", margin: 0 }}
+                className={style.big_btn}
                 src="/numbers_btn.png"
                 alt="Image"
               />
@@ -228,7 +242,7 @@ export default function HomeScreen() {
         </Grid2>
       </section>
       <Spacer />
-      <Container>
+      <Container ref={testimonialRef}>
         <Typography
           variant="h5"
           color="#CF2D31"
@@ -325,7 +339,7 @@ export default function HomeScreen() {
         <br />
         <button onClick={() => setPopupOpen(true)}>
           <img
-            style={{ width: "20rem" }}
+            className={style.big_btn}
             src="/consultation_btn.png"
             alt="Image"
           />
@@ -671,10 +685,9 @@ export default function HomeScreen() {
       </Container>
       <Spacer />
       <section className={style.footer_sec}>
-        <Grid2 container spacing={10}>
-          <Grid2 size={{ md: 6 }}></Grid2>
-          <Grid2 size={{ md: 6 }}>
-            <Spacer />
+        <div></div>
+        <div>
+          <div>
             <Typography
               variant="h3"
               color="white"
@@ -775,16 +788,11 @@ export default function HomeScreen() {
             <br />
             <br />
             <br />
-            <br />
             <button onClick={handleSubmit}>
-              <img
-                style={{ width: "20rem" }}
-                src="/black_btn.png"
-                alt="Image"
-              />
+              <img className={style.big_btn} src="/black_btn.png" alt="Image" />
             </button>
-          </Grid2>
-        </Grid2>
+          </div>
+        </div>
       </section>
       <Box m={1}></Box>
       <img src="/office_location.png" alt="Image" />

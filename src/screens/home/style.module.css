@@ -1,16 +1,12 @@
+.big_btn {
+  width: 20rem;
+}
+
 .hero_sec {
-  padding-bottom: 10rem;
+  padding-bottom: 8rem;
   background-size: cover;
   background-position: center;
   background-image: url("/hero_bg.png");
-}
-
-.hero_sec h1 {
-  color: white;
-  font-size: 5rem;
-  font-weight: 900;
-  line-height: 120%;
-  letter-spacing: -5px;
 }
 
 .hero_video {
@@ -79,10 +75,17 @@
 }
 
 .footer_sec {
-  padding: 2rem 4rem;
+  display: grid;
   aspect-ratio: 16/9;
   background-size: cover;
+  grid-template-columns: repeat(2, 1fr);
   background-image: url("/footer_bg.png");
+}
+
+.footer_sec div:nth-child(2) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .popup_section {
@@ -119,8 +122,8 @@
 }
 
 @media only screen and (max-width: 500px) {
-  .hero_sec h1 {
-    font-size: 4rem;
+  .big_btn {
+    width: 16rem;
   }
 
   .hero_video {
@@ -141,6 +144,10 @@
   }
 
   .footer_sec {
+    padding: 2rem;
+    display: block;
+    aspect-ratio: auto;
+    border-radius: 10px;
     background-image: url("/footer_bg_mobile.png");
   }
 }
