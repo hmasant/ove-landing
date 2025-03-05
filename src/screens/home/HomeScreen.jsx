@@ -1,5 +1,6 @@
 import style from "./style.module.css";
 import { useState, useRef } from "react";
+import { useNavigate } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { postRequest } from "../../network/request";
 import { EffectCards, Pagination, Navigation } from "swiper/modules";
@@ -17,6 +18,8 @@ import {
 const Spacer = () => <Box py={4}></Box>;
 
 export default function HomeScreen() {
+  const navigate = useNavigate();
+
   const hiringRef = useRef(null);
   const testimonialRef = useRef(null);
 
@@ -44,6 +47,7 @@ export default function HomeScreen() {
     setBrief("");
 
     setPopupOpen(false);
+    navigate("/thanks");
   };
 
   const data = [
@@ -775,7 +779,6 @@ export default function HomeScreen() {
                   },
                 }}
                 fullWidth
-                required
               />
               <br />
               <br />
@@ -871,7 +874,6 @@ export default function HomeScreen() {
                   placeholder="Enter Your Phone"
                   onChange={(e) => setPhone(e.target.value)}
                   fullWidth
-                  required
                 />
                 <br />
                 <br />

@@ -9,12 +9,14 @@ import "swiper/css/effect-cards";
 import "../styles/global.css";
 
 const HomeScreen = lazy(() => import("../screens/home/HomeScreen"));
+const ThankyouScreen = lazy(() => import("../screens/thankyou/ThankyouScreen"));
 
 export const Router = () => {
   return (
     <Suspense>
       <Routes>
         <Route index element={<HomeScreen />} />
+        <Route path="/thanks" element={<ThankyouScreen />} />
       </Routes>
     </Suspense>
   );
