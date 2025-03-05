@@ -36,7 +36,7 @@ export default function HomeScreen() {
   const cfUrl = "https://tight-pond-b68f.himanshu-masant-6f5.workers.dev/";
 
   const handleSubmit = async (e) => {
-    e.preventDefault;
+    e.preventDefault();
     await addDocument("leads", { name, email, phone, brief });
 
     await postRequest(cfUrl, { name, email, phone, brief });
