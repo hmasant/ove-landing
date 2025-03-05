@@ -709,100 +709,110 @@ export default function HomeScreen() {
             </Typography>
             <br />
             <br />
-            <TextField
-              value={name}
-              label="Name"
-              color="error"
-              variant="standard"
-              placeholder="Enter Your Name"
-              onChange={(e) => setName(e.target.value)}
-              sx={{
-                "& .MuiInputBase-input": { color: "white" },
-                "& .MuiInputLabel-root": { color: "white" },
-                "& .MuiInput-underline:before": {
-                  borderBottomColor: "white",
-                },
-                "& .MuiInput-underline:hover:before": {
-                  borderBottomColor: "white",
-                },
-              }}
-              fullWidth
-              required
-            />
-            <br />
-            <br />
-            <TextField
-              value={email}
-              label="Email"
-              color="error"
-              variant="standard"
-              placeholder="Enter Your Email"
-              onChange={(e) => setEmail(e.target.value)}
-              sx={{
-                "& .MuiInputBase-input": { color: "white" },
-                "& .MuiInputLabel-root": { color: "white" },
-                "& .MuiInput-underline:before": {
-                  borderBottomColor: "white",
-                },
-                "& .MuiInput-underline:hover:before": {
-                  borderBottomColor: "white",
-                },
-              }}
-              fullWidth
-              required
-            />
-            <br />
-            <br />
-            <TextField
-              value={phone}
-              label="Phone"
-              color="error"
-              variant="standard"
-              placeholder="Enter Your Phone"
-              onChange={(e) => setPhone(e.target.value)}
-              sx={{
-                "& .MuiInputBase-input": { color: "white" },
-                "& .MuiInputLabel-root": { color: "white" },
-                "& .MuiInput-underline:before": {
-                  borderBottomColor: "white",
-                },
-                "& .MuiInput-underline:hover:before": {
-                  borderBottomColor: "white",
-                },
-              }}
-              fullWidth
-              required
-            />
-            <br />
-            <br />
-            <TextField
-              value={brief}
-              color="error"
-              variant="standard"
-              label="Project Brief"
-              placeholder="Enter Your Project Details"
-              onChange={(e) => setBrief(e.target.value)}
-              sx={{
-                "& .MuiInputBase-input": { color: "white" },
-                "& .MuiInputLabel-root": { color: "white" },
-                "& .MuiInput-underline:before": {
-                  borderBottomColor: "white",
-                },
-                "& .MuiInput-underline:hover:before": {
-                  borderBottomColor: "white",
-                },
-              }}
-              fullWidth
-              multiline
-              required
-              rows={4}
-            />
-            <br />
-            <br />
-            <br />
-            <button onClick={handleSubmit}>
-              <img className={style.big_btn} src="/black_btn.png" alt="Image" />
-            </button>
+            <form onSubmit={handleSubmit}>
+              <TextField
+                value={name}
+                type="text"
+                label="Name"
+                color="error"
+                variant="standard"
+                placeholder="Enter Your Name"
+                onChange={(e) => setName(e.target.value)}
+                sx={{
+                  "& .MuiInputBase-input": { color: "white" },
+                  "& .MuiInputLabel-root": { color: "white" },
+                  "& .MuiInput-underline:before": {
+                    borderBottomColor: "white",
+                  },
+                  "& .MuiInput-underline:hover:before": {
+                    borderBottomColor: "white",
+                  },
+                }}
+                fullWidth
+                required
+              />
+              <br />
+              <br />
+              <TextField
+                value={email}
+                type="email"
+                label="Email"
+                color="error"
+                variant="standard"
+                placeholder="Enter Your Email"
+                onChange={(e) => setEmail(e.target.value)}
+                sx={{
+                  "& .MuiInputBase-input": { color: "white" },
+                  "& .MuiInputLabel-root": { color: "white" },
+                  "& .MuiInput-underline:before": {
+                    borderBottomColor: "white",
+                  },
+                  "& .MuiInput-underline:hover:before": {
+                    borderBottomColor: "white",
+                  },
+                }}
+                fullWidth
+                required
+              />
+              <br />
+              <br />
+              <TextField
+                value={phone}
+                type="number"
+                label="Phone"
+                color="error"
+                variant="standard"
+                placeholder="Enter Your Phone"
+                onChange={(e) => setPhone(e.target.value)}
+                sx={{
+                  "& .MuiInputBase-input": { color: "white" },
+                  "& .MuiInputLabel-root": { color: "white" },
+                  "& .MuiInput-underline:before": {
+                    borderBottomColor: "white",
+                  },
+                  "& .MuiInput-underline:hover:before": {
+                    borderBottomColor: "white",
+                  },
+                }}
+                fullWidth
+                required
+              />
+              <br />
+              <br />
+              <TextField
+                value={brief}
+                type="text"
+                color="error"
+                variant="standard"
+                label="Project Brief"
+                placeholder="Enter Your Project Details"
+                onChange={(e) => setBrief(e.target.value)}
+                sx={{
+                  "& .MuiInputBase-input": { color: "white" },
+                  "& .MuiInputLabel-root": { color: "white" },
+                  "& .MuiInput-underline:before": {
+                    borderBottomColor: "white",
+                  },
+                  "& .MuiInput-underline:hover:before": {
+                    borderBottomColor: "white",
+                  },
+                }}
+                fullWidth
+                multiline
+                required
+                rows={4}
+              />
+              <br />
+              <br />
+              <br />
+              <button type="submit">
+                <img
+                  className={style.big_btn}
+                  src="/black_btn.png"
+                  alt="Image"
+                />
+              </button>
+            </form>
           </div>
         </div>
       </section>
@@ -825,64 +835,70 @@ export default function HomeScreen() {
                 alt="OVE Logo"
               />
               <br />
-              <TextField
-                value={name}
-                label="Name"
-                color="error"
-                variant="standard"
-                placeholder="Enter Your Name"
-                onChange={(e) => setName(e.target.value)}
-                fullWidth
-                required
-              />
-              <br />
-              <br />
-              <TextField
-                value={email}
-                label="Email"
-                color="error"
-                variant="standard"
-                placeholder="Enter Your Email"
-                onChange={(e) => setEmail(e.target.value)}
-                fullWidth
-                required
-              />
-              <br />
-              <br />
-              <TextField
-                value={phone}
-                label="Phone"
-                color="error"
-                variant="standard"
-                placeholder="Enter Your Phone"
-                onChange={(e) => setPhone(e.target.value)}
-                fullWidth
-                required
-              />
-              <br />
-              <br />
-              <TextField
-                value={brief}
-                color="error"
-                variant="standard"
-                label="Project Brief"
-                placeholder="Enter Your Project Details"
-                onChange={(e) => setBrief(e.target.value)}
-                fullWidth
-                multiline
-                required
-                rows={3}
-              />
-              <br />
-              <br />
-              <br />
-              <button onClick={handleSubmit}>
-                <img
-                  style={{ width: "16rem" }}
-                  src="/consultation_btn.png"
-                  alt="Image"
+              <form onSubmit={handleSubmit}>
+                <TextField
+                  value={name}
+                  type="text"
+                  label="Name"
+                  color="error"
+                  variant="standard"
+                  placeholder="Enter Your Name"
+                  onChange={(e) => setName(e.target.value)}
+                  fullWidth
+                  required
                 />
-              </button>
+                <br />
+                <br />
+                <TextField
+                  value={email}
+                  type="email"
+                  label="Email"
+                  color="error"
+                  variant="standard"
+                  placeholder="Enter Your Email"
+                  onChange={(e) => setEmail(e.target.value)}
+                  fullWidth
+                  required
+                />
+                <br />
+                <br />
+                <TextField
+                  value={phone}
+                  type="number"
+                  label="Phone"
+                  color="error"
+                  variant="standard"
+                  placeholder="Enter Your Phone"
+                  onChange={(e) => setPhone(e.target.value)}
+                  fullWidth
+                  required
+                />
+                <br />
+                <br />
+                <TextField
+                  value={brief}
+                  type="text"
+                  color="error"
+                  variant="standard"
+                  label="Project Brief"
+                  placeholder="Enter Your Project Details"
+                  onChange={(e) => setBrief(e.target.value)}
+                  fullWidth
+                  multiline
+                  required
+                  rows={3}
+                />
+                <br />
+                <br />
+                <br />
+                <button type="submit">
+                  <img
+                    style={{ width: "16rem" }}
+                    src="/consultation_btn.png"
+                    alt="Image"
+                  />
+                </button>
+              </form>
             </div>
           </div>
         </section>
