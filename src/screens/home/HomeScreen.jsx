@@ -270,9 +270,9 @@ export default function HomeScreen() {
         <Grid2 container spacing={3}>
           <Grid2 size={{ md: 3, xs: 6 }}>
             <div className={style.testimonial_video}>
-              <video controls poster="/matt.png">
+              <video controls poster="/jenny.png">
                 <source
-                  src="https://scoobies-backend.s3.ap-south-1.amazonaws.com/6.mp4"
+                  src="https://scoobies-backend.s3.ap-south-1.amazonaws.com/8.mp4"
                   type="video/mp4"
                 />
                 Your browser does not support the video tag.
@@ -280,8 +280,8 @@ export default function HomeScreen() {
               <br />
               <br />
               <Box mx={2}>
-                <Typography variant="h5">Matt Lonergan</Typography>
-                <Typography color="grey">CEO, PMO PRO</Typography>
+                <Typography variant="h5">Jenny Junkeer</Typography>
+                <Typography color="grey">CEO, Intent</Typography>
               </Box>
             </div>
           </Grid2>
@@ -305,9 +305,9 @@ export default function HomeScreen() {
           </Grid2>
           <Grid2 size={{ md: 3, xs: 6 }}>
             <div className={style.testimonial_video}>
-              <video controls poster="/jenny.png">
+              <video controls poster="/matt.png">
                 <source
-                  src="https://scoobies-backend.s3.ap-south-1.amazonaws.com/8.mp4"
+                  src="https://scoobies-backend.s3.ap-south-1.amazonaws.com/6.mp4"
                   type="video/mp4"
                 />
                 Your browser does not support the video tag.
@@ -315,8 +315,8 @@ export default function HomeScreen() {
               <br />
               <br />
               <Box mx={2}>
-                <Typography variant="h5">Jenny Junkeer</Typography>
-                <Typography color="grey">CEO, Intent</Typography>
+                <Typography variant="h5">Matt Lonergan</Typography>
+                <Typography color="grey">CEO, PMO PRO</Typography>
               </Box>
             </div>
           </Grid2>

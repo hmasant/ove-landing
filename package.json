@@ -8,7 +8,7 @@
     "build": "vite build"
   },
   "dependencies": {
-    "@mui/material": "^6.4.6",
+    "@mui/material": "^6.4.7",
     "axios": "^1.8.1",
     "firebase": "^11.4.0",
     "react": "^19.0.0",
