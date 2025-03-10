@@ -9,19 +9,10 @@
   background-image: url("/hero_bg.png");
 }
 
-.hero_video {
-  padding: 5rem;
-  aspect-ratio: 1;
+.mute_btn {
+  font-size: 2rem;
+  margin-top: 1rem;
   color: #cf2d31;
-  font-size: 1.5rem;
-  text-align: right;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-image: url("/hero_video_bg.png");
-}
-
-.hero_video video {
-  border-radius: 15px;
 }
 
 .cta_sec {
@@ -124,10 +115,6 @@
 @media only screen and (max-width: 500px) {
   .big_btn {
     width: 16rem;
-  }
-
-  .hero_video {
-    padding: 4rem;
   }
 
   .dev_grid {

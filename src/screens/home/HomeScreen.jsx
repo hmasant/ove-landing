@@ -182,22 +182,23 @@ export default function HomeScreen() {
               </Box>
             </Grid2>
             <Grid2 size={{ md: 6 }}>
-              <div className={style.hero_video}>
-                <video loop autoPlay playsInline muted={isMuted}>
-                  <source
-                    src="https://scoobies-backend.s3.ap-south-1.amazonaws.com/podcast"
-                    type="video/mp4"
-                  />
-                  Your browser does not support the video tag.
-                </video>
-                <button onClick={() => setIsMuted(!isMuted)}>
-                  {isMuted ? (
-                    <i className="fa-solid fa-volume-xmark"></i>
-                  ) : (
-                    <i className="fa-solid fa-volume-high"></i>
-                  )}
-                </button>
-              </div>
+              <video loop autoPlay playsInline muted={isMuted}>
+                <source
+                  src="https://scoobies-backend.s3.ap-south-1.amazonaws.com/OVE.mp4"
+                  type="video/mp4"
+                />
+                Your browser does not support the video tag.
+              </video>
+              <button
+                className={style.mute_btn}
+                onClick={() => setIsMuted(!isMuted)}
+              >
+                {isMuted ? (
+                  <i className="fa-solid fa-volume-xmark"></i>
+                ) : (
+                  <i className="fa-solid fa-volume-high"></i>
+                )}
+              </button>
             </Grid2>
           </Grid2>
           <Spacer />
