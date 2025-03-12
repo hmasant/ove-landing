@@ -5,12 +5,11 @@
   "scripts": {
     "dev": "vite --open",
     "host": "vite --host",
-    "build": "vite build"
+    "build": "vite build && partytown copylib dist/~partytown"
   },
   "dependencies": {
+    "@builder.io/partytown": "^0.10.3",
     "@mui/material": "^6.4.7",
-    "axios": "^1.8.2",
-    "firebase": "^11.4.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-router-dom": "^7.3.0",

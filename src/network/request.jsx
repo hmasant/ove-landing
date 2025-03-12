@@ -1,9 +1,12 @@
-import axios from "axios";
-
-export const postRequest = async (url, data, headers) => {
+export const postRequest = async (url, data) => {
   try {
-    const res = await axios.post(url, data, { headers });
-    if (res.status >= 200 && res.status < 209) return res.data;
+    const res = await fetch(url, {
+      method: "POST",
+      body: JSON.stringify(data),
+      headers: { "Content-Type": "application/json" },
+    });
+
+    if (res.ok) return await res.json();
     else throw new Error(`Request Failed - ${res.status}`);
   } catch (error) {
     console.error(`Error: ${error}`);

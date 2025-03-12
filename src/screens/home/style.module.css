@@ -5,8 +5,8 @@
 .hero_sec {
   padding-bottom: 8rem;
   background-size: cover;
-  background-position: center;
-  background-image: url("/hero_bg.png");
+  background-position: bottom;
+  background-image: url("/hero_bg.svg");
 }
 
 .mute_btn {

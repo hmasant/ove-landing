@@ -4,7 +4,6 @@ import { useNavigate } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { postRequest } from "../../network/request";
 import { EffectCards, Pagination, Navigation } from "swiper/modules";
-import { addDocument } from "../../../firebase/cloudFirestore/setData";
 import {
   Box,
   Grid2,
@@ -37,7 +36,6 @@ export default function HomeScreen() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    await addDocument("leads", { name, email, phone, brief });
 
     await postRequest(cfUrl, { name, email, phone, brief });
 
@@ -168,14 +166,29 @@ export default function HomeScreen() {
               justifyContent="center"
             >
               <Box>
-                <img src="/hero_heading.png" alt="Image" />
+                <img
+                  src="/rating.svg"
+                  alt="Google Ratings"
+                  style={{ width: "15rem", margin: 0 }}
+                />
                 <br />
+                <Typography variant="h3" color="red" fontWeight="bold">
+                  Build Your Tech Team
+                </Typography>
+                <br />
+                <Typography variant="h4" color="white" fontWeight="bold">
+                  WITH TOP INDIAN DEVELOPERS
+                </Typography>
+                <br />
+                <Typography variant="h5" color="white">
+                  AUD 999 + Salary
+                </Typography>
                 <br />
                 <br />
                 <button onClick={() => setPopupOpen(true)}>
                   <img
                     className={style.big_btn}
-                    src="/black_btn.png"
+                    src="/black_btn.svg"
                     alt="Image"
                   />
                 </button>
@@ -202,8 +215,9 @@ export default function HomeScreen() {
             </Grid2>
           </Grid2>
           <Spacer />
+          <Spacer />
           <Typography
-            variant="h3"
+            variant="h4"
             color="white"
             fontWeight="bold"
             textAlign="center"
@@ -271,7 +285,10 @@ export default function HomeScreen() {
         <Grid2 container spacing={3}>
           <Grid2 size={{ md: 3, xs: 6 }}>
             <div className={style.testimonial_video}>
-              <video controls poster="/jenny.png">
+              <video
+                controls
+                poster="https://scoobies-backend.s3.ap-south-1.amazonaws.com/jenny.png"
+              >
                 <source
                   src="https://scoobies-backend.s3.ap-south-1.amazonaws.com/8.mp4"
                   type="video/mp4"
@@ -289,7 +306,10 @@ export default function HomeScreen() {
           <Grid2 size={{ md: 3, xs: 6 }}>
             <Spacer />
             <div className={style.testimonial_video}>
-              <video controls poster="/mark.png">
+              <video
+                controls
+                poster="https://scoobies-backend.s3.ap-south-1.amazonaws.com/mark.png"
+              >
                 <source
                   src="https://scoobies-backend.s3.ap-south-1.amazonaws.com/7.mp4"
                   type="video/mp4"
@@ -306,7 +326,10 @@ export default function HomeScreen() {
           </Grid2>
           <Grid2 size={{ md: 3, xs: 6 }}>
             <div className={style.testimonial_video}>
-              <video controls poster="/matt.png">
+              <video
+                controls
+                poster="https://scoobies-backend.s3.ap-south-1.amazonaws.com/matt.png"
+              >
                 <source
                   src="https://scoobies-backend.s3.ap-south-1.amazonaws.com/6.mp4"
                   type="video/mp4"
@@ -324,7 +347,10 @@ export default function HomeScreen() {
           <Grid2 size={{ md: 3, xs: 6 }}>
             <Spacer />
             <div className={style.testimonial_video}>
-              <video controls poster="/matthew.png">
+              <video
+                controls
+                poster="https://scoobies-backend.s3.ap-south-1.amazonaws.com/matthew.png"
+              >
                 <source
                   src="https://scoobies-backend.s3.ap-south-1.amazonaws.com/9.mp4"
                   type="video/mp4"
@@ -370,14 +396,14 @@ export default function HomeScreen() {
                 key={index}
                 alt={e.heading}
                 onClick={() => setTab(index)}
-                src={`/tab_${index}_white.png`}
+                src={`/tabs/tab_${index}_white.svg`}
               />
             ) : (
               <img
                 key={index}
                 alt={e.heading}
                 onClick={() => setTab(index)}
-                src={`/tab_${index}_red.png`}
+                src={`/tabs/tab_${index}_red.svg`}
               />
             )
           )}
@@ -430,7 +456,10 @@ export default function HomeScreen() {
               >
                 <SwiperSlide>
                   <div className={style.dev_video}>
-                    <video controls poster="/meghna.png">
+                    <video
+                      controls
+                      poster="https://scoobies-backend.s3.ap-south-1.amazonaws.com/meghna.png"
+                    >
                       <source
                         src="https://scoobies-backend.s3.ap-south-1.amazonaws.com/meghna_qa_final.mp4"
                         type="video/mp4"
@@ -812,7 +841,7 @@ export default function HomeScreen() {
               <button type="submit">
                 <img
                   className={style.big_btn}
-                  src="/black_btn.png"
+                  src="/black_btn.svg"
                   alt="Image"
                 />
               </button>
