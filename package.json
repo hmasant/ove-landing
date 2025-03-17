@@ -4,11 +4,9 @@
   "type": "module",
   "scripts": {
     "dev": "vite --open",
-    "host": "vite --host",
-    "build": "vite build && partytown copylib dist/~partytown"
+    "build": "vite build"
   },
   "dependencies": {
-    "@builder.io/partytown": "^0.10.3",
     "@mui/material": "^6.4.7",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
@@ -25,6 +23,6 @@
     "eslint": "^9.22.0",
     "eslint-plugin-react": "^7.37.4",
     "globals": "^16.0.0",
-    "vite": "^6.2.1"
+    "vite": "^6.2.2"
   }
 }

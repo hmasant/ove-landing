@@ -1,4 +1,4 @@
-import { lazy, Suspense } from "react";
+import { lazy } from "react";
 import { Route, Routes } from "react-router-dom";
 
 import "swiper/css";
@@ -13,11 +13,9 @@ const ThankyouScreen = lazy(() => import("../screens/thankyou/ThankyouScreen"));
 
 export const Router = () => {
   return (
-    <Suspense>
-      <Routes>
-        <Route index element={<HomeScreen />} />
-        <Route path="/thanks" element={<ThankyouScreen />} />
-      </Routes>
-    </Suspense>
+    <Routes>
+      <Route index element={<HomeScreen />} />
+      <Route path="/thanks" element={<ThankyouScreen />} />
+    </Routes>
   );
 };

@@ -120,7 +120,9 @@ export default function HomeScreen() {
             >
               <img
                 style={{ width: "10rem", margin: 0 }}
-                src="/logo.png"
+                fetchPriority="high"
+                loading="eager"
+                src="/logo.svg"
                 alt="OVE Logo"
               />
               &nbsp; &nbsp; &nbsp; &nbsp;
@@ -167,8 +169,10 @@ export default function HomeScreen() {
             >
               <Box>
                 <img
+                  loading="eager"
                   src="/rating.svg"
                   alt="Google Ratings"
+                  fetchPriority="high"
                   style={{ width: "15rem", margin: 0 }}
                 />
                 <br />
@@ -226,7 +230,13 @@ export default function HomeScreen() {
           </Typography>
           <br />
           <br />
-          <img style={{ width: "70vw" }} src="/partnerships.png" alt="Image" />
+          <img
+            style={{ width: "70vw" }}
+            src="/partnerships.svg"
+            fetchPriority="low"
+            loading="lazy"
+            alt="Image"
+          />
         </Container>
       </section>
       <Spacer />
@@ -394,14 +404,18 @@ export default function HomeScreen() {
             tab === index ? (
               <img
                 key={index}
+                loading="lazy"
                 alt={e.heading}
+                fetchPriority="low"
                 onClick={() => setTab(index)}
                 src={`/tabs/tab_${index}_white.svg`}
               />
             ) : (
               <img
                 key={index}
+                loading="lazy"
                 alt={e.heading}
+                fetchPriority="low"
                 onClick={() => setTab(index)}
                 src={`/tabs/tab_${index}_red.svg`}
               />
@@ -683,7 +697,12 @@ export default function HomeScreen() {
         <img src="/hiring_process.png" alt="Image" />
       </Container>
       <Spacer />
-      <img src="/achievements.png" alt="Image" />
+      <img
+        src="/achievements.svg"
+        fetchPriority="low"
+        loading="lazy"
+        alt="Image"
+      />
       <Spacer />
       <Container>
         <Typography
@@ -862,11 +881,7 @@ export default function HomeScreen() {
             </button>
             <div></div>
             <div>
-              <img
-                style={{ width: "12rem" }}
-                src="/logo_black.png"
-                alt="OVE Logo"
-              />
+              <img style={{ width: "12rem" }} src="/logo.svg" alt="OVE Logo" />
               <br />
               <form onSubmit={handleSubmit}>
                 <TextField
