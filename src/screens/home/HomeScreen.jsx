@@ -120,8 +120,6 @@ export default function HomeScreen() {
             >
               <img
                 style={{ width: "10rem", margin: 0 }}
-                fetchPriority="high"
-                loading="eager"
                 src="/logo.svg"
                 alt="OVE Logo"
               />
@@ -169,10 +167,8 @@ export default function HomeScreen() {
             >
               <Box>
                 <img
-                  loading="eager"
                   src="/rating.svg"
                   alt="Google Ratings"
-                  fetchPriority="high"
                   style={{ width: "15rem", margin: 0 }}
                 />
                 <br />
@@ -248,7 +244,9 @@ export default function HomeScreen() {
       <br />
       <img
         style={{ width: "90vw", textAlign: "center" }}
-        src="/clients.png"
+        fetchPriority="low"
+        src="/clients.svg"
+        loading="lazy"
         alt="Image"
       />
       <Spacer />
@@ -265,12 +263,19 @@ export default function HomeScreen() {
               with elite developers within 48 hours.
             </Typography>
             <Spacer />
-            <img src="/stats.png" alt="Image" />
+            <img
+              fetchPriority="low"
+              src="/stats.svg"
+              loading="lazy"
+              alt="Image"
+            />
             <Spacer />
             <button onClick={() => setPopupOpen(true)}>
               <img
                 className={style.big_btn}
-                src="/numbers_btn.png"
+                src="/numbers_btn.svg"
+                fetchPriority="low"
+                loading="lazy"
                 alt="Image"
               />
             </button>
@@ -387,8 +392,10 @@ export default function HomeScreen() {
         <br />
         <button onClick={() => setPopupOpen(true)}>
           <img
+            src="/consultation_btn.svg"
             className={style.big_btn}
-            src="/consultation_btn.png"
+            fetchPriority="low"
+            loading="lazy"
             alt="Image"
           />
         </button>
@@ -396,7 +403,13 @@ export default function HomeScreen() {
       <Spacer />
       <Divider />
       <Spacer />
-      <img src="/heading.png" alt="Image" style={{ width: "60vw" }} />
+      <img
+        alt="Image"
+        loading="lazy"
+        src="/heading.svg"
+        fetchPriority="low"
+        style={{ width: "60vw" }}
+      />
       <Spacer />
       <section className={style.tab_sec}>
         <div className={style.tab_grid}>
@@ -450,6 +463,8 @@ export default function HomeScreen() {
               <img
                 style={{ borderRadius: 25 }}
                 src={`/graphic_${tab}.png`}
+                fetchPriority="low"
+                loading="lazy"
                 alt="Image"
               />
             </Grid2>
@@ -496,7 +511,9 @@ export default function HomeScreen() {
                       </Box>
                       <img
                         style={{ width: "2rem", margin: 0 }}
-                        src="/swipe.png"
+                        fetchPriority="low"
+                        src="/swipe.svg"
+                        loading="lazy"
                         alt="Gesture"
                       />
                     </Box>
@@ -527,7 +544,9 @@ export default function HomeScreen() {
                       </Box>
                       <img
                         style={{ width: "2rem", margin: 0 }}
-                        src="/swipe.png"
+                        fetchPriority="low"
+                        src="/swipe.svg"
+                        loading="lazy"
                         alt="Gesture"
                       />
                     </Box>
@@ -558,7 +577,9 @@ export default function HomeScreen() {
                       </Box>
                       <img
                         style={{ width: "2rem", margin: 0 }}
-                        src="/swipe.png"
+                        fetchPriority="low"
+                        src="/swipe.svg"
+                        loading="lazy"
                         alt="Gesture"
                       />
                     </Box>
@@ -589,7 +610,9 @@ export default function HomeScreen() {
                       </Box>
                       <img
                         style={{ width: "2rem", margin: 0 }}
-                        src="/swipe.png"
+                        fetchPriority="low"
+                        src="/swipe.svg"
+                        loading="lazy"
                         alt="Gesture"
                       />
                     </Box>
@@ -620,7 +643,9 @@ export default function HomeScreen() {
                       </Box>
                       <img
                         style={{ width: "2rem", margin: 0 }}
-                        src="/swipe.png"
+                        fetchPriority="low"
+                        src="/swipe.svg"
+                        loading="lazy"
                         alt="Gesture"
                       />
                     </Box>
@@ -648,7 +673,9 @@ export default function HomeScreen() {
             <br />
             <img
               style={{ width: "60%", margin: 0 }}
-              src="/dev_sec_cards.png"
+              src="/dev_sec_cards.svg"
+              fetchPriority="low"
+              loading="lazy"
               alt="Image"
             />
             <br />
@@ -657,7 +684,9 @@ export default function HomeScreen() {
             <button onClick={() => setPopupOpen(true)}>
               <img
                 style={{ width: "16rem", margin: 0 }}
-                src="/red_btn.png"
+                fetchPriority="low"
+                src="/red_btn.svg"
+                loading="lazy"
                 alt="Button"
               />
             </button>
@@ -667,7 +696,9 @@ export default function HomeScreen() {
       <Spacer />
       <img
         alt="Image"
-        src="/cta_final.png"
+        loading="lazy"
+        src="/big_cta.svg"
+        fetchPriority="low"
         style={{ width: "90vw" }}
         onClick={() => setPopupOpen(true)}
       />
@@ -694,7 +725,12 @@ export default function HomeScreen() {
           3 simple steps
         </Typography>
         <Spacer />
-        <img src="/hiring_process.png" alt="Image" />
+        <img
+          src="/hiring_process.svg"
+          fetchPriority="low"
+          loading="lazy"
+          alt="Image"
+        />
       </Container>
       <Spacer />
       <img
@@ -727,19 +763,44 @@ export default function HomeScreen() {
           modules={[Pagination, Navigation]}
         >
           <SwiperSlide>
-            <img src="/project_1.png" alt="Project" />
+            <img
+              src="/project_1.png"
+              fetchPriority="low"
+              loading="lazy"
+              alt="Project"
+            />
           </SwiperSlide>
           <SwiperSlide>
-            <img src="/project_2.png" alt="Project" />
+            <img
+              src="/project_2.png"
+              fetchPriority="low"
+              loading="lazy"
+              alt="Project"
+            />
           </SwiperSlide>
           <SwiperSlide>
-            <img src="/project_3.png" alt="Project" />
+            <img
+              src="/project_3.png"
+              fetchPriority="low"
+              loading="lazy"
+              alt="Project"
+            />
           </SwiperSlide>
           <SwiperSlide>
-            <img src="/project_4.png" alt="Project" />
+            <img
+              src="/project_4.png"
+              fetchPriority="low"
+              loading="lazy"
+              alt="Project"
+            />
           </SwiperSlide>
           <SwiperSlide>
-            <img src="/project_5.png" alt="Project" />
+            <img
+              fetchPriority="low"
+              loading="lazy"
+              src="/project_5.png"
+              alt="Project"
+            />
           </SwiperSlide>
         </Swiper>
       </Container>
@@ -861,6 +922,8 @@ export default function HomeScreen() {
                 <img
                   className={style.big_btn}
                   src="/black_btn.svg"
+                  fetchPriority="low"
+                  loading="lazy"
                   alt="Image"
                 />
               </button>
@@ -869,7 +932,12 @@ export default function HomeScreen() {
         </div>
       </section>
       <Box m={1}></Box>
-      <img src="/office_location.png" alt="Image" />
+      <img
+        src="/office_location.svg"
+        fetchPriority="low"
+        loading="lazy"
+        alt="Image"
+      />
       {popupOpen ? (
         <section className={style.popup_section}>
           <div className={style.popup_form}>
@@ -881,7 +949,13 @@ export default function HomeScreen() {
             </button>
             <div></div>
             <div>
-              <img style={{ width: "12rem" }} src="/logo.svg" alt="OVE Logo" />
+              <img
+                style={{ width: "12rem" }}
+                fetchPriority="low"
+                src="/logo.svg"
+                loading="lazy"
+                alt="OVE Logo"
+              />
               <br />
               <form onSubmit={handleSubmit}>
                 <TextField
@@ -940,8 +1014,10 @@ export default function HomeScreen() {
                 <br />
                 <button type="submit">
                   <img
+                    src="/consultation_btn.svg"
                     style={{ width: "16rem" }}
-                    src="/consultation_btn.png"
+                    fetchPriority="low"
+                    loading="lazy"
                     alt="Image"
                   />
                 </button>

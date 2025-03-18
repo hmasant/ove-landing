@@ -19,7 +19,7 @@
   width: 100vw;
   padding: 4rem;
   background-size: cover;
-  background-image: url("/numbers_bg.png");
+  background-image: url("/numbers_bg.svg");
 }
 
 .testimonial_video {
@@ -40,7 +40,7 @@
 
 .tab_sec {
   background-size: cover;
-  background-image: url("/tab_bg.png");
+  background-image: url("/tab_bg.svg");
 }
 
 .tab_grid {
@@ -70,7 +70,7 @@
   aspect-ratio: 16/9;
   background-size: cover;
   grid-template-columns: repeat(2, 1fr);
-  background-image: url("/footer_bg.png");
+  background-image: url("/footer_bg.svg");
 }
 
 .footer_sec div:nth-child(2) {
@@ -101,7 +101,7 @@
   border-radius: 10px;
   background-size: contain;
   grid-template-columns: repeat(2, 1fr);
-  background-image: url("/popup_bg.png");
+  background-image: url("/popup_bg.svg");
 }
 
 .popup_close_btn {
@@ -135,6 +135,6 @@
     display: block;
     aspect-ratio: auto;
     border-radius: 10px;
-    background-image: url("/footer_bg_mobile.png");
+    background-color: rgba(0, 0, 0, 0.8);
   }
 }
