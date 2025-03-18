@@ -207,9 +207,19 @@ export default function HomeScreen() {
                 onClick={() => setIsMuted(!isMuted)}
               >
                 {isMuted ? (
-                  <i className="fa-solid fa-volume-xmark"></i>
+                  <img
+                    loading="eager"
+                    src="/mute.svg"
+                    fetchPriority="high"
+                    style={{ width: "2rem" }}
+                  />
                 ) : (
-                  <i className="fa-solid fa-volume-high"></i>
+                  <img
+                    loading="eager"
+                    src="/unmute.svg"
+                    fetchPriority="high"
+                    style={{ width: "2rem" }}
+                  />
                 )}
               </button>
             </Grid2>
@@ -455,7 +465,6 @@ export default function HomeScreen() {
               >
                 <Typography variant="h6">
                   Share Your Requirement &nbsp; &nbsp; &nbsp;
-                  <i className="fa-solid fa-angles-right"></i>
                 </Typography>
               </Button>
             </Grid2>
@@ -945,7 +954,7 @@ export default function HomeScreen() {
               onClick={() => setPopupOpen(false)}
               className={style.popup_close_btn}
             >
-              <i className="fa-solid fa-xmark"></i>
+              X
             </button>
             <div></div>
             <div>
