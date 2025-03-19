@@ -195,7 +195,13 @@ export default function HomeScreen() {
               </Box>
             </Grid2>
             <Grid2 size={{ md: 6 }}>
-              <video loop autoPlay playsInline muted={isMuted}>
+              <video
+                loop
+                autoPlay
+                playsInline
+                muted={isMuted}
+                poster="/thumbnail.svg"
+              >
                 <source
                   src="https://scoobies-backend.s3.ap-south-1.amazonaws.com/OVE.mp4"
                   type="video/mp4"

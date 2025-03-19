@@ -9,6 +9,12 @@ export default defineConfig({
     minify: true,
     cssMinify: true,
     cssCodeSplit: true,
+    terserOptions: {
+      compress: {
+        drop_console: true,
+        drop_debugger: true,
+      },
+    },
     rollupOptions: {
       output: {
         manualChunks: {
