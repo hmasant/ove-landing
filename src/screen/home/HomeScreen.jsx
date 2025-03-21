@@ -4,7 +4,10 @@ import { useState, lazy } from "react";
 const Header = lazy(() => import("../../components/Header"));
 
 export default function HomeScreen() {
-  const [isMuted, setIsMuted] = useState(true);
+  const [videoLoaded, setVideoLoaded] = useState(false);
+  const videoId = "Q1k63XEG9Ac";
+
+  const loadVideo = () => setVideoLoaded(true);
 
   return (
     <>
@@ -39,12 +42,64 @@ export default function HomeScreen() {
               />
             </button>
           </div>
-          <iframe
-            width={480}
-            height={270}
-            rel="noopener"
-            src="https://www.youtube.com/embed/Q1k63XEG9Ac"
-          ></iframe>
+
+          {videoLoaded ? (
+            <iframe
+              width={480}
+              height={270}
+              rel="noopener"
+              src={`https://www.youtube.com/embed/${videoId}?autoplay=1`}
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            ></iframe>
+          ) : (
+            <div
+              onClick={loadVideo}
+              style={{
+                position: "relative",
+                width: "480px",
+                height: "270px",
+                backgroundColor: "#000",
+                cursor: "pointer",
+              }}
+            >
+              <img
+                src={`https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`}
+                alt="Video Thumbnail"
+                style={{
+                  width: "100%",
+                  height: "100%",
+                  objectFit: "cover",
+                  position: "absolute",
+                }}
+              />
+              <div
+                style={{
+                  position: "absolute",
+                  top: "50%",
+                  left: "50%",
+                  transform: "translate(-50%, -50%)",
+                  width: "68px",
+                  height: "48px",
+                  backgroundColor: "rgba(0, 0, 0, 0.7)",
+                  borderRadius: "10px",
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                }}
+              >
+                <div
+                  style={{
+                    width: 0,
+                    height: 0,
+                    borderStyle: "solid",
+                    borderWidth: "12px 0 12px 20px",
+                    borderColor: "transparent transparent transparent #fff",
+                  }}
+                ></div>
+              </div>
+            </div>
+          )}
         </div>
       </section>
     </>
