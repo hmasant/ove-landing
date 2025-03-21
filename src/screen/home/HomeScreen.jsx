@@ -63,7 +63,7 @@ export default function HomeScreen() {
               }}
             >
               <img
-                src="/video_thumbnail.svg"
+                src="/video_thumbnail.webp"
                 alt="Video Thumbnail"
                 style={{
                   width: "100%",
