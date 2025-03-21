@@ -63,28 +63,23 @@ export default function HomeScreen() {
               }}
             >
               <img
-                src="/video_thumbnail.webp"
-                alt="Video Thumbnail"
-                style={{
-                  width: "100%",
-                  height: "100%",
-                  objectFit: "cover",
-                  position: "absolute",
-                }}
+                style={{ width: "100%", height: "100%" }}
+                src="/thumbnail.webp"
+                alt="Video"
               />
               <div
                 style={{
-                  position: "absolute",
                   top: "50%",
                   left: "50%",
-                  transform: "translate(-50%, -50%)",
                   width: "68px",
                   height: "48px",
-                  backgroundColor: "rgba(0, 0, 0, 0.7)",
-                  borderRadius: "10px",
                   display: "flex",
-                  justifyContent: "center",
+                  position: "absolute",
+                  borderRadius: "10px",
                   alignItems: "center",
+                  justifyContent: "center",
+                  transform: "translate(-50%, -50%)",
+                  backgroundColor: "rgba(0, 0, 0, 0.7)",
                 }}
               >
                 <div
