@@ -55,11 +55,10 @@ export default function HomeScreen() {
             <div
               onClick={loadVideo}
               style={{
-                position: "relative",
                 width: "480px",
                 height: "270px",
-                backgroundColor: "#000",
                 cursor: "pointer",
+                position: "relative",
               }}
             >
               <img
