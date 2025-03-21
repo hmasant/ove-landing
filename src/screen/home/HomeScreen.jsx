@@ -17,9 +17,9 @@ export default function HomeScreen() {
             <img
               style={{ height: "1.5rem" }}
               alt="Google Ratings"
-              fetchPriority="high"
+              fetchPriority="low"
               src="/ratings.svg"
-              loading="eager"
+              loading="lazy"
             />
             <br />
             <br />
@@ -35,8 +35,8 @@ export default function HomeScreen() {
               <img
                 style={{ height: "2.5rem" }}
                 src="/white_btn.svg"
-                fetchPriority="high"
-                loading="eager"
+                fetchPriority="low"
+                loading="lazy"
                 alt="Button"
               />
             </button>
@@ -65,8 +65,8 @@ export default function HomeScreen() {
               <img
                 style={{ width: "100%", height: "100%" }}
                 src="/thumbnail.webp"
-                fetchPriority="high"
-                loading="eager"
+                fetchPriority="low"
+                loading="lazy"
                 alt="Video"
               />
               <div
@@ -100,7 +100,6 @@ export default function HomeScreen() {
         <br />
         <br />
         <br />
-        <br />
         <h2 className={style.white_heading}>Our Partnerships</h2>
         <br />
         <br />
@@ -108,9 +107,9 @@ export default function HomeScreen() {
           <img
             style={{ width: "70vw" }}
             src="/partnerships.svg"
-            fetchPriority="high"
+            fetchPriority="low"
             alt="Partnerships"
-            loading="eager"
+            loading="lazy"
           />
         </center>
       </section>
