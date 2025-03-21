@@ -65,6 +65,8 @@ export default function HomeScreen() {
               <img
                 style={{ width: "100%", height: "100%" }}
                 src="/thumbnail.webp"
+                fetchPriority="high"
+                loading="eager"
                 alt="Video"
               />
               <div
@@ -95,6 +97,22 @@ export default function HomeScreen() {
             </div>
           )}
         </div>
+        <br />
+        <br />
+        <br />
+        <br />
+        <h2 className={style.white_heading}>Our Partnerships</h2>
+        <br />
+        <br />
+        <center>
+          <img
+            style={{ width: "70vw" }}
+            src="/partnerships.svg"
+            fetchPriority="high"
+            alt="Partnerships"
+            loading="eager"
+          />
+        </center>
       </section>
     </>
   );

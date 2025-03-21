@@ -27,6 +27,12 @@
   font-weight: lighter;
 }
 
+.hero_sec .white_heading {
+  color: white;
+  font-size: 3rem;
+  text-align: center;
+}
+
 @media only screen and (max-width: 500px) {
   .grid_two {
     display: block;
