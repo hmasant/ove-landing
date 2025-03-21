@@ -1,0 +1,33 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Noto Sans";
+}
+
+button {
+  border: 0;
+  cursor: pointer;
+  text-decoration: none;
+  background-color: inherit;
+}
+
+header {
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+header button {
+  height: 100%;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 1rem 2rem;
+  background-color: red;
+}
+
+video {
+  width: 100%;
+  aspect-ratio: 16/9;
+}
