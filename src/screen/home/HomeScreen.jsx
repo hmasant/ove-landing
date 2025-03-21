@@ -5,7 +5,6 @@ const Header = lazy(() => import("../../components/Header"));
 
 export default function HomeScreen() {
   const [videoLoaded, setVideoLoaded] = useState(false);
-  const videoId = "Q1k63XEG9Ac";
 
   const loadVideo = () => setVideoLoaded(true);
 
@@ -48,7 +47,7 @@ export default function HomeScreen() {
               width={480}
               height={270}
               rel="noopener"
-              src={`https://www.youtube.com/embed/${videoId}?autoplay=1`}
+              src="https://www.youtube.com/embed/Q1k63XEG9Ac"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
             ></iframe>
@@ -64,7 +63,7 @@ export default function HomeScreen() {
               }}
             >
               <img
-                src={`https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`}
+                src="/video_thumbnail.svg"
                 alt="Video Thumbnail"
                 style={{
                   width: "100%",
