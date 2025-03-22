@@ -2,6 +2,7 @@ import style from "./style.module.css";
 import { useState, lazy } from "react";
 
 const Header = lazy(() => import("../../components/Header"));
+const OurStory = lazy(() => import("../../components/home/OurStory"));
 
 export default function HomeScreen() {
   const [videoLoaded, setVideoLoaded] = useState(false);
@@ -12,7 +13,7 @@ export default function HomeScreen() {
     <>
       <Header />
       <section className={style.hero_sec}>
-        <div className={style.grid_two}>
+        <div className="grid_two">
           <div>
             <img
               style={{ height: "1.5rem" }}
@@ -33,7 +34,7 @@ export default function HomeScreen() {
             <br />
             <button>
               <img
-                style={{ height: "2.5rem" }}
+                style={{ height: "3rem" }}
                 src="/white_btn.svg"
                 fetchPriority="low"
                 loading="lazy"
@@ -101,7 +102,7 @@ export default function HomeScreen() {
         <br />
         <br />
         <center>
-          <h2 className={style.white_heading}>Our Partnerships</h2>
+          <h2 className="white_heading">Our Partnerships</h2>
           <br />
           <br />
           <img
@@ -118,7 +119,7 @@ export default function HomeScreen() {
       <br />
       <br />
       <center>
-        <h2 className={style.black_heading}>
+        <h2 className="black_heading">
           Trusted by Startups and
           <span style={{ color: "red" }}> Fortune 500 </span>
           Companies!
@@ -133,6 +134,15 @@ export default function HomeScreen() {
           alt="Clients"
         />
       </center>
+      <br />
+      <br />
+      <br />
+      <br />
+      <OurStory />
+      <br />
+      <br />
+      <br />
+      <br />
     </>
   );
 }

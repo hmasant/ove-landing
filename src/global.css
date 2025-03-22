@@ -31,3 +31,26 @@ video {
   width: 100%;
   aspect-ratio: 16/9;
 }
+
+.white_heading {
+  color: white;
+  font-size: 2.75rem;
+  font-weight: normal;
+}
+
+.black_heading {
+  font-size: 2.75rem;
+  font-weight: normal;
+}
+
+.grid_two {
+  gap: 2rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+@media only screen and (max-width: 500px) {
+  .grid_two {
+    display: block;
+  }
+}
