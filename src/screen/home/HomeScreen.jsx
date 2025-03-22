@@ -60,8 +60,8 @@ export default function HomeScreen() {
               <img
                 style={{ width: "100%", height: "100%" }}
                 src="/thumbnail.webp"
-                fetchPriority="low"
-                loading="lazy"
+                fetchPriority="high"
+                loading="eager"
                 alt="Video"
               />
             </div>
