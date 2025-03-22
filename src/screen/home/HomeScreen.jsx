@@ -45,8 +45,8 @@ export default function HomeScreen() {
 
           {videoLoaded ? (
             <iframe
-              width={480}
-              height={270}
+              width={"100%"}
+              height={"100%"}
               rel="noopener"
               src="https://www.youtube.com/embed/Q1k63XEG9Ac"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -55,12 +55,7 @@ export default function HomeScreen() {
           ) : (
             <div
               onClick={loadVideo}
-              style={{
-                width: "480px",
-                height: "270px",
-                cursor: "pointer",
-                position: "relative",
-              }}
+              style={{ cursor: "pointer", border: "2px solid white" }}
             >
               <img
                 style={{ width: "100%", height: "100%" }}
@@ -69,31 +64,6 @@ export default function HomeScreen() {
                 loading="lazy"
                 alt="Video"
               />
-              <div
-                style={{
-                  top: "50%",
-                  left: "50%",
-                  width: "68px",
-                  height: "48px",
-                  display: "flex",
-                  position: "absolute",
-                  borderRadius: "10px",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  transform: "translate(-50%, -50%)",
-                  backgroundColor: "rgba(0, 0, 0, 0.7)",
-                }}
-              >
-                <div
-                  style={{
-                    width: 0,
-                    height: 0,
-                    borderStyle: "solid",
-                    borderWidth: "12px 0 12px 20px",
-                    borderColor: "transparent transparent transparent #fff",
-                  }}
-                ></div>
-              </div>
             </div>
           )}
         </div>
