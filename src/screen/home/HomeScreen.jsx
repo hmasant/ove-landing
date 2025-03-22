@@ -99,12 +99,13 @@ export default function HomeScreen() {
         <br />
         <br />
         <br />
-        <h2 className={style.white_heading}>Our Partnerships</h2>
-        <br />
         <br />
         <center>
+          <h2 className={style.white_heading}>Our Partnerships</h2>
+          <br />
+          <br />
           <img
-            style={{ width: "70vw" }}
+            style={{ width: "60vw" }}
             src="/partnerships.svg"
             fetchPriority="low"
             alt="Partnerships"
@@ -112,6 +113,26 @@ export default function HomeScreen() {
           />
         </center>
       </section>
+      <br />
+      <br />
+      <br />
+      <br />
+      <center>
+        <h2 className={style.black_heading}>
+          Trusted by Startups and
+          <span style={{ color: "red" }}> Fortune 500 </span>
+          Companies!
+        </h2>
+        <br />
+        <br />
+        <img
+          style={{ width: "90vw" }}
+          fetchPriority="low"
+          src="/clients.svg"
+          loading="lazy"
+          alt="Clients"
+        />
+      </center>
     </>
   );
 }

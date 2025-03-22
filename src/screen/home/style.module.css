@@ -27,10 +27,15 @@
   font-weight: lighter;
 }
 
-.hero_sec .white_heading {
+.white_heading {
   color: white;
-  font-size: 3rem;
-  text-align: center;
+  font-size: 2.5rem;
+  font-weight: normal;
+}
+
+.black_heading {
+  font-size: 2.5rem;
+  font-weight: normal;
 }
 
 @media only screen and (max-width: 500px) {
