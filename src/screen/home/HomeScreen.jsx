@@ -42,30 +42,31 @@ export default function HomeScreen() {
               />
             </button>
           </div>
-
-          {videoLoaded ? (
-            <iframe
-              width={"100%"}
-              height={"100%"}
-              rel="noopener"
-              src="https://www.youtube.com/embed/Q1k63XEG9Ac"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-            ></iframe>
-          ) : (
-            <div
-              onClick={loadVideo}
-              style={{ cursor: "pointer", border: "2px solid white" }}
-            >
-              <img
-                style={{ width: "100%", height: "100%" }}
-                src="/thumbnail.webp"
-                fetchPriority="high"
-                loading="eager"
-                alt="Video"
-              />
-            </div>
-          )}
+          <div className={style.video_sec}>
+            {videoLoaded ? (
+              <iframe
+                width={"100%"}
+                height={"100%"}
+                rel="noopener"
+                src="https://www.youtube.com/embed/Q1k63XEG9Ac"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              ></iframe>
+            ) : (
+              <div
+                onClick={loadVideo}
+                style={{ cursor: "pointer", border: "2px solid white" }}
+              >
+                <img
+                  style={{ width: "100%", height: "100%" }}
+                  src="/thumbnail.webp"
+                  fetchPriority="high"
+                  loading="eager"
+                  alt="Video"
+                />
+              </div>
+            )}
+          </div>
         </div>
         <br />
         <br />

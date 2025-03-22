@@ -21,3 +21,9 @@
   font-size: 1.5rem;
   font-weight: lighter;
 }
+
+@media only screen and (max-width: 500px) {
+  .video_sec {
+    display: none;
+  }
+}
