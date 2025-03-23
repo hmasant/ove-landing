@@ -15,7 +15,7 @@ export default function TabsSection() {
               alt={e.heading}
               fetchPriority="low"
               onClick={() => setTab(index)}
-              src={`/tabs/tab_${index}_white.svg`}
+              src={`/tabs/tab_${index}_white.webp`}
               style={{ width: "100%", height: "100%" }}
             />
           ) : (
@@ -25,7 +25,7 @@ export default function TabsSection() {
               alt={e.heading}
               fetchPriority="low"
               onClick={() => setTab(index)}
-              src={`/tabs/tab_${index}_red.svg`}
+              src={`/tabs/tab_${index}_red.webp`}
               style={{ width: "100%", height: "100%" }}
             />
           )
