@@ -1,6 +1,11 @@
+.red_description {
+  color: #cf2d31;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
 .story_sec {
-  width: 100vw;
-  padding: 5rem;
+  padding: 4rem;
   background-size: cover;
   background-image: url("/numbers_bg.svg");
 }
@@ -8,5 +13,36 @@
 .story_sec p {
   color: white;
   font-size: 1.5rem;
+  font-weight: lighter;
+}
+
+.testimonial_sec {
+  padding: 4rem;
+  text-align: center;
+}
+
+.testimonial_sec .video_grid {
+  gap: 2rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.tab_sec {
+  padding: 0 4rem;
+  padding-bottom: 4rem;
+  background-size: cover;
+  background-image: url("/tab_bg.svg");
+}
+
+.tab_grid {
+  gap: 1rem;
+  display: grid;
+  cursor: pointer;
+  grid-template-columns: repeat(7, 1fr);
+}
+
+.tab_sec p {
+  color: white;
+  font-size: 1.25rem;
   font-weight: lighter;
 }

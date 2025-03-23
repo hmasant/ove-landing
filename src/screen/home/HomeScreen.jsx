@@ -3,6 +3,8 @@ import { useState, lazy } from "react";
 
 const Header = lazy(() => import("../../components/Header"));
 const OurStory = lazy(() => import("../../components/home/OurStory"));
+const Testimonial = lazy(() => import("../../components/home/Testimonial"));
+const TabsSection = lazy(() => import("../../components/home/TabsSection"));
 
 export default function HomeScreen() {
   const [videoLoaded, setVideoLoaded] = useState(false);
@@ -110,10 +112,8 @@ export default function HomeScreen() {
       <br />
       <br />
       <OurStory />
-      <br />
-      <br />
-      <br />
-      <br />
+      <Testimonial />
+      <TabsSection />
     </>
   );
 }
