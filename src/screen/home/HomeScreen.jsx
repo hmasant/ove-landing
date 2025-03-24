@@ -26,11 +26,12 @@ export default function HomeScreen() {
             />
             <br />
             <br />
+            <h1 className={style.text_one}>Save upto 65%</h1>
+            <h1 className={style.text_two}>ON YOUR TECHNOLOGY TEAM</h1>
             <br />
-            <h1 className={style.text_one}>Build Your Tech Team</h1>
-            <h1 className={style.text_two}>WITH TOP INDIAN DEVELOPERS</h1>
-            <br />
-            <h2 className={style.text_three}>At AUD 999 + Salary</h2>
+            <h2 className={style.text_three}>
+              Hire world-class talent and teams supercharged by AI
+            </h2>
             <br />
             <br />
             <br />

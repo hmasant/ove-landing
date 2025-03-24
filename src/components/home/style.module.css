@@ -46,3 +46,13 @@
   font-size: 1.25rem;
   font-weight: lighter;
 }
+
+.tab_graphic {
+  display: flex;
+  justify-content: center;
+}
+
+.tab_graphic img {
+  width: 75%;
+  border-radius: 25px;
+}
