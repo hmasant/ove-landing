@@ -6,7 +6,6 @@ const Footer = lazy(() => import("../../components/Footer"));
 
 const Projects = lazy(() => import("../../components/home/Projects"));
 const OurStory = lazy(() => import("../../components/home/OurStory"));
-const DevProfile = lazy(() => import("../../components/home/DevProfile"));
 const TabsSection = lazy(() => import("../../components/home/TabsSection"));
 const Testimonial = lazy(() => import("../../components/home/Testimonial"));
 const HiringProcess = lazy(() => import("../../components/home/HiringProcess"));
@@ -120,7 +119,6 @@ export default function HomeScreen() {
       <OurStory />
       <Testimonial />
       <TabsSection />
-      <DevProfile />
       <br />
       <br />
       <br />
