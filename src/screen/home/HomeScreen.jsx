@@ -2,9 +2,14 @@ import style from "./style.module.css";
 import { useState, lazy } from "react";
 
 const Header = lazy(() => import("../../components/Header"));
+const Footer = lazy(() => import("../../components/Footer"));
+
+const Projects = lazy(() => import("../../components/home/Projects"));
 const OurStory = lazy(() => import("../../components/home/OurStory"));
-const Testimonial = lazy(() => import("../../components/home/Testimonial"));
+const DevProfile = lazy(() => import("../../components/home/DevProfile"));
 const TabsSection = lazy(() => import("../../components/home/TabsSection"));
+const Testimonial = lazy(() => import("../../components/home/Testimonial"));
+const HiringProcess = lazy(() => import("../../components/home/HiringProcess"));
 
 export default function HomeScreen() {
   const [videoLoaded, setVideoLoaded] = useState(false);
@@ -115,6 +120,40 @@ export default function HomeScreen() {
       <OurStory />
       <Testimonial />
       <TabsSection />
+      <DevProfile />
+      <br />
+      <br />
+      <br />
+      <br />
+      <HiringProcess />
+      <br />
+      <br />
+      <br />
+      <br />
+      <img
+        style={{ width: "100vw" }}
+        src="/achievements.svg"
+        fetchPriority="low"
+        loading="lazy"
+        alt="Image"
+      />
+      <br />
+      <br />
+      <br />
+      <br />
+      <Projects />
+      <br />
+      <br />
+      <br />
+      <br />
+      <Footer />
+      <img
+        style={{ width: "100vw", marginTop: "0.25rem" }}
+        src="/office_location.svg"
+        fetchPriority="low"
+        loading="lazy"
+        alt="Image"
+      />
     </>
   );
 }

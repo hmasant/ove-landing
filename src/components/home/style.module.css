@@ -56,3 +56,17 @@
   width: 75%;
   border-radius: 25px;
 }
+
+.dev_section {
+  padding: 2rem;
+}
+
+.dev_video h4 {
+  color: white;
+  font-size: 1.25rem;
+  font-weight: lighter;
+}
+
+.dev_video p {
+  color: white;
+}
