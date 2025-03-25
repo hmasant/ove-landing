@@ -35,7 +35,7 @@ export default function HomeScreen() {
             <h1 className={style.text_two}>ON YOUR TECHNOLOGY TEAM</h1>
             <br />
             <h2 className={style.text_three}>
-              Hire world-class talent and teams supercharged by AI
+              Hire world-class tech team supercharged by AI
             </h2>
             <br />
             <br />
@@ -85,7 +85,7 @@ export default function HomeScreen() {
           <br />
           <br />
           <img
-            style={{ width: "60vw" }}
+            style={{ width: "80vw" }}
             src="/partnerships.svg"
             fetchPriority="low"
             alt="Partnerships"

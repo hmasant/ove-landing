@@ -101,6 +101,17 @@ input::-webkit-inner-spin-button {
 }
 
 @media only screen and (max-width: 500px) {
+  .white_heading {
+    color: white;
+    font-size: 2rem;
+    font-weight: normal;
+  }
+
+  .black_heading {
+    font-size: 2rem;
+    font-weight: normal;
+  }
+
   .grid_two {
     display: block;
   }
