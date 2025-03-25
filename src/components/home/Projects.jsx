@@ -22,7 +22,7 @@ export default function Projects() {
         <SwiperSlide>
           <img
             style={{ width: "80%" }}
-            src="/project_1.png"
+            src="/project_1.webp"
             fetchPriority="low"
             loading="lazy"
             alt="Project"
@@ -31,7 +31,7 @@ export default function Projects() {
         <SwiperSlide>
           <img
             style={{ width: "80%" }}
-            src="/project_2.png"
+            src="/project_2.webp"
             fetchPriority="low"
             loading="lazy"
             alt="Project"
@@ -40,7 +40,7 @@ export default function Projects() {
         <SwiperSlide>
           <img
             style={{ width: "80%" }}
-            src="/project_3.png"
+            src="/project_3.webp"
             fetchPriority="low"
             loading="lazy"
             alt="Project"
@@ -49,7 +49,7 @@ export default function Projects() {
         <SwiperSlide>
           <img
             style={{ width: "80%" }}
-            src="/project_4.png"
+            src="/project_4.webp"
             fetchPriority="low"
             loading="lazy"
             alt="Project"
@@ -60,7 +60,7 @@ export default function Projects() {
             style={{ width: "80%" }}
             fetchPriority="low"
             loading="lazy"
-            src="/project_5.png"
+            src="/project_5.webp"
             alt="Project"
           />
         </SwiperSlide>
