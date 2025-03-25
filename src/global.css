@@ -101,6 +101,13 @@ input::-webkit-inner-spin-button {
 }
 
 @media only screen and (max-width: 500px) {
+  footer button,
+  header button {
+    padding: 1rem;
+    font-size: 0.75rem;
+    font-weight: normal;
+  }
+
   .white_heading {
     color: white;
     font-size: 2rem;
