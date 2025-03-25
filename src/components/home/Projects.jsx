@@ -21,8 +21,8 @@ export default function Projects() {
       >
         <SwiperSlide>
           <img
+            src="/projects/project_1.webp"
             style={{ width: "80%" }}
-            src="/project_1.webp"
             fetchPriority="low"
             loading="lazy"
             alt="Project"
@@ -30,8 +30,8 @@ export default function Projects() {
         </SwiperSlide>
         <SwiperSlide>
           <img
+            src="/projects/project_2.webp"
             style={{ width: "80%" }}
-            src="/project_2.webp"
             fetchPriority="low"
             loading="lazy"
             alt="Project"
@@ -39,8 +39,8 @@ export default function Projects() {
         </SwiperSlide>
         <SwiperSlide>
           <img
+            src="/projects/project_3.webp"
             style={{ width: "80%" }}
-            src="/project_3.webp"
             fetchPriority="low"
             loading="lazy"
             alt="Project"
@@ -48,8 +48,8 @@ export default function Projects() {
         </SwiperSlide>
         <SwiperSlide>
           <img
+            src="/projects/project_4.webp"
             style={{ width: "80%" }}
-            src="/project_4.webp"
             fetchPriority="low"
             loading="lazy"
             alt="Project"
@@ -57,10 +57,10 @@ export default function Projects() {
         </SwiperSlide>
         <SwiperSlide>
           <img
+            src="/projects/project_5.webp"
             style={{ width: "80%" }}
             fetchPriority="low"
             loading="lazy"
-            src="/project_5.webp"
             alt="Project"
           />
         </SwiperSlide>
