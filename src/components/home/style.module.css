@@ -70,3 +70,26 @@
 .dev_video p {
   color: white;
 }
+
+
+@media only screen and (max-width: 479px) {
+  .tab_sec {
+    padding: 0px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .tab_graphic {
+    display: flex;
+    justify-content: flex-start;
+  }
+  .story_sec {
+    padding: 3em 1.5em;
+  }
+  .testimonial_sec {
+    padding: 3em 1.5em; 
+  }
+  .testimonial_sec .video_grid {
+    gap: 1.5rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

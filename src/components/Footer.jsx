@@ -6,39 +6,37 @@ export default function Footer() {
   const [phone, setPhone] = useState("");
   const [brief, setBrief] = useState("");
 
+  const cfUrl = "https://tight-pond-b68f.himanshu-masant-6f5.workers.dev/";
+
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    await postRequest(cfUrl, { name, email, phone, brief });
+
+    setName("");
+    setPhone("");
+    setEmail("");
+    setBrief("");
+
+    setPopupOpen(false);
+    navigate("/thanks");
   };
 
   return (
-    <footer className="grid_two">
+    <footer className="grid_two footer-main-parent">
       <div></div>
       <div className="footer_form">
         <div>
-          <h2 className="white_heading">Share Your Requirements</h2>
-          <br />
-          <br />
+          <h2 className="white_heading contact-form-title">Share Your Requirements</h2>
           <form action={handleSubmit}>
             <input type="text" placeholder="Full Name" required />
-            <br />
-            <br />
-            <br />
-            <div className="grid_two">
+            <div className="grid_two email-box-parent">
               <input type="email" placeholder="Email" required />
               <input type="number" placeholder="Phone" required />
             </div>
-            <br />
-            <br />
-            <br />
             <textarea placeholder="Project Description"></textarea>
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <div>
-              <button type="submit">Book a Free Consultation</button>
+            <div className="submit-btn-parent">
+              <button type="submit" className="submit-btn">Book a Free Consultation</button>
             </div>
           </form>
         </div>

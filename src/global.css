@@ -24,10 +24,6 @@ footer {
   background-image: url("/footer_bg.svg");
 }
 
-footer form {
-  margin-right: 2rem;
-}
-
 footer form input,
 footer form textarea {
   border: 0;
@@ -87,6 +83,7 @@ input::-webkit-inner-spin-button {
   gap: 2rem;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  margin-top: 75px;  
 }
 
 .dev-swiper {
@@ -99,6 +96,65 @@ input::-webkit-inner-spin-button {
   border: 5px solid #cf2d31;
   background-color: #cf2d31;
 }
+.banner-btn {
+  margin-top: 40px;
+}
+
+.partnerships-parent {
+  margin-top: 70px;
+
+}
+.partnership-logo-parent {
+  margin-top: 40px;
+}
+.trusted-main-parent {
+  margin-top: 75px;
+  margin-bottom: 75px;
+} 
+.about-left-parent h2 {
+  margin-bottom: 20px !important;
+}
+.about-left-parent p {
+  margin-bottom: 20px;
+}
+.about-left-parent .about-btn {
+  margin-top: 35px;
+}
+.testimonial-inner-parent h2 {
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 1.2;
+  margin-top: 10px;
+  margin-bottom: 45px;
+}
+.tab-content-left-child-parent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 30px;
+}
+.hiring-process-main-parent {
+  padding-top: 75px;
+  padding-bottom: 75px;
+}
+.hiring-image-parent {
+  margin-top: 50px;
+}
+.hiring-image-parent img {
+  width: 65vw;
+}
+.project-main-parent {
+  padding-top: 75px;
+}
+.contact-form-title {
+  margin-bottom: 35px;
+}
+.submit-btn-parent {
+  margin-top: 4em;
+}
+.email-box-parent {
+  margin-bottom: 4em;
+}
 
 @media only screen and (max-width: 500px) {
   footer button,
@@ -106,6 +162,72 @@ input::-webkit-inner-spin-button {
     padding: 1rem;
     font-size: 0.75rem;
     font-weight: normal;
+  }
+  .story-grid {
+    margin-top: 0px;
+  }
+  .email-box-parent {
+    margin-bottom: 2em;
+  }
+  .email-box-parent {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2em;
+  }
+  .submit-btn-parent {
+    margin-top: 3em;
+  }
+  .contact-form-title {
+    margin-bottom: 20px;
+  }
+  .footer-main-parent {
+    margin-top: 0px;
+  }
+  .project-main-parent {
+    padding: 3em 1.5em;
+  }
+  .project-inner-parent h2 {
+    margin-top: 15px;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  .hiring-image-parent img {
+    width: 85vw;
+  }
+  .hiring-process-inner-parent h2 {
+    margin-top: 10px;
+    font-size: 22px;
+    font-weight: 300;
+  }
+  .hiring-image-parent {
+    margin-top: 30px;
+  }
+  .hiring-process-main-parent {
+    padding: 3em 1.5em;
+  }
+  .testimonial-inner-parent h2 {
+    font-size: 20px;
+  }
+  .tabs-inner-parent {
+    display: grid !important;
+    grid-template-columns: repeat(4, 1fr) !important;
+  }
+  .about-left-parent .about-btn {
+    margin-top: 15px;
+  }
+  .trusted-main-parent {
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+  .trusted-heading {
+    font-size: 25px !important;
+  }
+  .banner-btn {
+    margin-top: 30px;
+  }
+  .partnerships-parent {
+    margin-top: 30px;
+    margin-bottom: 15px;
   }
 
   .white_heading {
@@ -121,5 +243,50 @@ input::-webkit-inner-spin-button {
 
   .grid_two {
     display: block;
+  }
+  .banner-btn img {
+    width: 260px;
+  }
+  
+  .header-nav button {
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+  .header-nav {
+    gap: 15px;
+  }
+  .about-btn img {
+    width: 250px;
+  }
+  .tabs-share-btn img {
+    width: 250px;
+  }
+  footer {
+    background-color: #000;
+    opacity: 90%;
+    background-image: unset;
+  }
+  .footer_form {
+    padding: 30px;
+  }
+  .swiper-slide.swiper-slide-active {
+    margin-right: 0px !important;
+  }
+  .grid_two.tab-content-parent {
+    display: flex;
+    flex-direction: column;
+  }
+  .tab-sec {
+    padding-bottom: 3em !important;
+  }
+  .story-image {
+    width: 290px !important;
+  }
+  .white_heading {
+    font-size: 25px;
+    font-weight: 600;
+  }
+  .partnership-logo-parent {
+    margin-top: 15px;
   }
 }

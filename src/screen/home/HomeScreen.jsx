@@ -19,8 +19,8 @@ export default function HomeScreen() {
     <>
       <Header />
       <section className={style.hero_sec}>
-        <div className="grid_two">
-          <div>
+        <div className="grid_two about-grid">
+          <div className="hero-section-inner-parent">
             <img
               style={{ height: "1.5rem" }}
               alt="Google Ratings"
@@ -32,14 +32,10 @@ export default function HomeScreen() {
             <br />
             <h1 className={style.text_one}>Save upto 65%</h1>
             <h1 className={style.text_two}>ON YOUR TECHNOLOGY TEAM</h1>
-            <br />
-            <h2 className={style.text_three}>
+            <p className={`hire-world-class ${style.text_three}`}>
               Hire world-class tech team supercharged by AI
-            </h2>
-            <br />
-            <br />
-            <br />
-            <button>
+            </p>
+            <button className="banner-btn">
               <img
                 style={{ height: "3rem" }}
                 src="/white_btn.svg"
@@ -63,6 +59,7 @@ export default function HomeScreen() {
               <div
                 onClick={loadVideo}
                 style={{ cursor: "pointer", border: "2px solid white" }}
+                
               >
                 <img
                   style={{ width: "100%", height: "100%" }}
@@ -75,14 +72,9 @@ export default function HomeScreen() {
             )}
           </div>
         </div>
-        <br />
-        <br />
-        <br />
-        <br />
-        <center>
-          <h2 className="white_heading">Our Partnerships</h2>
-          <br />
-          <br />
+        <center className="partnerships-parent">
+          <h2 className="white_heading partnership-heading">Our Partnerships</h2>
+          <div className="partnership-logo-parent">
           <img
             style={{ width: "80vw" }}
             src="/partnerships.svg"
@@ -90,14 +82,12 @@ export default function HomeScreen() {
             alt="Partnerships"
             loading="lazy"
           />
+          </div>
         </center>
       </section>
-      <br />
-      <br />
-      <br />
-      <br />
-      <center>
-        <h2 className="black_heading">
+      <center className="trusted-main-parent">
+        <div className="trusted-inner-parent">
+        <h2 className="black_heading trusted-heading">
           Trusted by Startups and
           <span style={{ color: "red" }}> Fortune 500 </span>
           Companies!
@@ -111,23 +101,12 @@ export default function HomeScreen() {
           loading="lazy"
           alt="Clients"
         />
+        </div>
       </center>
-      <br />
-      <br />
-      <br />
-      <br />
       <OurStory />
       <Testimonial />
       <TabsSection />
-      <br />
-      <br />
-      <br />
-      <br />
       <HiringProcess />
-      <br />
-      <br />
-      <br />
-      <br />
       <img
         style={{ width: "100vw" }}
         src="/achievements.svg"
@@ -135,15 +114,7 @@ export default function HomeScreen() {
         loading="lazy"
         alt="Image"
       />
-      <br />
-      <br />
-      <br />
-      <br />
       <Projects />
-      <br />
-      <br />
-      <br />
-      <br />
       <Footer />
       <img
         style={{ width: "100vw", marginTop: "0.25rem" }}

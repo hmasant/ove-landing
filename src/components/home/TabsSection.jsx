@@ -1,12 +1,13 @@
 import { useState } from "react";
 import style from "./style.module.css";
 
+
 export default function TabsSection() {
   const [tab, setTab] = useState(0);
 
   return (
-    <section className={style.tab_sec}>
-      <div className={style.tab_grid}>
+    <section className={`tab-sec ${style.tab_sec}`}>
+      <div className={`tabs-inner-parent ${style.tab_grid}`}>
         {data.map((e, index) =>
           tab === index ? (
             <img
@@ -31,20 +32,11 @@ export default function TabsSection() {
           )
         )}
       </div>
-      <br />
-      <br />
-      <br />
-      <div className="grid_two">
-        <div>
-          <h2 className="white_heading">{data[tab].heading}</h2>
-          <br />
-          <br />
-          <br />
+      <div className="grid_two tab-content-parent">
+        <div className="tab-content-left-child-parent">
+          <h2 className="white_heading tab-content-title">{data[tab].heading}</h2>
           <p>{data[tab].content}</p>
-          <br />
-          <br />
-          <br />
-          <button>
+          <button className="tabs-share-btn">
             <img
               style={{ height: "3rem" }}
               fetchPriority="low"

@@ -4,12 +4,10 @@ import { Pagination, Navigation } from "swiper/modules";
 
 export default function Projects() {
   return (
-    <center>
+    <center className="project-main-parent">
+      <div className="project-inner-parent">
       <p className={style.red_description}>Our Recent Projects</p>
-      <br />
       <h2 className="black_heading">Our recently delivered projects</h2>
-      <br />
-      <br />
       <Swiper
         loop={true}
         slidesPerView={1}
@@ -65,6 +63,7 @@ export default function Projects() {
           />
         </SwiperSlide>
       </Swiper>
+      </div>
     </center>
   );
 }

@@ -3,13 +3,11 @@ import style from "./style.module.css";
 export default function Testimonial() {
   return (
     <section className={style.testimonial_sec}>
+      <div className="testimonial-inner-parent">
       <p className={style.red_description}>Client Testimonials</p>
-      <br />
       <h2 className="black_heading">
-        Our success stories that speak <br /> for themselves
+        Our Success Stories That Speak <br /> for Themselves
       </h2>
-      <br />
-      <br />
       <div className={style.video_grid}>
         <video controls>
           <source
@@ -39,6 +37,7 @@ export default function Testimonial() {
           />
           Your browser does not support the video tag.
         </video>
+      </div>
       </div>
     </section>
   );

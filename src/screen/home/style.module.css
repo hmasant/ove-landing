@@ -1,3 +1,7 @@
+/* .about-left-parent h2 {
+  margin-bottom: 20px !important;
+} */
+
 .hero_sec {
   padding: 5rem;
   padding-bottom: 10rem;
@@ -14,26 +18,32 @@
 .hero_sec .text_two {
   color: white;
   font-size: 2rem;
+  margin-top: 25px;
 }
 
 .hero_sec .text_three {
   color: white;
   font-size: 1.5rem;
-  font-weight: lighter;
+  font-weight: 400;
+  margin-top: 20px;
 }
 
 @media only screen and (max-width: 500px) {
   .hero_sec {
-    padding: 2rem;
+    padding: 1.5rem;
   }
 
   .hero_sec .text_one {
-    font-size: 3rem;
+    font-size: 28px;
   }
 
   .hero_sec .text_two {
-    font-size: 1.5rem;
+    font-size: 20px;
+    margin-top: 10px;
   }
+  /* .style-module__text_two___UsvVC {
+    margin-top: 10px;
+  } */
 
   .hero_sec .text_three {
     font-size: 1rem;
