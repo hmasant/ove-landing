@@ -71,6 +71,38 @@
   color: white;
 }
 
+.popup_section {
+  top: 0;
+  z-index: 5;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  position: fixed;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.popup_form {
+  gap: 5rem;
+  height: 90vh;
+  padding: 2rem;
+  display: grid;
+  position: relative;
+  aspect-ratio: 16/9;
+  border-radius: 10px;
+  background-size: contain;
+  grid-template-columns: repeat(2, 1fr);
+  background-image: url("/popup_bg.webp");
+}
+
+.popup_close_btn {
+  top: 0;
+  right: 0;
+  padding: 1rem;
+  position: absolute;
+  background: transparent;
+}
 
 @media only screen and (max-width: 479px) {
   .tab_sec {
@@ -86,7 +118,7 @@
     padding: 3em 1.5em;
   }
   .testimonial_sec {
-    padding: 3em 1.5em; 
+    padding: 3em 1.5em;
   }
   .testimonial_sec .video_grid {
     gap: 1.5rem;

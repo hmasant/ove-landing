@@ -1,8 +1,10 @@
 import style from "./style.module.css";
 import { useState, lazy } from "react";
+import { UpdateContext, ReadContext } from "../../context";
 
 const Header = lazy(() => import("../../components/Header"));
 const Footer = lazy(() => import("../../components/Footer"));
+const Popup = lazy(() => import("../../components/home/PopupForm"));
 
 const Projects = lazy(() => import("../../components/home/Projects"));
 const OurStory = lazy(() => import("../../components/home/OurStory"));
@@ -11,12 +13,16 @@ const Testimonial = lazy(() => import("../../components/home/Testimonial"));
 const HiringProcess = lazy(() => import("../../components/home/HiringProcess"));
 
 export default function HomeScreen() {
+  const update = UpdateContext();
+  const popupState = ReadContext();
+
   const [videoLoaded, setVideoLoaded] = useState(false);
 
   const loadVideo = () => setVideoLoaded(true);
 
   return (
     <>
+      {popupState.showPopup ? <Popup /> : <></>}
       <Header />
       <section className={style.hero_sec}>
         <div className="grid_two about-grid">
@@ -35,7 +41,7 @@ export default function HomeScreen() {
             <p className={`hire-world-class ${style.text_three}`}>
               Hire world-class tech team supercharged by AI
             </p>
-            <button className="banner-btn">
+            <button className="banner-btn" onClick={() => update.togglePopup()}>
               <img
                 style={{ height: "3rem" }}
                 src="/white_btn.svg"
@@ -59,7 +65,6 @@ export default function HomeScreen() {
               <div
                 onClick={loadVideo}
                 style={{ cursor: "pointer", border: "2px solid white" }}
-                
               >
                 <img
                   style={{ width: "100%", height: "100%" }}
@@ -73,34 +78,36 @@ export default function HomeScreen() {
           </div>
         </div>
         <center className="partnerships-parent">
-          <h2 className="white_heading partnership-heading">Our Partnerships</h2>
+          <h2 className="white_heading partnership-heading">
+            Our Partnerships
+          </h2>
           <div className="partnership-logo-parent">
-          <img
-            style={{ width: "80vw" }}
-            src="/partnerships.svg"
-            fetchPriority="low"
-            alt="Partnerships"
-            loading="lazy"
-          />
+            <img
+              style={{ width: "80vw" }}
+              src="/partnerships.svg"
+              fetchPriority="low"
+              alt="Partnerships"
+              loading="lazy"
+            />
           </div>
         </center>
       </section>
       <center className="trusted-main-parent">
         <div className="trusted-inner-parent">
-        <h2 className="black_heading trusted-heading">
-          Trusted by Startups and
-          <span style={{ color: "red" }}> Fortune 500 </span>
-          Companies!
-        </h2>
-        <br />
-        <br />
-        <img
-          style={{ width: "90vw" }}
-          fetchPriority="low"
-          src="/clients.svg"
-          loading="lazy"
-          alt="Clients"
-        />
+          <h2 className="black_heading trusted-heading">
+            Trusted by Startups and
+            <span style={{ color: "red" }}> Fortune 500 </span>
+            Companies!
+          </h2>
+          <br />
+          <br />
+          <img
+            style={{ width: "90vw" }}
+            fetchPriority="low"
+            src="/clients.svg"
+            loading="lazy"
+            alt="Clients"
+          />
         </div>
       </center>
       <OurStory />
