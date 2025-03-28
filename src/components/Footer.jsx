@@ -1,6 +1,10 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { postRequest } from "../network/request";
 
 export default function Footer() {
+  const navigate = useNavigate();
+
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
@@ -11,15 +15,18 @@ export default function Footer() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    await postRequest(cfUrl, { name, email, phone, brief });
+    try {
+      await postRequest(cfUrl, { name, email, phone, brief });
 
-    setName("");
-    setPhone("");
-    setEmail("");
-    setBrief("");
+      setName("");
+      setPhone("");
+      setEmail("");
+      setBrief("");
 
-    setPopupOpen(false);
-    navigate("/thanks");
+      navigate("/thanks");
+    } catch (error) {
+      console.error("Form submission failed:", error);
+    }
   };
 
   return (
@@ -27,16 +34,42 @@ export default function Footer() {
       <div></div>
       <div className="footer_form">
         <div>
-          <h2 className="white_heading contact-form-title">Share Your Requirements</h2>
-          <form action={handleSubmit}>
-            <input type="text" placeholder="Full Name" required />
+          <h2 className="white_heading contact-form-title">
+            Share Your Requirements
+          </h2>
+          <form onSubmit={handleSubmit}>
+            <input
+              type="text"
+              value={name}
+              placeholder="Full Name"
+              onChange={(e) => setName(e.target.value)}
+              required
+            />
             <div className="grid_two email-box-parent">
-              <input type="email" placeholder="Email" required />
-              <input type="number" placeholder="Phone" required />
+              <input
+                type="email"
+                value={email}
+                placeholder="Email"
+                onChange={(e) => setEmail(e.target.value)}
+                required
+              />
+              <input
+                type="number"
+                value={phone}
+                placeholder="Phone"
+                onChange={(e) => setPhone(e.target.value)}
+                required
+              />
             </div>
-            <textarea placeholder="Project Description"></textarea>
+            <textarea
+              value={brief}
+              placeholder="Project Description"
+              onChange={(e) => setBrief(e.target.value)}
+            ></textarea>
             <div className="submit-btn-parent">
-              <button type="submit" className="submit-btn">Book a Free Consultation</button>
+              <button type="submit" className="submit-btn">
+                Book a Free Consultation
+              </button>
             </div>
           </form>
         </div>

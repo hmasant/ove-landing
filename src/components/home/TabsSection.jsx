@@ -1,8 +1,9 @@
 import { useState } from "react";
 import style from "./style.module.css";
-
+import { UpdateContext } from "../../context";
 
 export default function TabsSection() {
+  const update = UpdateContext();
   const [tab, setTab] = useState(0);
 
   return (
@@ -34,9 +35,14 @@ export default function TabsSection() {
       </div>
       <div className="grid_two tab-content-parent">
         <div className="tab-content-left-child-parent">
-          <h2 className="white_heading tab-content-title">{data[tab].heading}</h2>
+          <h2 className="white_heading tab-content-title">
+            {data[tab].heading}
+          </h2>
           <p>{data[tab].content}</p>
-          <button className="tabs-share-btn">
+          <button
+            className="tabs-share-btn"
+            onClick={() => update.togglePopup()}
+          >
             <img
               style={{ height: "3rem" }}
               fetchPriority="low"

@@ -1,0 +1,12 @@
+.thanks_sec {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: lightblue;
+}
+
+.thanks_sec div {
+  width: 80vw;
+  text-align: center;
+}

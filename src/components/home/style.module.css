@@ -104,6 +104,29 @@
   background: transparent;
 }
 
+.popup_form form input,
+.popup_form form textarea {
+  border: 0;
+  width: 100%;
+  font-size: 1.25rem;
+  border-bottom: 1px solid black;
+}
+
+.popup_form form button {
+  height: 100%;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 1rem 2rem;
+  background-color: red;
+}
+
+.popup_form h2 {
+  font-size: 2rem;
+  text-align: center;
+  font-weight: normal;
+}
+
 @media only screen and (max-width: 479px) {
   .tab_sec {
     padding: 0px;
@@ -123,5 +146,16 @@
   .testimonial_sec .video_grid {
     gap: 1.5rem;
     grid-template-columns: repeat(2, 1fr);
+  }
+  .popup_form h2 {
+    font-weight: bold;
+    font-size: 1.25rem;
+  }
+  .popup_form {
+    height: 80vh;
+    display: block;
+    aspect-ratio: 9/16;
+    background-image: none;
+    background-color: white;
   }
 }

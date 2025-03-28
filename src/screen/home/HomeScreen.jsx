@@ -39,7 +39,7 @@ export default function HomeScreen() {
             <h1 className={style.text_one}>Save upto 65%</h1>
             <h1 className={style.text_two}>ON YOUR TECHNOLOGY TEAM</h1>
             <p className={`hire-world-class ${style.text_three}`}>
-              Hire world-class tech team supercharged by AI
+              Hire world-class tech teams supercharged by AI
             </p>
             <button className="banner-btn" onClick={() => update.togglePopup()}>
               <img

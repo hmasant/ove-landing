@@ -83,7 +83,7 @@ input::-webkit-inner-spin-button {
   gap: 2rem;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  margin-top: 75px;  
+  margin-top: 75px;
 }
 
 .dev-swiper {
@@ -102,7 +102,6 @@ input::-webkit-inner-spin-button {
 
 .partnerships-parent {
   margin-top: 70px;
-
 }
 .partnership-logo-parent {
   margin-top: 40px;
@@ -110,7 +109,7 @@ input::-webkit-inner-spin-button {
 .trusted-main-parent {
   margin-top: 75px;
   margin-bottom: 75px;
-} 
+}
 .about-left-parent h2 {
   margin-bottom: 20px !important;
 }
@@ -209,8 +208,7 @@ input::-webkit-inner-spin-button {
     font-size: 20px;
   }
   .tabs-inner-parent {
-    display: grid !important;
-    grid-template-columns: repeat(4, 1fr) !important;
+    gap: 0.25rem !important;
   }
   .about-left-parent .about-btn {
     margin-top: 15px;
@@ -242,12 +240,12 @@ input::-webkit-inner-spin-button {
   }
 
   .grid_two {
-    display: block;
+    grid-template-columns: repeat(1, 1fr);
   }
   .banner-btn img {
     width: 260px;
   }
-  
+
   .header-nav button {
     padding: 8px 12px;
     font-size: 14px;

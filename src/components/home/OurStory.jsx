@@ -1,6 +1,9 @@
 import style from "./style.module.css";
+import { UpdateContext } from "../../context";
 
 export default function OurStory() {
+  const update = UpdateContext();
+
   return (
     <section className={`story-main-parent ${style.story_sec}`}>
       <div className="grid_two story-grid">
@@ -18,7 +21,7 @@ export default function OurStory() {
             loading="lazy"
             alt="Image"
           />
-          <button className="about-btn">
+          <button className="about-btn" onClick={() => update.togglePopup()}>
             <img
               style={{ height: "3rem" }}
               src="/white_btn.svg"
