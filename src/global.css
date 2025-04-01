@@ -10,11 +10,31 @@ button {
   text-decoration: none;
   background-color: inherit;
 }
-
-header {
-  padding: 1rem;
+.container {
+  width: 100%;
+  max-width: 1340px;
+  margin: 0 auto;
+}
+.header-inner-parent {
   display: flex;
   justify-content: space-between;
+}
+.nav-right-parent {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+.nav-btn-parent ul {
+  display: flex;
+  list-style: none;
+  gap: 25px;
+}
+.nav-btn-parent {
+  display: flex;
+  gap: 25px;
+}
+
+header {
   background-color: rgba(0, 0, 0, 0.9);
 }
 
@@ -36,14 +56,31 @@ footer form textarea {
   border-bottom: 1px solid white;
 }
 
-footer button,
-header button {
+footer button, header button {
   height: 100%;
   color: white;
   font-size: 1rem;
-  font-weight: bold;
-  padding: 1rem 2rem;
-  background-color: red;
+  font-weight: 500;
+  padding: 12px 22px;
+  background-color: #d3292c;
+  border-radius: 30px;
+  transition: 0.3s all ease-in-out;
+}
+.nav-btn-parent button:hover {
+  background: #fff;
+  color: #000;
+}
+.header-nav {
+  padding: 15px 0px;
+}
+.nav-btn-parent ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  transition: 0.3s all ease-in-out;
+}
+.nav-btn-parent ul li a:hover {
+  color: #d3292c;
 }
 
 footer .footer_form {

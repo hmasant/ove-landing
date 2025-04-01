@@ -47,7 +47,7 @@ export default function Footer() {
             />
             <div className="grid_two email-box-parent">
               <input
-                type="email"
+                type="email"     
                 value={email}
                 placeholder="Email"
                 onChange={(e) => setEmail(e.target.value)}
