@@ -10,7 +10,7 @@ export default function Testimonial() {
       </h2>
       <div className={`client-testimonial ${style.video_grid}`}>
         <div className="client-video-parent">
-        <video controls>
+        <video className="client-videos" controls>
           <source
             src="https://scoobies-backend.s3.ap-south-1.amazonaws.com/8.mp4"
             type="video/mp4"
@@ -22,7 +22,7 @@ export default function Testimonial() {
           </div>
           </div>
           <div className="client-video-parent">
-        <video controls>
+        <video className="client-videos" controls>
           <source
             src="https://scoobies-backend.s3.ap-south-1.amazonaws.com/7.mp4"
             type="video/mp4"
@@ -34,7 +34,7 @@ export default function Testimonial() {
           </div>
           </div>
           <div className="client-video-parent">
-        <video controls>
+        <video className="client-videos" controls>
           <source
             src="https://scoobies-backend.s3.ap-south-1.amazonaws.com/6.mp4"
             type="video/mp4"
@@ -46,7 +46,7 @@ export default function Testimonial() {
           </div>
           </div>
           <div className="client-video-parent">
-        <video controls>
+        <video className="client-videos" controls>
           <source
             src="https://scoobies-backend.s3.ap-south-1.amazonaws.com/9.mp4"
             type="video/mp4"

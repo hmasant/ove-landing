@@ -46,6 +46,15 @@ button {
 .client-bio-parent p {
   margin-top: 5px;
 }
+.form-parent input, textarea {
+  color: #fff;
+  font-weight: 500;
+}
+.client-videos {
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+}
+
 
 header {
   background-color: rgba(0, 0, 0, 0.9);
@@ -63,7 +72,7 @@ footer form textarea {
   width: 100%;
   color: white;
   padding: 0.5rem;
-  font-weight: 100;
+  /* font-weight: 100; */
   font-size: 1.25rem;
   background-color: transparent;
   border-bottom: 1px solid white;

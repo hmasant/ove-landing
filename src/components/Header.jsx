@@ -21,7 +21,7 @@ export default function Header() {
             </div>
             
             <div className="nav-btn-parent">
-              <button>Book a Free Consultation</button>
+              <button>Schedule a Call</button>
               <button>Contact US</button>
             </div>
           </div>

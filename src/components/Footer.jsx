@@ -37,7 +37,7 @@ export default function Footer() {
           <h2 className="white_heading contact-form-title">
             Share Your Requirements
           </h2>
-          <form onSubmit={handleSubmit}>
+          <form className="form-parent" onSubmit={handleSubmit}>
             <input
               type="text"
               value={name}
