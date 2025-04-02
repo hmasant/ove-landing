@@ -31,7 +31,20 @@ button {
 }
 .nav-btn-parent {
   display: flex;
-  gap: 25px;
+  gap: 10px;
+}
+.client-bio-parent {
+  background: #cf2d31;
+  padding: 20px;
+  margin-top: -5px;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+.client-bio-parent h3, p {
+  color: #fff;
+}
+.client-bio-parent p {
+  margin-top: 5px;
 }
 
 header {
