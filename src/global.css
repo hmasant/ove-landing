@@ -346,4 +346,85 @@ input::-webkit-inner-spin-button {
   .partnership-logo-parent {
     margin-top: 15px;
   }
+  .header-nav {
+    padding: 15px .8rem;
+  }
+  .toggle {
+    border-radius: 5px;
+    font-size: 22px !important;
+    padding: 6px 12px !important;
+  }
 }
+
+/* Responsive navbar css start */
+
+
+/* For smooth transition */
+.mobile-nav {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: #fff;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease-in-out;
+  z-index: 999; /* ensure it's above other content */
+}
+
+/* Show when open */
+.mobile-nav.open {
+  transform: translateX(0);
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Optional: hide nav completely when closed */
+@media (max-width: 767px) {
+  .mobile-nav:not(.open) {
+    pointer-events: none;
+    transition: transform 0.3s ease-in-out;
+    opacity: 0;
+  }
+
+  .mobile-nav.open {
+    pointer-events: auto;
+    opacity: 1;
+  }
+  .nav-right-parent.mobile-nav.open {
+    top: 0;
+    padding: 30px;
+    background: #000;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+  }
+  .nav-btn-parent ul {
+    gap: 15px;
+  }
+  .toggle {
+    z-index: 9999;
+  }
+  .nav-btn-parent {
+    flex-direction: column;
+    gap: 15px;
+  }
+  .nav-btn-parent ul {
+    display: flex;
+    list-style:
+  none;
+    flex-direction: column;
+  }
+  .nav-btn-parent button {
+    padding: 14px 28px;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 14px;
+  }
+  .nav-responsive-logo {
+    margin-top: 10px;
+  }
+  .nav-responsive-logo img {
+    width: 230px;
+  }
+}
+
+/* Responsive navbar css end */
