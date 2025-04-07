@@ -1,9 +1,14 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import Popup from '../components/home/PopupForm'
+import { UpdateContext, ReadContext } from "../context";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
+
+  const update = UpdateContext();
+  const popupState = ReadContext();
   
   useEffect(() => {
     const checkScreenSize = () => {
@@ -17,6 +22,8 @@ export default function Header() {
   }, []);
 
   return (
+    <>
+    {popupState.showPopup && <Popup />}
     <header className="header-nav">
       <div className="container">
         <div className="header-inner-parent">
@@ -56,8 +63,8 @@ export default function Header() {
             </div>
 
             <div className="nav-btn-parent">
-              <button>Schedule a Call</button>
-              <button>Contact Us</button>
+              <button onClick={() => update.togglePopup()}>Schedule a Call</button>
+              <button onClick={() => update.togglePopup()}>Contact Us</button>
             </div>
 
             {/* Mobile Logo inside nav */}
@@ -77,5 +84,6 @@ export default function Header() {
         </div>
       </div>
     </header>
+    </>
   );
 }

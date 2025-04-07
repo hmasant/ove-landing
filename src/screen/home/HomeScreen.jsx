@@ -1,6 +1,7 @@
 import style from "./style.module.css";
 import { useState, lazy } from "react";
 import { UpdateContext, ReadContext } from "../../context";
+import Developer from "../../components/home/Developer";
 
 const Header = lazy(() => import("../../components/Header"));
 const Footer = lazy(() => import("../../components/Footer"));
@@ -87,6 +88,7 @@ export default function HomeScreen() {
       <OurStory />
       <Testimonial />
       <TabsSection />
+      <Developer />
       <HiringProcess />
       <img
         style={{ width: "100vw" }}
