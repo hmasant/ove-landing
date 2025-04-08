@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { HashLink as Link } from 'react-router-hash-link';
 import Popup from '../components/home/PopupForm'
 import { UpdateContext, ReadContext } from "../context";
 
@@ -52,14 +52,15 @@ export default function Header() {
             className={`nav-right-parent ${isMobile ? "mobile-nav" : ""} ${isOpen ? "open" : ""}`}
           >
             <div className="nav-btn-parent">
-              <ul>
-                <li>
-                  <Link to="/hiring-process">Hiring Process</Link>
-                </li>
-                <li>
-                  <Link to="/client-success">Client Success</Link>
-                </li>
-              </ul>
+            <ul>
+  <li>
+    <Link smooth to="#hiring-process">Hiring Process</Link>
+  </li>
+  <li>
+    <Link smooth to="#client-success">Client Success</Link>
+  </li>
+</ul>
+
             </div>
 
             <div className="nav-btn-parent">

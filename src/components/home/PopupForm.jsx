@@ -35,7 +35,7 @@ export default function PopupForm() {
 
   return (
     <section className={style.popup_section}>
-      <div className={style.popup_form}>
+      <div className={`popup-form-mobile ${style.popup_form}`}>
         <button
           className={style.popup_close_btn}
           onClick={() => update.togglePopup()}
@@ -43,12 +43,9 @@ export default function PopupForm() {
           X
         </button>
         <div></div>
-        <div>
+        <div className="popup-requirements">
           <h2>Share Your Requirements</h2>
-          <br />
-          <br />
-          <br />
-          <form onSubmit={handleSubmit}>
+          <form className="popup-form-parent" onSubmit={handleSubmit}>
             <input
               type="text"
               value={name}
@@ -73,6 +70,8 @@ export default function PopupForm() {
               />
             </div>
             <textarea
+            className="popup-form-textarea"
+            id="popup-textarea"
               value={brief}
               placeholder="Project Description"
               onChange={(e) => setBrief(e.target.value)}

@@ -2,7 +2,7 @@ import style from "./style.module.css";
 
 export default function HiringProcess() {
   return (
-    <center className="hiring-process-main-parent">
+    <center id="hiring-process" className="hiring-process-main-parent">
       <div className="hiring-process-inner-parent">
       <p className={style.red_description}>Our Hiring Process</p>
       <h2 className="black_heading">

@@ -85,10 +85,10 @@ export default function HomeScreen() {
           />
         </div>
       </center>
+      <Developer />
       <OurStory />
       <Testimonial />
       <TabsSection />
-      <Developer />
       <HiringProcess />
       <img
         style={{ width: "100vw" }}

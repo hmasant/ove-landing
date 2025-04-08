@@ -4,6 +4,10 @@
   font-family: "Noto Sans";
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 button {
   border: 0;
   cursor: pointer;
@@ -14,6 +18,13 @@ button {
   width: 100%;
   max-width: 1340px;
   margin: 0 auto;
+}
+.no-scroll {
+  overflow: hidden;
+  /* height: 100vh; */
+}
+.popup-form-parent {
+  margin-top: 50px;
 }
 .developer-video-parent {
   width: 18%;
@@ -103,7 +114,7 @@ button {
 .client-bio-parent p {
   margin-top: 5px;
 }
-.form-parent input, textarea {
+.form-parent input {
   color: #fff;
   font-weight: 500;
 }
@@ -266,6 +277,7 @@ input::-webkit-inner-spin-button {
 }
 .submit-btn-parent {
   margin-top: 4em;
+  text-align: center;
 }
 .email-box-parent {
   margin-bottom: 4em;
@@ -466,8 +478,7 @@ input::-webkit-inner-spin-button {
   }
   .nav-btn-parent ul {
     display: flex;
-    list-style:
-  none;
+    list-style: none;
     flex-direction: column;
   }
   .nav-btn-parent button {
@@ -481,6 +492,51 @@ input::-webkit-inner-spin-button {
   }
   .nav-responsive-logo img {
     width: 230px;
+  }
+  .developer-content-main {
+    flex-direction: column;
+  }
+  .developer-section {
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+  }
+  .developer-section {
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+  .developer-content-parent h3 {
+    font-size: 18px;
+    text-align: center;
+  }
+  .developer-content-parent h2 {
+    margin-top: 5px;
+    font-size: 25px;
+    text-align: center;
+  }
+  .developer-content-parent p {
+    margin-top: 15px;
+    width: 100%;
+    text-align: center;
+  }
+  .developer-box-parent {
+    width: auto;
+  }
+  .developer-boxes-parent {
+    flex-direction: column;
+    margin-top: 30px;
+  }
+  .developer-video-content {
+    flex-direction: column;
+    gap: 30px;
+  }
+  .developer-video-parent {
+    width: auto;
+  }
+  .popup-form-parent {
+    margin-top: 30px;
+  }
+  .popup-form-parent input, textarea {
+    font-size: 16px !important;
   }
 }
 

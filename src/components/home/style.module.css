@@ -73,7 +73,7 @@
 
 .popup_section {
   top: 0;
-  z-index: 5;
+  z-index: 9999;
   width: 100vw;
   height: 100vh;
   display: flex;
@@ -118,7 +118,8 @@
   font-size: 1rem;
   font-weight: bold;
   padding: 1rem 2rem;
-  background-color: red;
+  background-color: #d3292c;
+  border-radius: 30px;
 }
 
 .popup_form h2 {
@@ -145,16 +146,16 @@
   }
   .testimonial_sec .video_grid {
     gap: 1.5rem;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
   }
   .popup_form h2 {
     font-weight: bold;
     font-size: 1.25rem;
   }
   .popup_form {
-    height: 80vh;
+    height: auto;
     display: block;
-    aspect-ratio: 9/16;
+    aspect-ratio: 11/16;
     background-image: none;
     background-color: white;
   }
