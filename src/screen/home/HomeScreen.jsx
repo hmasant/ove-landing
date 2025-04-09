@@ -31,7 +31,7 @@ export default function HomeScreen() {
               fetchPriority="low"
               src="/ratings.svg"
             />
-            <h1 className={style.text_two}>Hire Software <br></br>Developers at Half Cost</h1>
+            <h1 className={style.text_two}>Hire Software Developers<br></br> at Half Cost</h1>
             <h1 className={`banner-secondary-title ${style.text_one}`}>Save up to 65% on Tech Team Hiring</h1>
             <p className={`hire-world-class ${style.text_three}`}>
             Hire world-class tech teams supercharged by AI
