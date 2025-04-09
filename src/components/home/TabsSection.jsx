@@ -68,11 +68,7 @@ export default function TabsSection() {
 const data = [
   {
     heading: "SaaS & Software Products",
-    content: `We specialize in building scalable and secure SaaS solutions 
-      tailored to your business needs. From MVP development to full-scale platforms,
-      our team ensures seamless cloud integration, multi-tenancy support, and robust
-      security. We help businesses transform ideas into market-ready SaaS products
-      with rapid deployment and continuous enhancements.`,
+    content: `We specialize in providing skilled software developers to build scalable and secure SaaS solutions tailored to your business needs. From MVP development to full-scale platforms, our augmented software developer team ensures seamless cloud integration, multi-tenancy support, and robust security. We help businesses transform ideas into market-ready SaaS products with rapid deployment and continuous enhancements by supplying the right software developers for your specific project requirements.`,
   },
   {
     heading: "Custom Web App Development",

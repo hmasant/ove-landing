@@ -11,6 +11,7 @@ const OurStory = lazy(() => import("../../components/home/OurStory"));
 const TabsSection = lazy(() => import("../../components/home/TabsSection"));
 const Testimonial = lazy(() => import("../../components/home/Testimonial"));
 const HiringProcess = lazy(() => import("../../components/home/HiringProcess"));
+// const Achievement = lazy(() => import("../../components/home/Achievement"));
 
 export default function HomeScreen() {
   const update = UpdateContext();
@@ -24,17 +25,16 @@ export default function HomeScreen() {
         <div className="grid_two about-grid">
           <div className="hero-section-inner-parent">
             <img
+            className="google-review"
               style={{ height: "1.5rem" }}
               alt="Google Ratings"
               fetchPriority="low"
               src="/ratings.svg"
             />
-            <br />
-            <br />
-            <h1 className={style.text_one}>Save up to 65%</h1>
-            <h1 className={style.text_two}>ON YOUR TECHNOLOGY TEAM</h1>
+            <h1 className={style.text_two}>Hire Software <br></br>Developers at Half Cost</h1>
+            <h1 className={`banner-secondary-title ${style.text_one}`}>Save up to 65% on Tech Team Hiring</h1>
             <p className={`hire-world-class ${style.text_three}`}>
-              Hire world-class tech teams supercharged by AI
+            Hire world-class tech teams supercharged by AI
             </p>
             <button className="banner-btn" onClick={() => update.togglePopup()}>
               <img
@@ -90,6 +90,7 @@ export default function HomeScreen() {
       <Testimonial />
       <TabsSection />
       <HiringProcess />
+      {/* <Achievement /> */}
       <img
         style={{ width: "100vw" }}
         src="/achievements.svg"

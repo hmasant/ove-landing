@@ -10,8 +10,7 @@ export default function OurStory() {
         <div className="about-left-parent">
           <h2 className="white_heading">Hear what our numbers say about us</h2>
           <p>
-            Save upto 50-70% cost compared to in-house hiring. Get matched with
-            elite developers within 48 hours.
+          Save upto 50-70% cost compared to in-house hiring. Get matched with elite software developers within 48 hours.
           </p>
           <img
             className="story-image"

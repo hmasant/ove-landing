@@ -8,7 +8,7 @@ function Developer() {
           
           <div className="developer-content-main">
           <div className="developer-content-parent">
-              <h3>Meet our Developers</h3>
+              <h3>Meet our Software Developers</h3>
               <h2>Hire your next developer</h2>
               <p>
                 Our talent pool is well-versed in industry-leading technologies,
