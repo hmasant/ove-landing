@@ -1,17 +1,16 @@
+import { lazy } from "react";
 import style from "./style.module.css";
-import { useState, lazy } from "react";
 import { UpdateContext, ReadContext } from "../../context";
-import Developer from "../../components/home/Developer";
 
 const Header = lazy(() => import("../../components/Header"));
 const Footer = lazy(() => import("../../components/Footer"));
 const Popup = lazy(() => import("../../components/home/PopupForm"));
 const Projects = lazy(() => import("../../components/home/Projects"));
 const OurStory = lazy(() => import("../../components/home/OurStory"));
+const Developer = lazy(() => import("../../components/home/Developer"));
 const TabsSection = lazy(() => import("../../components/home/TabsSection"));
 const Testimonial = lazy(() => import("../../components/home/Testimonial"));
 const HiringProcess = lazy(() => import("../../components/home/HiringProcess"));
-// const Achievement = lazy(() => import("../../components/home/Achievement"));
 
 export default function HomeScreen() {
   const update = UpdateContext();
@@ -25,16 +24,20 @@ export default function HomeScreen() {
         <div className="grid_two about-grid">
           <div className="hero-section-inner-parent">
             <img
-            className="google-review"
+              className="google-review"
               style={{ height: "1.5rem" }}
               alt="Google Ratings"
               fetchPriority="low"
               src="/ratings.svg"
             />
-            <h1 className={style.text_two}>Hire Software Developers<br></br> at Half Cost</h1>
-            <h1 className={`banner-secondary-title ${style.text_one}`}>Save up to 65% on Tech Team Hiring</h1>
+            <h1 className={style.text_two}>
+              Hire Software Developers<br></br> at Half Cost
+            </h1>
+            <h1 className={`banner-secondary-title ${style.text_one}`}>
+              Save up to 65% on Tech Team Hiring
+            </h1>
             <p className={`hire-world-class ${style.text_three}`}>
-            Hire world-class tech teams supercharged by AI
+              Hire world-class tech teams supercharged by AI
             </p>
             <button className="banner-btn" onClick={() => update.togglePopup()}>
               <img
@@ -59,7 +62,9 @@ export default function HomeScreen() {
           </div>
         </div>
         <center className="partnerships-parent">
-          <h2 className="white_heading partnership-heading">Our Partnerships</h2>
+          <h2 className="white_heading partnership-heading">
+            Our Partnerships
+          </h2>
           <div className="partnership-logo-parent">
             <img
               style={{ width: "80vw" }}
@@ -73,7 +78,8 @@ export default function HomeScreen() {
       <center className="trusted-main-parent">
         <div className="trusted-inner-parent">
           <h2 className="black_heading trusted-heading">
-            Trusted by Startups and <span style={{ color: "red" }}>Fortune 500</span> Companies!
+            Trusted by Startups and{" "}
+            <span style={{ color: "red" }}>Fortune 500</span> Companies!
           </h2>
           <br />
           <br />
@@ -90,7 +96,6 @@ export default function HomeScreen() {
       <Testimonial />
       <TabsSection />
       <HiringProcess />
-      {/* <Achievement /> */}
       <img
         style={{ width: "100vw" }}
         src="/achievements.svg"

@@ -1,18 +1,16 @@
-import React from 'react';
-
-function Developer() {
+export default function Developer() {
   return (
     <section className="developer-section">
       <div className="container">
         <div className="developer-main-parent">
-          
           <div className="developer-content-main">
-          <div className="developer-content-parent">
+            <div className="developer-content-parent">
               <h3>Meet our Software Developers</h3>
               <h2>Hire your next developer</h2>
               <p>
                 Our talent pool is well-versed in industry-leading technologies,
-                enabling seamless collaboration with you to deliver optimal results.
+                enabling seamless collaboration with you to deliver optimal
+                results.
               </p>
             </div>
 
@@ -27,13 +25,9 @@ function Developer() {
                 <p>Get matched with elite developers within 48 hours.</p>
               </div>
             </div>
-
-
-
           </div>
 
           <div className="developer-video-content">
-            
             <div className="client-video-parent developer-video-parent">
               <video className="client-videos" controls>
                 <source
@@ -98,13 +92,9 @@ function Developer() {
                 <p>Digital Marketer</p>
               </div>
             </div>
-
           </div>
-          
         </div>
       </div>
     </section>
   );
 }
-
-export default Developer;
