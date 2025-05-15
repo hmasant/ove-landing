@@ -49,7 +49,7 @@ export default function HomeScreen() {
             </button>
           </div>
           <div className={style.video_sec}>
-            <iframe
+            {/* <iframe
               width="560"
               height="315"
               src="https://www.youtube.com/embed/Q1k63XEG9Ac?autoplay=1&mute=1"
@@ -58,7 +58,7 @@ export default function HomeScreen() {
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               referrerPolicy="strict-origin-when-cross-origin"
               allowFullScreen
-            ></iframe>
+            ></iframe> */}
           </div>
         </div>
         <center className="partnerships-parent">
