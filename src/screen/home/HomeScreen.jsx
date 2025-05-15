@@ -7,6 +7,7 @@ const Footer = lazy(() => import("../../components/Footer"));
 const Popup = lazy(() => import("../../components/home/PopupForm"));
 const Projects = lazy(() => import("../../components/home/Projects"));
 const OurStory = lazy(() => import("../../components/home/OurStory"));
+const HeroVideo = lazy(() => import("../../components/home/HeroVideo"));
 const Developer = lazy(() => import("../../components/home/Developer"));
 const TabsSection = lazy(() => import("../../components/home/TabsSection"));
 const Testimonial = lazy(() => import("../../components/home/Testimonial"));
@@ -49,16 +50,7 @@ export default function HomeScreen() {
             </button>
           </div>
           <div className={style.video_sec}>
-            {/* <iframe
-              width="560"
-              height="315"
-              src="https://www.youtube.com/embed/Q1k63XEG9Ac?autoplay=1&mute=1"
-              title="YouTube video player"
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerPolicy="strict-origin-when-cross-origin"
-              allowFullScreen
-            ></iframe> */}
+            <HeroVideo />
           </div>
         </div>
         <center className="partnerships-parent">
