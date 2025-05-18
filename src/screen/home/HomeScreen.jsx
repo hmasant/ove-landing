@@ -1,5 +1,5 @@
-import { lazy } from "react";
 import style from "./style.module.css";
+import { lazy, useState, useEffect } from "react";
 import { UpdateContext, ReadContext } from "../../context";
 
 const Header = lazy(() => import("../../components/Header"));
@@ -14,12 +14,13 @@ const Testimonial = lazy(() => import("../../components/home/Testimonial"));
 const HiringProcess = lazy(() => import("../../components/home/HiringProcess"));
 
 export default function HomeScreen() {
+  const isMobile = useIsMobile();
+
   const update = UpdateContext();
   const popupState = ReadContext();
 
   return (
     <>
-      {popupState.showPopup && <Popup />}
       <Header />
       <section className={style.hero_sec}>
         <div className="grid_two about-grid">
@@ -50,7 +51,7 @@ export default function HomeScreen() {
             </button>
           </div>
           <div className={style.video_sec}>
-            <HeroVideo />
+            {isMobile ? <></> : <HeroVideo />}
           </div>
         </div>
         <center className="partnerships-parent">
@@ -102,6 +103,20 @@ export default function HomeScreen() {
         fetchPriority="low"
         alt="Image"
       />
+      {popupState.showPopup && <Popup />}
     </>
   );
 }
+
+const useIsMobile = (breakpoint = 768) => {
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= breakpoint);
+
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth <= breakpoint);
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, [breakpoint]);
+
+  return isMobile;
+};
