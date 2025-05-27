@@ -15,7 +15,7 @@ export default function DevProfile() {
           >
             <SwiperSlide>
               <div className={style.dev_video}>
-                <video controls>
+                <video controls preload="metadata">
                   <source
                     src="https://hire-ove.s3.ap-south-1.amazonaws.com/Manas_JavaDev.mp4"
                     type="video/mp4"
@@ -30,7 +30,7 @@ export default function DevProfile() {
             </SwiperSlide>
             <SwiperSlide>
               <div className={style.dev_video}>
-                <video controls>
+                <video controls preload="metadata">
                   <source
                     src="https://hire-ove.s3.ap-south-1.amazonaws.com/Manas_JavaDev.mp4"
                     type="video/mp4"
@@ -43,7 +43,7 @@ export default function DevProfile() {
             </SwiperSlide>
             <SwiperSlide>
               <div className={style.dev_video}>
-                <video controls>
+                <video controls preload="metadata">
                   <source
                     src="https://hire-ove.s3.ap-south-1.amazonaws.com/Manas_JavaDev.mp4"
                     type="video/mp4"
@@ -56,7 +56,7 @@ export default function DevProfile() {
             </SwiperSlide>
             <SwiperSlide>
               <div className={style.dev_video}>
-                <video controls>
+                <video controls preload="metadata">
                   <source
                     src="https://hire-ove.s3.ap-south-1.amazonaws.com/Manas_JavaDev.mp4"
                     type="video/mp4"
@@ -69,7 +69,7 @@ export default function DevProfile() {
             </SwiperSlide>
             <SwiperSlide>
               <div className={style.dev_video}>
-                <video controls>
+                <video controls preload="metadata">
                   <source
                     src="https://hire-ove.s3.ap-south-1.amazonaws.com/Manas_JavaDev.mp4"
                     type="video/mp4"
