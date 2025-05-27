@@ -277,7 +277,8 @@ input::-webkit-inner-spin-button {
   text-align: center;
 }
 .email-box-parent {
-  margin-bottom: 4em;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
 }
 
 @media only screen and (max-width: 500px) {

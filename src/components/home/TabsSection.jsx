@@ -33,6 +33,9 @@ export default function TabsSection() {
           )
         )}
       </div>
+      <br />
+      <br />
+      <br />
       <div className="grid_two tab-content-parent">
         <div className="tab-content-left-child-parent">
           <h2 className="white_heading tab-content-title">
