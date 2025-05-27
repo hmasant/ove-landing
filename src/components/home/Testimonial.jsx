@@ -10,12 +10,12 @@ export default function Testimonial() {
         </h2>
 
         <div className={`client-testimonial ${style.video_grid}`}>
-
           <div className="client-video-parent">
             <video
               className="client-videos"
-              controls
               poster="./jenny.png"
+              preload="metadata"
+              controls
             >
               <source
                 src="https://scoobies-backend.s3.ap-south-1.amazonaws.com/8.mp4"
@@ -29,9 +29,11 @@ export default function Testimonial() {
           </div>
 
           <div className="client-video-parent">
-            <video className="client-videos"
-            controls
-            poster="./mark.png"
+            <video
+              className="client-videos"
+              poster="./mark.png"
+              preload="metadata"
+              controls
             >
               <source
                 src="https://scoobies-backend.s3.ap-south-1.amazonaws.com/7.mp4"
@@ -45,9 +47,11 @@ export default function Testimonial() {
           </div>
 
           <div className="client-video-parent">
-            <video className="client-videos" 
-            controls
-            poster="./matt.png"
+            <video
+              className="client-videos"
+              poster="./matt.png"
+              preload="metadata"
+              controls
             >
               <source
                 src="https://scoobies-backend.s3.ap-south-1.amazonaws.com/6.mp4"
@@ -61,9 +65,11 @@ export default function Testimonial() {
           </div>
 
           <div className="client-video-parent">
-            <video className="client-videos" 
-            controls
-            poster="./matthew.png"
+            <video
+              className="client-videos"
+              poster="./matthew.png"
+              preload="metadata"
+              controls
             >
               <source
                 src="https://scoobies-backend.s3.ap-south-1.amazonaws.com/9.mp4"
@@ -75,7 +81,6 @@ export default function Testimonial() {
               <p>MD, Sea Side Media</p>
             </div>
           </div>
-
         </div>
       </div>
     </section>
