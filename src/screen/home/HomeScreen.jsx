@@ -69,8 +69,7 @@ export default function HomeScreen() {
           <div className="partnership-logo-parent">
             <img
               style={{ width: "80vw" }}
-              src="/partnerships.svg"
-              fetchPriority="low"
+              src="/partnerships.webp"
               alt="Partnerships"
               loading="lazy"
             />
